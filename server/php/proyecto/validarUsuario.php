@@ -2,6 +2,8 @@
    include("../conectar.php"); 
    $link = Conectar();
 
+   date_default_timezone_set('America/Bogota');
+
    $usuario = addslashes($_POST['pUsuario']);
    $clave = addslashes($_POST['pClave']);
    $Fecha = $_POST['pFecha'];

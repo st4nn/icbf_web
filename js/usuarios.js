@@ -8,6 +8,7 @@ function funUsuarios()
 		$("#cntUsuarios_VerUsuarios").hide();
 		$("#cntUsuarios_CrearUsuario").slideDown();
 		$("#frmUsuarios_Crear")[0].reset();
+		$("#txtUsuarios_Crear_idLogin").val("");
 		$("#lblUsuarios_Crear_Tipo").text("Creación");
 		$("#cntUsuarios_Crear_DatosUsuario .form-control").attr("disabled", false);
 		$("#cntUsuarios_Crear_DatosSesion .form-control").attr("disabled", false);
@@ -17,6 +18,8 @@ function funUsuarios()
 	{
 		$("#cntUsuarios_CrearUsuario").hide();
 		$("#cntUsuarios_VerUsuarios").slideDown();
+
+		usuarios_CargarUsuarios();
 	});
 
 	$(document).delegate('#tblUsuarios tbody button', 'click', function(event) 
@@ -34,7 +37,7 @@ function funUsuarios()
 		$("#txtUsuarios_Crear_idCentroZonal").val($(fila[7]).attr("idCentroZonal"));
 		$("#txtUsuarios_Crear_Estado").val($(fila[8]).text());
 
-		$("#txtUsuarios_Crear_Usuario").val($(fila[2]).text());
+		$("#txtUsuarios_Crear_nUsuario").val($(fila[2]).text());
 		$("#txtUsuarios_Crear_Clave").val("laClaveEstaProtegida");
 		$("#txtUsuarios_Crear_Clave2").val("laClaveEstaProtegida");
 
@@ -46,12 +49,16 @@ function funUsuarios()
 	{
 		$("#cntUsuarios_Crear_DatosUsuario .form-control").attr("disabled", false);
 		$("#cntUsuarios_Crear_DatosSesion .form-control").attr("disabled", true);
+		
+		$("#txtUsuarios_Crear_Correo").attr("disabled", true);
 	});
 
 	$(document).delegate('.btnUsuarios_EditarClave', 'click', function(event) 
 	{
 		$("#cntUsuarios_Crear_DatosUsuario .form-control").attr("disabled", true);
 		$("#cntUsuarios_Crear_DatosSesion .form-control").attr("disabled", false);
+
+		$("#txtUsuarios_Crear_nUsuario").attr("disabled", true);
 	});	
 
 	$("#frmUsuarios_Crear").on("submit", function(evento)
@@ -59,7 +66,17 @@ function funUsuarios()
 		evento.preventDefault();
 		$("#frmUsuarios_Crear").generarDatosEnvio("txtUsuarios_Crear_", function(datos)
 		{
-			console.log(datos);
+			$.post('../server/php/proyecto/crearUsuario.php', {datos : datos}, function(data, textStatus, xhr) 
+			{
+				if (data.Error != "")
+				{
+					Mensaje("Error", data.Error, "danger");
+				} else
+				{
+					$("#txtUsuarios_Crear_idLogin").val(data.datos);
+					Mensaje("Hey", "Los datos han sido ingresados", "success");
+				}
+			}, "json");
 		});
 	});
 }
