@@ -1,0 +1,43 @@
+<div class="page">
+	<div class="page-content container-fluid">
+		<div class="col-sm-12">
+			<div class="panel panel-primary panel-bordered">
+		        <div class="panel-heading">
+		        	<h3 class="panel-title">Usuarios Creados</h3>
+	          		<div class="panel-actions">
+	    				<button class="btn text-left btn-success btn-block"><i class="icon fa-user-plus"></i> Crear Usuario</button>
+		            </div>
+		        </div>
+		        <div class="panel-body">
+		        	<div class="table-responsive">
+			        	<table id="tblUsuarios" class="table table-hover table-striped">
+			        		<thead>
+			        			<tr>
+			        				<th class="width-100"></th>
+			        				<th>id</th>
+			        				<th>Usuario</th>
+			        				<th>Nombre</th>
+			        				<th>Cargo</th>
+			        				<th>Perfil</th>
+			        				<th>Correo</th>
+			        				<th>Estado</th>
+			        			</tr>
+			        		</thead>
+			        		<tbody>
+			        		</tbody>			        		
+			        	</table>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/usuarios.js", function(ev)
+        {
+          funUsuarios();
+        });
+      });
+</script>

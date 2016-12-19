@@ -6,21 +6,23 @@
    $idUsuario = $_POST['Usuario'];
    $Usuario = datosUsuario($idUsuario);
 
-   $empresa = "";
-
    if ($Usuario['idPerfil'] <> 1)
    {
-      $empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
    }
 
-   $sql = "SELECT    
-                datosUsuarios.idLogin AS id,
-                CONCAT(datosUsuarios.Nombre, ' (', datosUsuarios.Cargo, ')') AS Nombre
-            FROM 
-               datosUsuarios
-               INNER JOIN Login ON datosUsuarios.idLogin = Login.idLogin
-            WHERE Login.Estado = 'Activo'
-            AND datosUsuarios.idPerfil >= '" . $Usuario['idPerfil'] . "' " . $empresa . ";";
+   $sql = "SELECT
+            Login.idLogin as id,
+            Login.Usuario,
+            Login.Estado,
+            datosUsuarios.Nombre,
+            datosUsuarios.Correo,
+            datosUsuarios.Cargo,
+            Perfiles.Nombre AS 'Perfil'
+          FROM
+            Login
+            INNER JOIN datosUsuarios ON Login.idLogin = datosUsuarios.idLogin
+            LEFT JOIN Perfiles ON datosUsuarios.idPerfil = Perfiles.idPerfil;";
 
    $result = $link->query($sql);
 

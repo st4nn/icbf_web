@@ -76,16 +76,14 @@ function cargarModulo(vinculo, titulo, callback)
           callback();
         } else
         {
-          tds += '<div id="' + nomModulo + '" class="page Modulo">';
-            tds += '<div class="cntModulo page-content container-fluid">';
+          tds += '<div id="' + nomModulo + '" class="Modulo">';
                 tds += '<p>No tiene permiso para acceder a este modulo...</p>';
-            tds += '</div>';
           tds += '</div>';
 
           $("#contenedorDeModulos").append(tds);
           $.get(vinculo + "?tmpId=" + obtenerPrefijo(), function(data) 
           {
-            $("#" + nomModulo + " .cntModulo").html(data);
+            $("#" + nomModulo).html(data);
             callback();
           });
         }
@@ -281,7 +279,7 @@ $.fn.crearDataTable = function(tds, callback)
         $(this).dataTable().fnDestroy();
     } 
 
-    if (tds =! undefined && tds != "")
+    if (tds != undefined && tds != "")
     {
       $(this).find("tbody").find("tr").remove();
       $("#" + idObj + " tbody").append(tds);

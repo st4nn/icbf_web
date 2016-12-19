@@ -10,13 +10,10 @@
                Datos.Nombre AS 'Nombre',
                Datos.Correo AS 'Correo',
                Datos.Cargo AS 'Cargo',
-               Empresa.id AS 'idEmpresa',
-               Empresa.Nombre AS 'Empresa',
                Datos.idPerfil AS 'idPerfil'
             FROM 
                Login AS Login
                INNER JOIN datosUsuarios AS Datos ON Datos.idLogin = Login.idLogin
-               INNER JOIN confEmpresas AS Empresa ON Login.idEmpresa = Empresa.id
             WHERE 
                Login.idLogin = $idUsuario";
       
