@@ -1,0 +1,31 @@
+  <!-- Page -->
+  <input type="hidden" id="txtMapa_idHogar">
+  <div id="cntVisitas_Mapa" class="col-md-12">
+    <div id="cntVisitas_Mapa_Navegar" class="col-xs-4" style="position: absolute; top:3px; left:3px;">
+        <button type="button" id="btnVisitas_VolverAlPanel" class="btn btn-primary btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+          <i class="front-icon fa-arrow-left animation-scale-up" aria-hidden="true"><i class="front-icon glyphicon-tree-deciduous-circle animation-scale-up" aria-hidden="true"></i></i>
+        </button>
+    </div>
+    <div id="cntVisitas_Marcador_Opciones" class="col-md-12 hide" style="position: absolute; bottom:2px; left:3px;">
+        <button type="button" id="btnVisitas_VerHogar" class="btn btn-success btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+          <i class="front-icon wb-eye animation-scale-up" aria-hidden="true"></i>
+        </button>
+    </div>
+    <img id="imgPoda_Marcador_Mira" src="../assets/images/icons/mira.png" alt="" style="position:absolute; left: calc(50% - 10px); bottom:calc(50% - 10px); height:auto; width: 20px;">
+    <div id="cntVisitas_Mapa_Opciones" class="col-md-12" style="position: absolute; bottom:2px; left:3px;">
+        <button type="button" id="btnVisitas_agregarHogar" class="btn btn-success btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+          <i class="front-icon wb-plus-circle animation-scale-up" aria-hidden="true"><i class="front-icon glyphicon-tree-deciduous-circle animation-scale-up" aria-hidden="true"></i></i>
+        </button>
+    </div>
+  </div>
+
+    <!-- End Page -->
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/mapa.js", function(ev)
+        {
+          controlarPermisos();
+        });
+      });
+
+</script>
