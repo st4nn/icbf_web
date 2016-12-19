@@ -18,7 +18,10 @@
             datosUsuarios.Nombre,
             datosUsuarios.Correo,
             datosUsuarios.Cargo,
-            Perfiles.Nombre AS 'Perfil'
+            datosUsuarios.idPerfil,
+            datosUsuarios.idCentroZonal,
+            Perfiles.Nombre AS 'Perfil',
+            'Centro Zonal' AS 'CentroZonal'
           FROM
             Login
             INNER JOIN datosUsuarios ON Login.idLogin = datosUsuarios.idLogin
