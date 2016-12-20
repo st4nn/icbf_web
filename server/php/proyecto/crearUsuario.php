@@ -137,7 +137,7 @@
                {
                   if ($mensaje <> "")
                   {
-                     $obj = EnviarCorreo($datos->Correo, $Asunto, $mensaje) ;
+                     //$obj = EnviarCorreo($datos->Correo, $Asunto, $mensaje) ;
                   }
 
                   $Respuesta['datos'] = $nuevoId;
