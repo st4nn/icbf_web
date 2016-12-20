@@ -12,21 +12,11 @@
    }
 
    $sql = "SELECT
-            Login.idLogin as id,
-            Login.Usuario,
-            Login.Estado,
-            datosUsuarios.Nombre,
-            datosUsuarios.Correo,
-            datosUsuarios.Cargo,
-            datosUsuarios.idPerfil,
-            datosUsuarios.idCentroZonal,
-            Perfiles.Nombre AS 'Perfil',
-            CentrosZonales.Nombre AS 'CentroZonal'
+            Regionales.*,
+            datosUsuarios.Nombre AS Usuario_Nombre 
           FROM
-            Login
-            INNER JOIN datosUsuarios ON Login.idLogin = datosUsuarios.idLogin
-            LEFT JOIN CentrosZonales ON datosUsuarios.idCentroZonal = CentrosZonales.id
-            LEFT JOIN Perfiles ON datosUsuarios.idPerfil = Perfiles.idPerfil;";
+            Regionales
+            LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = Regionales.Usuario;";
 
    $result = $link->query($sql);
 

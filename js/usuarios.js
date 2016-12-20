@@ -2,6 +2,7 @@ function funUsuarios()
 {
 	$("#tblUsuarios").crearDataTable("");
 	usuarios_CargarUsuarios();	
+	usuarios_CargarCentrosZonales();
 
 	$("#btnUsuarios_CrearUsuario").on("click", function()
 	{
@@ -115,6 +116,35 @@ function usuarios_CargarUsuarios()
 				});
 				
     			$("#tblUsuarios").crearDataTable(tds, function(){});
+			} else
+			{
+				Mensaje("Error", data, "danger");
+			}
+		}
+	}, "json");
+}
+
+function usuarios_CargarCentrosZonales()
+{
+	$("#txtUsuarios_Crear_idCentroZonal option").remove();
+	$.post('../server/php/proyecto/configuracion_CargarCentrosZonales.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
+	{
+		if (data == 0)
+		{
+			Mensaje("Error", "No hay datos en la Tabla", "danger");
+		} else
+		{
+			if (typeof(data) == "object")
+			{
+				var tds = "";
+				var tds2 = "";
+				
+				$.each(data, function(index, val) 
+				{
+	    			tds2 += '<option value="' + val.id + '">' + val.Nombre + '</option>';
+				});
+				
+    			$("#txtUsuarios_Crear_idCentroZonal").append(tds2);
 			} else
 			{
 				Mensaje("Error", data, "danger");
