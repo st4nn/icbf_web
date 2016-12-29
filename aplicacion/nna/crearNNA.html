@@ -1,0 +1,143 @@
+<!-- Page -->
+<div class="page">
+  <br><button id="btnNNA_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
+  <div class="page-content container-fluid">
+    <form id="frmNNA">
+      <input type="hidden" class="form-control guardar" id="txtNNA_Prefijo">
+      
+      <div class="col-sm-12">
+        <div class="col-sm-8">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Registro NNA</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Codigo" class="control-label">Código</label>
+                    <input type="text" class="form-control guardar" id="txtNNA_Codigo" readonly="true">
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_TipoDocumento" class="control-label">Tipo Documento</label>
+                    <select id="txtNNA_TipoDocumento" class="form-control guardar">
+                      <option value="PN">Partida de Nacimiento</option> <!-- Opciones Inventadas -->
+                      <option value="RC">Registro Civil</option>
+                      <option value="TI">Tarjeta de Identidad</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Documento" class="control-label">Número Documento</label>
+                    <input type="text" class="form-control guardar" id="txtNNA_Documento">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Apellido1" class="control-label">Primer Apellido</label>
+                    <input type="text" class="form-control guardar" id="txtNNA_Apellido1" required>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Apellido2" class="control-label">Segundo Apellido</label>
+                    <input type="text" class="form-control guardar" id="txtNNA_Apellido2">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Nombre1" class="control-label">Primer Nombre</label>
+                    <input type="text" class="form-control guardar" id="txtNNA_Nombre1" required>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Nombre2" class="control-label">Segundo Nombre</label>
+                    <input type="text" class="form-control guardar" id="txtNNA_Nombre2">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_FechaNacimiento" class="control-label">Fecha de Nacimiento</label>
+                    <input type="text" class="form-control guardar datepicker" id="txtNNA_FechaNacimiento">
+                  </div>
+                </div>
+                <div class="col-md-3 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Edad" class="control-label">Edad</label>
+                    <input type="text" class="form-control" id="txtNNA_Edad"  readonly="true" style="border:none; background: white;">
+                  </div>
+                </div>
+                <div class="col-md-3 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Genero" class="control-label">Género</label>
+                    <select id="txtNNA_Genero" class="form-control guadar">
+                      <option value="F">Femenino</option>
+                      <option value="M">Masculino</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3 form-group">
+                  <div class="form-group">
+                    <label for="txtNNA_Adoptabilidad" class="control-label">¿Declarado en Adoptabilidad?</label>
+                    <select id="txtNNA_Adoptabilidad" class="form-control guardar">
+                      <option value="NO">NO</option>
+                      <option value="SI">SI</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Registro Fotográfico</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-sm-12 text-center">
+                <img id="imgNNA_Foto" style="height: 266px;width:210px; border-radius: 28px;" src="../assets/portraits/5.png" alt="...">
+              </div>
+              <div id="cntNNA_DivArchivo" class="col-md-12 form-group">
+                <div class="input-group input-group-file">
+                  <span class="input-group-btn">
+                    <span class="btn btn-success col-md-12 btn-file">
+                      <i class="icon fa-picture-o" aria-hidden="true"></i>
+                      <input id="btnRegistroNNA_Galeria" type="file" name="...">
+                    </span>'
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-12 col-md-12 btn-group"> <!-- Pendientes Iconos -->
+          <a vinculo="nnaPrograma.html" href="javascript:void(0)" class="btn btn-success btn-md lnkMenuBar_Item" ><i class="icon fa-floppy-o"></i> Programa</a>
+          <button type="submit" class="btn btn-warning btn-md"><i class="icon fa-floppy-o"></i> Observaciones</button>
+          <button type="submit" class="btn btn-primary btn-md"><i class="icon fa-floppy-o"></i> Historial</button>
+        </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Page -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  funNNA_Crear();
+});
+</script>

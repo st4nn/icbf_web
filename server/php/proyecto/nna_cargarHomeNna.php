@@ -3,12 +3,8 @@
   include("datosUsuario.php"); 
    $link = Conectar();
 
-   $Parametro = addslashes($_POST['Nombre']);
    $idUsuario = addslashes($_POST['Usuario']);
    $Usuario = datosUsuario($idUsuario);
-
-   $Parametro ="%" . str_replace(" ", "%", $Parametro) . '%';
-
 
    if ($Usuario['idPerfil'] <> 1)
    {
@@ -16,21 +12,12 @@
    }
 
    $sql = "SELECT
-            Login.idLogin as id,
-            datosUsuarios.Nombre,
-            datosUsuarios.Cargo
+            nna.id as id,
+            CONCAT(nna.Nombre1, ' ', nna.Nombre2, ' ', nna.Apellido1, ' ', nna.Apellido2) AS Nombre,
+            nna.Documento,
+            nna.FechaNacimiento
           FROM
-            Login
-            INNER JOIN datosUsuarios ON Login.idLogin = datosUsuarios.idLogin
-            LEFT JOIN equipos_has_usuarios ON equipos_has_usuarios.idUsuario = Login.idLogin
-            LEFT JOIN equipos ON equipos_has_usuarios.idEquipo = equipos.id AND equipos.Estado = 1
-         WHERE
-            Login.Estado = 'Activo' 
-            AND (equipos_has_usuarios.idUsuario IS NULL OR equipos.id IS NULL)
-            AND (
-               datosUsuarios.Nombre LIKE '$Parametro'
-               OR datosUsuarios.Cargo LIKE '$Parametro'
-            ) LIMIT 0, 30;";
+            nna;";
 
    $result = $link->query($sql);
 

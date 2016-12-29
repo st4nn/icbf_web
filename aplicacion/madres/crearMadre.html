@@ -1,0 +1,230 @@
+<!-- Page -->
+<div class="page">
+  <br><button id="btnResponsable_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
+  <div class="page-content container-fluid">
+    <form id="frmResponsable">
+      
+      <input type="hidden" class="form-control guardar" id="txtResponsable_Latitud" value="4.686804">
+      <input type="hidden" class="form-control guardar" id="txtResponsable_Longitud" value="-74.083867">
+
+      <input type="hidden" class="form-control guardar" id="txtResponsable_Prefijo">
+      
+      <div class="col-sm-12">
+        <div class="col-sm-8">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Registro de Responsable</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtResponsable_Codigo" class="control-label">Código</label>
+                    <input type="text" class="form-control guardar" id="txtResponsable_Codigo" readonly="true">
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtResponsable_Cedula" class="control-label">Cedula</label>
+                    <input type="number" class="form-control guardar" id="txtResponsable_Cedula" required>
+                  </div>
+                </div>
+              </div>
+                
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtResponsable_Apellido1" class="control-label">Primer Apellido</label>
+                    <input type="text" class="form-control guardar" id="txtResponsable_Apellido1" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtResponsable_Apellido2" class="control-label">Segundo Apellido</label>
+                    <input type="text" class="form-control guardar" id="txtResponsable_Apellido2">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtResponsable_Nombre1" class="control-label">Primer Nombre</label>
+                    <input type="text" class="form-control guardar" id="txtResponsable_Nombre1" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtResponsable_Nombre2" class="control-label">Segundo Nombre</label>
+                    <input type="text" class="form-control guardar" id="txtResponsable_Nombre2">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Registro Fotográfico</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-sm-12 text-center">
+                  <img id="imgResponsable_Foto" style="height: 266px;width:210px; border-radius: 28px;" src="../assets/portraits/5.png" alt="...">
+              </div>
+              <div id="cntResponsable_DivArchivo" class="col-md-12 form-group">
+                <div class="input-group input-group-file">
+                  <span class="input-group-btn">
+                      <span class="btn btn-success col-md-12 btn-file">
+                        <i class="icon fa-picture-o" aria-hidden="true"></i>
+                        <input id="btnRegistroResponsable_Galeria" type="file" name="...">
+                      </span>'
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Contacto</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="col-md-6 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Nombre2" class="control-label">Telefono Fijo</label>
+                  <input type="number" class="form-control guardar" id="txtResponsable_Telefono1">
+                </div>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Telefono2" class="control-label">_</label>
+                  <input type="number" class="form-control guardar" id="txtResponsable_Telefono2">
+                </div>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Celular1" class="control-label">Telefono Celular</label>
+                  <input type="number" class="form-control guardar" id="txtResponsable_Celular1">
+                </div>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Celular2" class="control-label">_</label>
+                  <input type="number" class="form-control guardar" id="txtResponsable_Celular2">
+                </div>
+              </div>
+
+              <div class="col-md-12 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Nombre2" class="control-label">Correo</label>
+                  <input type="email" class="form-control guardar" id="txtResponsable_Correo">
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Edad</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="col-md-8 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_FechaNacimiento" class="control-label">Fecha de Nacimiento</label>
+                  <input type="text" class="form-control guardar datepicker" id="txtResponsable_FechaNacimiento">
+                </div>
+              </div>
+
+              <div class="col-md-12 form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Edad" class="control-label">Edad</label>
+                  <input type="text" class="form-control" id="txtResponsable_Edad" readonly="true" style="border:none; background: white;">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+       <div class="col-sm-12">
+
+        <div class="col-sm-4 col-md-4">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ubicación</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Direccion" class="control-label">Dirección</label>
+                  <input type="text" class="form-control guardar" id="txtResponsable_Direccion">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Barrio" class="control-label">Barrio</label>
+                  <input type="text" class="form-control guardar" id="txtResponsable_Barrio">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="txtResponsable_Localidad" class="control-label">Centro Zonal</label>
+                  <select type="text" class="form-control guardar" id="txtResponsable_Localidad">
+                    <option value="1">Kennedy</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Localización</h3>
+            </div>
+            <div class="panel-body">
+              <div class="height-500 col-sm-12" id="cntResponable_Mapa"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-sm-12">
+        <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Page -->
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+          funMadre_Crear();
+      });
+</script>

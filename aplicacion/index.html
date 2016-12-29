@@ -48,10 +48,13 @@
 
     <!-- Plugins For Nestable -->
     <link rel="stylesheet" href="../assets/vendor/nestable/nestable.css">
+    <link rel="stylesheet" href="../assets/vendor/asrange/asRange.css">
 
     <!--Plugin From forms advanced -->
     <link rel="stylesheet" href="../assets/examples/css/forms/advanced.css">
     <link rel="stylesheet" href="../assets/vendor/icheck/icheck.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
+    
     <link rel="stylesheet" href="../assets/vendor/typeahead-js/typeahead.css">
     <!-- Plugin For Gallery -->
     <link rel="stylesheet" href="../assets/vendor/magnific-popup/magnific-popup.css">
@@ -249,13 +252,13 @@
 
               <li class="site-menu-category">Programa</li>
                 <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                  <a vinculo="madres/madres.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-female" aria-hidden="true"></i>
                     <span class="site-menu-title">Madres</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                  <a vinculo="nna/nna.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-child" aria-hidden="true"></i>
                     <span class="site-menu-title">NNA</span>
                   </a>
@@ -263,33 +266,27 @@
 
               <li class="site-menu-category">Programación</li>
                 <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                  <a vinculo="programacion/visitas.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-cab" aria-hidden="true"></i>
-                    <span class="site-menu-title">Visitas</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
-                    <i class="site-menu-icon glyphicon-list-alt" aria-hidden="true"></i>
-                    <span class="site-menu-title">Valoración</span>
+                    <span class="site-menu-title">Asignaciones</span>
                   </a>
                 </li>
 
               <li class="site-menu-category">Reportes</li>
                 <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                  <a vinculo="na.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon glyphicon-th-list" aria-hidden="true"></i>
                     <span class="site-menu-title">Formatos</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                  <a vinculo="na.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-line-chart" aria-hidden="true"></i>
                     <span class="site-menu-title">Estadísticas</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                  <a vinculo="na.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-map-marker" aria-hidden="true"></i>
                     <span class="site-menu-title">Mapas</span>
                   </a>
@@ -303,6 +300,7 @@
       <!-- Page -->
       <input id="txtCoordenadas_Global" type="hidden">
       <div id="contenedorDeModulos">
+        <img src="../assets/images/logoFundacion_xs.png" style="z-index: 1000; position: fixed; right: 5px; bottom: 5px;">
       </div>
       <!-- End Page -->
       <!-- Core  -->
@@ -330,7 +328,11 @@
       <script src="../assets/js/components/slidepanel.js"></script>
       <script src="../assets/js/components/switchery.js"></script>
       <script src="../assets/vendor/peity/jquery.peity.js"></script>
-      <script src="../assets/vendor/typeahead-js/typeahead.jquery.min.js"></script>
+      <script src="../assets/js/components/masonry.js"></script>
+      <script src="../assets/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
+      <script src="../assets/vendor/typeahead-js/handlebars.js"></script>
+      <script src="../assets/vendor/typeahead-js/bloodhound.min.js"></script>
+        <script src="../assets/vendor/typeahead-js/typeahead.jquery.min.js"></script>
       <!-- Plugin For This Page -->
       <script src="../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
       <script src="../assets/vendor/moment/moment.min.js"></script>
@@ -379,13 +381,13 @@
       <!-- Scripts For This Widgets Data-->
       <script src="../assets/js/components/peity.js"></script>
       <script src="../assets/js/components/tasklist.js"></script>
-      <script src="../assets/js/components/masonry.js"></script>
       <!-- Scripts For Alertify-->
       <script src="../assets/vendor/alertify-js/alertify.js"></script>
       <script src="../assets/js/components/alertify-js.js"></script>
 
       <!-- Scripts For Nestable-->
       <script src="../assets/vendor/nestable/jquery.nestable.js"></script>
+      <script src="../assets/vendor/asrange/jquery-asRange.min.js"></script>
       
       <!-- Scripts For Tabs -->
       <script src="../assets/js/components/tabs.js"></script>
@@ -402,12 +404,11 @@
       <script src="../assets/vendor/webui-popover/jquery.webui-popover.min.js"></script>
       <script src="../assets/js/components/webui-popover.js"></script>
       <script src="../assets/examples/js/uikit/tooltip-popover.js"></script>
-      <!--
-      <script src="http://maps.google.com/maps/api/js?key=AIzaSyCqsaOPb3d9wCtzrh-7XGN4dnMy44qV5ns"></script>
+      
+      <script src="http://maps.google.com/maps/api/js?key=AIzaSyBv7MJjnp61LJoSwYHgLTuNUuBmPsJitpc&libraries=visualization&sensor=true"></script>
       <script src="../assets/vendor/gmaps/gmaps.js"></script>
       <script src="../assets/js/components/gmaps.js"></script>
-      -->
-      
+
       <script src="../js/funciones.js"></script>
       <script type="text/javascript">
       $(document).ready(function($)

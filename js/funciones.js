@@ -76,15 +76,15 @@ function cargarModulo(vinculo, titulo, callback)
           callback();
         } else
         {
-          tds += '<div id="' + nomModulo + '" class="Modulo">';
-                tds += '<p>No tiene permiso para acceder a este modulo...</p>';
-          tds += '</div>';
+          tds += '<div id="' + nomModulo + '" class="Modulo"></div>';
 
           $("#contenedorDeModulos").append(tds);
           $.get(vinculo + "?tmpId=" + obtenerPrefijo(), function(data) 
           {
             $("#" + nomModulo).html(data);
             callback();
+          }).fail(function() {
+            Mensaje("Error", "No tiene permisos para acceder a este modulo", "danger");
           });
         }
         $("#lblUbicacionModulo").text(titulo);
@@ -217,8 +217,8 @@ function obtenerFecha()
 }
 function obtenerPrefijo()
 {
-  //var f = new Date();
-  //return f.getFullYear() + CompletarConCero(f.getMonth() +1, 2) + CompletarConCero(f.getDate(), 2) + CompletarConCero(f.getHours(), 2) + CompletarConCero(f.getMinutes(), 2) + CompletarConCero(f.getSeconds(), 2) + CompletarConCero(Usuario.id, 3);
+  var f = new Date();
+  return f.getFullYear() + CompletarConCero(f.getMonth() +1, 2) + CompletarConCero(f.getDate(), 2) + CompletarConCero(f.getHours(), 2) + CompletarConCero(f.getMinutes(), 2) + CompletarConCero(f.getSeconds(), 2) + CompletarConCero(Usuario.id, 3);
 }
 function CompletarConCero(n, length)
 {
@@ -305,4 +305,194 @@ function sumarFecha(fecha, days)
     year=fecha.getFullYear();
  
     return year + "-" + CompletarConCero(month, 2)  + "-" + CompletarConCero(day, 2);   
+}
+
+function calcularEdad(fecha)
+{
+  if (fecha != "")
+  {
+    // Si la fecha es correcta, calculamos la edad
+    var values=fecha.split("-");
+    var dia = values[2];
+    var mes = values[1];
+    var ano = values[0];
+
+    // cogemos los valores actuales
+    var fecha_hoy = new Date();
+    var ahora_ano = fecha_hoy.getYear();
+    var ahora_mes = fecha_hoy.getMonth()+1;
+    var ahora_dia = fecha_hoy.getDate();
+
+    // realizamos el calculo
+    var edad = (ahora_ano + 1900) - ano;
+    if ( ahora_mes < mes )
+    {
+        edad--;
+    }
+    if ((mes == ahora_mes) && (ahora_dia < dia))
+    {
+        edad--;
+    }
+    if (edad > 1900)
+    {
+        edad -= 1900;
+    }
+
+    // calculamos los meses
+    var meses=0;
+    if(ahora_mes>mes)
+        meses=ahora_mes-mes;
+    if(ahora_mes<mes)
+        meses=12-(mes-ahora_mes);
+    if(ahora_mes==mes && dia>ahora_dia)
+        meses=11;
+
+    // calculamos los dias
+    var dias=0;
+    if(ahora_dia>dia)
+        dias=ahora_dia-dia;
+    if(ahora_dia<dia)
+    {
+        ultimoDiaMes=new Date(ahora_ano, ahora_mes, 0);
+        dias=ultimoDiaMes.getDate()-(dia-ahora_dia);
+    }
+      
+      return {anios : edad, meses : meses, dias : dias};
+  } else
+  {
+    return {anios : 0, meses : 0, dias : 0};
+  }
+}
+
+$.fn.iniciarMapa = function(parametros, callback)
+{
+  if (callback === undefined)
+  {
+    callback = function(){};
+  }
+  var contenedor = '#' + $(this).attr("id");
+
+  var objMapa = parametros.objMapa || null;
+  if (parametros.fClick === undefined)
+  {
+    parametros.fClick = function(){};
+  }
+  if (typeof GMaps == "undefined")
+  {
+    $(contenedor).slideUp();
+  } else
+  {
+    if (contenedor === undefined)
+    {
+      
+    } else
+    {
+      if (parametros.Lat === undefined && parametros.Lon === undefined)
+      {
+        parametros.Lat = 4.686804;
+        parametros.Lon = -74.083867;
+      }
+        objMapa = new GMaps({
+          el: contenedor,
+          lat : parametros.Lat,
+          lng : parametros.Lon,
+          click : parametros.fClick,
+          zoomControl: true,
+          zoomControlOpt: {
+            style: "SMALL",
+            position: "TOP_LEFT"
+          },
+          panControl: true,
+          streetViewControl: true,
+          mapTypeControl: true,
+          overviewMapControl: true
+
+        });
+
+        callback(objMapa);
+    }
+  }
+}
+
+$.fn.iniciarResponsables = function(parametros)
+{
+  var idObj = $(this).attr("id").replace("cnt", "");
+  var tds = ""
+  tds += '<div class="col-md-12 form-group">';
+    tds += '<label for="txt' + idObj + '_Responsable" class="control-label" data-plugin="select2">Responsable a Agregar</label>';
+    tds += '<div class="input-group input-group-file">';
+      tds += '<input type="text" class="form-control" id="txt' + idObj + '_Responsable" value="" placeholder="Ingrese el Nombre del Responsable" />';
+      tds += '<span id="" class="input-group-btn">';
+          tds += '<button type="button" class="btn btn-success">';
+            tds += '<i class="icon fa-user-plus" aria-hidden="true"></i>';
+          tds += '</button>';
+      tds += '</span>';
+    tds += '</div>';
+    tds += '<div class="row">';
+      tds += '<ul id="cnt' + idObj + '_Correos" class="list-group list-group-full">';
+      tds += '</ul>';
+    tds += '</div>';
+  tds += '</div>';
+
+  $(this).append(tds);
+
+  var jsonUsuarios = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+
+      remote: {
+        url: '../server/php/proyecto/' + parametros.url + '.php?q=%QUERY',
+         q : 'algo',
+        wildcard: '%QUERY'
+      }
+    });
+
+    $('#txt' + idObj + '_Responsable').typeahead(null, {
+      name: 'Usuarios',
+      display: 'name',
+      source: jsonUsuarios,
+      templates: {
+        empty: [
+          '<div class="empty-message">',
+            'No se ha encontrado usuarios que coincidad con el texto',
+          '</div>'
+        ].join('\n'),
+        suggestion: Handlebars.compile('<div><strong>{{name}}</strong> – ({{mail}})</div>')
+      }
+    });
+
+    $(document).delegate('.btnResponsables_Quitar', 'click', function(event) 
+    {
+      event.preventDefault();
+      $(this).parent('div').parent('div').parent('li').remove();
+    });
+    
+
+    $('#txt' + idObj + '_Responsable').bind('typeahead:select', function(ev, suggestion) {
+      var obj = $('#cnt' + idObj + '_Correos').find('.list-group-item[idUsuario=' + suggestion.id + ']');
+      if (obj.length == 0)
+      {
+        var tds = "";
+          tds += '<li class="list-group-item" idUsuario="' + suggestion.id + '">';
+            tds += '<div class="media">';
+              tds += '<div class="media-left text-center">';
+                  tds += '<i class="icon wb-user margin-left-10 font-size-20"></i>';
+              tds += '</div>';
+              tds += '<div class="media-body">';
+                tds += '<h4 class="media-heading">' + suggestion.name + '</h4>';
+                tds += '<small>' + suggestion.mail + '</small>';
+              tds += '</div>';
+              tds += '<div class="media-right">';
+                tds += '<a class="btnResponsables_Quitar" href="javascript:void(0)">';
+                  tds += '<i class="icon wb-close">';
+                tds += '</a>';
+              tds += '</div>';
+            tds += '</div>';
+          tds += '</li>';
+
+        $('#cnt' + idObj + '_Correos').append(tds);
+      }
+
+      $('#txt' + idObj + '_Responsable').typeahead('val', '');
+    });
 }

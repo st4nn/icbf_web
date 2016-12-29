@@ -1,0 +1,156 @@
+<div class="page">
+  <br><button id="btnNNAPrograma_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
+  <div class="page-content container-fluid">
+    <form id="frmNNAPrograma">
+      <input type="hidden" class="form-control guardar" id="txtNNAPrograma_id">
+      <input type="hidden" class="form-control guardar" id="txtNNAPrograma_Prefijo">
+
+      <h3 id="lblNNAPrograma_NombreNNA"></h3>
+
+      <div class="col-sm-12">
+        <div class="col-sm-8">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">NNA Programa</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_FIngreso" class="control-label">Fecha de ingreso</label>
+                    <input type="text" class="form-control guardar datepicker" id="txtNNAPrograma_FIngreso">
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_TiempoHogar" class="control-label">Tiempo en el hogar</label>
+                    <input type="text" class="form-control" id="txtNNAPrograma_TiempoHogar" readonly="true" style="border:none; background: white;">
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Sim" class="control-label">SIM</label>
+                    <input type="text" class="form-control guardar" id="txtNNAPrograma_Sim">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_RangoEdad" class="control-label">Edad NNA SP</label>
+                    <select id="txtNNAPrograma_RangoEdad" class="form-control">
+                      <option value="Rango1">0 a 4</option> <!-- rangos Inventados  -->
+                      <option value="Rango2">5 a 12</option>
+                      <option value="Rango3">12 a 18</option>
+                    </select>
+                  </div>
+                </div>
+              
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Discapacidad" class="control-label">Discapacidad</label>
+                    <select id="txtNNAPrograma_Discapacidad" class="form-control">
+                      <option value="OptDisc1">OptDisc1</option>
+                      <option value="OptDisc2">OptDisc2</option>
+                      <option value="OptDisc3">OptDisc3</option>
+                      <option value="OptDisc4">OptDisc4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_DiscapacidadDesc" class="control-label">Descripción Discapacidad</label>
+                    <textarea id="txtNNAPrograma_DiscapacidadDesc" rows="3" class="form-control guardar" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Defensor" class="control-label">Defensor de Familia</label>
+                    <select id="txtNNAPrograma_Defensor" class="form-control">
+                      <option value="opt1">Defensor 1 de 1000</option>
+                      <option value="opt1">Defensor 2 de 1000</option>
+                      <option value="opt1">Defensor 3 de 1000</option>
+                      <option value="opt1">Defensor 4 de 1000</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Observaciones</h3>
+            </div>
+            <div class="panel-body">
+
+              <div class="col-md-12 form-group">
+                <div class="form-group">
+                  <label for="txtNNAPrograma_Observaciones" class="control-label">Observacion</label>
+                  <textarea  class="form-control" rows="10" id="txtNNAPrograma_Observaciones"></textarea>
+                </div>
+              </div>
+
+           
+            </div>
+            <div class="panel-footer">
+              <button type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-12">
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Historial de Observaciones</h3>
+            </div>
+            <div class="panel-body">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Historial</h3>
+            </div>
+            <div class="panel-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Responsables</h3>
+            </div>
+            <div class="panel-body">
+              <div id="cntNNAPrograma_Responsable">
+                
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Page -->
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    funnna_Programa();
+  });
+</script>

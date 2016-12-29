@@ -19,7 +19,7 @@
       $Respuesta['Error'] = "El nombre no puede estar vacío";
    } else
    {
-      $sql = "SELECT COUNT(*) AS 'Cantidad' FROM Equipos WHERE Nombre = '" . $nomEquipo . "';";
+      $sql = "SELECT COUNT(*) AS 'Cantidad' FROM Equipos WHERE Nombre = '" . $nomEquipo . "' AND Estado = 1;";
       $result = $link->query($sql);
 
       $fila =  $result->fetch_array(MYSQLI_ASSOC);

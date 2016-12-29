@@ -3,7 +3,8 @@
   include("datosUsuario.php"); 
    $link = Conectar();
 
-   $idUsuario = $_POST['Usuario'];
+   $idUsuario = addslashes($_POST['Usuario']);
+   $idMadre = addslashes($_POST['idMadre']);
    $Usuario = datosUsuario($idUsuario);
 
    if ($Usuario['idPerfil'] <> 1)
@@ -12,16 +13,17 @@
    }
 
    $sql = "SELECT
-            equipos.*,
-            GROUP_CONCAT(concat(datosUsuarios.idLogin, ':', datosUsuarios.Nombre, ':', datosUsuarios.Cargo) SEPARATOR ',') AS Integrantes 
+            madres.*,
+            CentrosZonales.Nombre AS CentroZonal,
+            CONCAT(Archivos.Ruta, '/', Archivos.Nombre) AS Foto
           FROM
-            equipos
-            LEFT JOIN equipos_has_usuarios ON equipos_has_usuarios.idEquipo = equipos.id
-            LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = equipos_has_usuarios.idUsuario 
+            madres
+            LEFT JOIN CentrosZonales ON CentrosZonales.id = madres.Localidad
+            LEFT JOIN Archivos ON Archivos.Prefijo = madres.Prefijo AND Archivos.Proceso = 'Foto Madre'
          WHERE
-            equipos.Estado = 1
+            madres.id = '$idMadre'
          GROUP BY
-            equipos.id;";
+            madres.id;";
 
    $result = $link->query($sql);
 
@@ -31,10 +33,10 @@
       $Resultado = array();
       while ($row = mysqli_fetch_assoc($result))
       {
-         $Resultado[$idx] = array();
+         //$Resultado[$idx] = array();
          foreach ($row as $key => $value) 
          {
-            $Resultado[$idx][$key] = utf8_encode($value);
+            $Resultado[$key] = utf8_encode($value);
          }
          $idx++;
       }

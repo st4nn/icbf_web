@@ -116,6 +116,31 @@ function funEquipos()
 		$("#btnEquipos_CrearEquipo").slideDown();
 	});
 
+	$(document).delegate('.btnEquipos_Borrar', 'click', function(event) 
+	{
+		var obj = this;
+		alertify.set({"labels" : {"ok" : "Si, Borrar", "cancel" : "No, Volver"}});
+		alertify.confirm("Confirma que desea borrar este Equipo?", function (ev) 
+		{
+			if (ev)
+			{
+			      
+			  $.post("../server/php/proyecto/equipos_BorrarEquipo.php", {Usuario : Usuario.id, idEquipo: $(obj).attr("idEquipo")}, function(data)
+			  {
+			    if (data.Error != "")
+			    {
+			      Mensaje("Error", data.Error, "danger");
+			    } else
+			    {
+					var t = $("#tblEquipos").DataTable();
+				    t.row($(obj).parent("div").parent("td").parent("tr")).remove().draw();
+			    }
+			  }, 'json');
+			} 
+		});
+	});
+	
+
 	$(document).delegate('.btnEquipos_EditarDatos', 'click', function(event) 
 	{
 		var fila = $(this).parent("div").parent("td").parent("tr").find("td");
@@ -175,7 +200,7 @@ function funEquipos()
 					var tds = "";
 					tds += '<div>';
 						tds += '<button type="button" idEquipo="' + data.datos + '" class="btn btn-icon btn-info btnEquipos_EditarDatos"><i class="icon wb-edit" aria-hidden="true"></i></button>';
-						tds += '<button type="button" idEquipo="' + data.datos + '" class="btn btn-icon btn-danger btnUsuarios_EditarClave margin-left-5"><i class="icon wb-trash" aria-hidden="true"></i></button>';
+						tds += '<button type="button" idEquipo="' + data.datos + '" class="btn btn-icon btn-danger btnEquipos_Borrar margin-left-5"><i class="icon wb-trash" aria-hidden="true"></i></button>';
 					tds += '</div>';
 
 					var tds2 = "";
@@ -219,7 +244,7 @@ function usuarios_CargarEquipos()
 	    				tds += '<td>';
 	    					tds += '<div>';
 	    						tds += '<button type="button" idEquipo="' + val.id + '" class="btn btn-icon btn-info btnEquipos_EditarDatos"><i class="icon wb-edit" aria-hidden="true"></i></button>';
-								tds += '<button type="button" idEquipo="' + val.id + '" class="btn btn-icon btn-danger btnUsuarios_EditarClave margin-left-5"><i class="icon wb-trash" aria-hidden="true"></i></button>';
+								tds += '<button type="button" idEquipo="' + val.id + '" class="btn btn-icon btn-danger btnEquipos_Borrar margin-left-5"><i class="icon wb-trash" aria-hidden="true"></i></button>';
 	    					tds += '</div>';
 	    				tds += '</td>';
 	    				tds += '<td>' + val.id + '</td>';
