@@ -19,7 +19,7 @@ function aplicacion()
 {
   $("#lblCerrarSesion").on("click", cerrarSesion);
     
-	$(".lnkMenuBar_Item").on("click", function(evento)
+	$(document).delegate(".lnkMenuBar_Item", "click", function(evento)
     {
       evento.preventDefault();
       var titulo = $(this).find('span').text();
@@ -495,4 +495,35 @@ $.fn.iniciarResponsables = function(parametros)
 
       $('#txt' + idObj + '_Responsable').typeahead('val', '');
     });
+}
+function controlarPermisos()
+{
+  
+}
+
+function iniciarWizard(elemento, controles, funFinish, funBeforeChange)
+{
+  if (funBeforeChange == undefined)
+  {
+    funBeforeChange = function(from, to){};
+  }
+
+  if (funFinish == undefined)
+  {
+    funFinish = function(){};
+  }
+  var defaults = $.components.getDefaults("wizard");
+  var options = $.extend(true, {}, defaults, {
+    autoFocus: false,
+    buttonsAppendTo: controles,
+    buttonLabels: {
+            next: 'Siguiente',
+            back: 'Anterior',
+            finish: 'Cerrar'
+        },
+    onBeforeChange: funBeforeChange,
+    onFinish : funFinish
+  });
+
+  var wizard = elemento.wizard(options).data('wizard');
 }

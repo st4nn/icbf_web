@@ -1,0 +1,113 @@
+<!-- Page -->
+<div class="page">
+  <div class="page-content container-fluid">
+    <div class="text-center row col-md-12">
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body lnkMenuBar_Item" vinculo="firma.html">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-heart-o" aria-hidden="true"></i>
+            </button>
+            <br><span>Validación Inicial <br> Trabajo Social</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-gears" aria-hidden="true"></i>
+            </button>
+            <br><span>Validación Inicial <br>Psicología</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-plus" aria-hidden="true"></i>
+            </button>
+            <br><span>Platin Inicial</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-paper-plane-o" aria-hidden="true"></i>
+            </button>
+            <br><span>Plan de Resultados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center row col-md-12">
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body" vinculo="formatos/visitaSeguimiento.html" id="lnkHome_Visita_VisitaSeguimiento">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-eye" aria-hidden="true"></i>
+            </button>
+            <br><span>Visita de Seguimiento</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body" vinculo="formatos/actaVisitaDomiciliaria.html" id="lnkHome_Visita_ActaVisitaDomiciliaria">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-file-pdf-o" aria-hidden="true"></i>
+            </button>
+            <br><span>Acta de Visita Domiciliaria</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body lnkMenuBar_Item" vinculo="formatos/matriz-peligros.html">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-exclamation-triangle" aria-hidden="true"></i>
+            </button>
+            <br><span>Matriz de Peligros</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body lnkMenuBar_Item" vinculo="">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-apple" aria-hidden="true"></i>
+            </button>
+            <br><span>Nutrición</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center row col-md-12">
+      <div class="col-xs-6 col-sm-3" style="height:100%;">
+        <div class="panel">
+          <div class="panel-body" id="lnkHome_Visita_PlatinSeguimiento">
+            <button type="button" class="btn btn-icon btn-primary btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="primary">
+            <i class="icon fa-bullseye" aria-hidden="true"></i>
+            </button>
+            <br><span>Platin de Seguimiento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- End Page -->
+<script type="text/javascript">
+jQuery(document).ready(function()
+{
+  $.getScript("../js/home-visita.js", function(ev)
+  {
+    funHome_Visita();
+  });
+});
+</script>

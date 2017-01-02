@@ -1,0 +1,1044 @@
+<div class="page">
+  <div class="page-header">
+    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel">Volver al Panel</button>
+    <h1 class="page-title"> </h1>
+  </div>
+  <div class="page-content container-fluid" id="cntMatrizPeligros_Wizard">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Panel Wizard Form Container -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Matriz de Peligros</h3>
+          </div>
+          <div class="panel-body">
+            <!-- Steps -->
+            <div class="pearls row">
+              <div class="pearl current col-xs-2">
+                <div class="pearl-icon"><i class="icon wb-user" aria-hidden="true"></i></div>
+                <span class="pearl-title">Cocina</span>
+              </div>
+              <div class="pearl col-xs-1">
+                <div class="pearl-icon"><i class="icon wb-payment" aria-hidden="true"></i></div>
+                <span class="pearl-title">Comedor</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon wb-check" aria-hidden="true"></i></div>
+                <span class="pearl-title">Baño</span>
+              </div>
+              <div class="pearl col-xs-1">
+                <div class="pearl-icon"><i class="icon wb-check" aria-hidden="true"></i></div>
+                <span class="pearl-title">Habitaciones</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon wb-check" aria-hidden="true"></i></div>
+                <span class="pearl-title">Instalaciones de Agua, Gas y Electricidad</span>
+              </div>
+              <div class="pearl col-xs-1">
+                <div class="pearl-icon"><i class="icon wb-check" aria-hidden="true"></i></div>
+                <span class="pearl-title">Escaleras</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon wb-check" aria-hidden="true"></i></div>
+                <span class="pearl-title">Jardin o Patio</span>
+              </div>
+            </div>
+          </div>
+          
+          <div id="cntMatrizPeligros_Controles"></div><br><br>
+        </div>
+        <!-- End Steps -->
+        <!-- Wizard Content -->
+        <form class="wizard-content">
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">La zona de la cocina y el lavadero ¿están iluminados?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros1_1" name="optMatrizPeligros1">
+                          <label for="optMatrizPeligros1_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros1_2" name="optMatrizPeligros1">
+                          <label for="optMatrizPeligros1_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">Cuando está cocinando ¿procura que los mangos de las ollas no Sobresalgan de la estufa y no estén situados sobre el fuego?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros2_1" name="optMatrizPeligros2">
+                          <label for="optMatrizPeligros2_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros2_1" name="optMatrizPeligros">
+                          <label for="optMatrizPeligros2_1">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">Si se derrama algo en el suelo ¿lo recoge enseguida?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros3_1" name="optMatrizPeligros3">
+                          <label for="optMatrizPeligros3_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros3_2" name="optMatrizPeligros3">
+                          <label for="optMatrizPeligros3_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Sigue las instrucciones de utilización de las ollas a presión?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros4_1" name="optMatrizPeligros4">
+                          <label for="optMatrizPeligros4_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros4_2" name="optMatrizPeligros4">
+                          <label for="optMatrizPeligros4_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">5</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Tiene un manejo especial para los cuchillos de cocina?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros5_1" name="optMatrizPeligros5">
+                          <label for="optMatrizPeligros5_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros5_2" name="optMatrizPeligros5">
+                          <label for="optMatrizPeligros5_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">6</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Utiliza los aparatos eléctricos lejos del lavadero o aposentos de agua?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros6_1" name="optMatrizPeligros6">
+                          <label for="optMatrizPeligros6_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros6_2" name="optMatrizPeligros6">
+                          <label for="optMatrizPeligros6_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">7</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">Los productos de limpieza ¿están afuera del alcance de los niños, niñas y adolescentes?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros7_1" name="optMatrizPeligros7">
+                          <label for="optMatrizPeligros7_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros7_2" name="optMatrizPeligros7">
+                          <label for="optMatrizPeligros7_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">8</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">La zona de la cocina ¿tiene baranda de seguridad para los niños y niñas?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros8_1" name="optMatrizPeligros8">
+                          <label for="optMatrizPeligros8_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros8_1" name="optMatrizPeligros8">
+                          <label for="optMatrizPeligros8_1">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">9</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Cierra puertas y cajones inmediatamente después de su uso? </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros9_1" name="optMatrizPeligros9">
+                          <label for="optMatrizPeligros9_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros9_2" name="optMatrizPeligros9">
+                          <label for="optMatrizPeligros9_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-dark">10</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Desconecta los aparatos eléctricos al limpiarlos? Ejemplo: licuadora, horno microondas entre otros.</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros10_1" name="optMatrizPeligros10">
+                          <label for="optMatrizPeligros10_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros10_2" name="optMatrizPeligros10">
+                          <label for="optMatrizPeligros10_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Inicia Step Comedor -->
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-warning">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">Las áreas de paso ¿están despejadas entre  muebles y mesas?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros11_1" name="optMatrizPeligros11">
+                          <label for="optMatrizPeligros11_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros11_2" name="optMatrizPeligros11">
+                          <label for="optMatrizPeligros11_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-warning">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Evita las conexiones en enchufes múltiples?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros12_1" name="optMatrizPeligros12">
+                          <label for="optMatrizPeligros12_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros12_2" name="optMatrizPeligros12">
+                          <label for="optMatrizPeligros12_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-warning">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Las tomas corriente tienen el protector para evitar que los niños y niñas  ingresen sus dedos</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros13_1" name="optMatrizPeligros13">
+                          <label for="optMatrizPeligros13_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros13_2" name="optMatrizPeligros13">
+                          <label for="optMatrizPeligros13_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-warning">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Los balcones y ventanas cuentan con un seguro que se encuentre lejos del alcance de los niños y niñas?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros14_1" name="optMatrizPeligros14">
+                          <label for="optMatrizPeligros14_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros14_2" name="optMatrizPeligros14">
+                          <label for="optMatrizPeligros14_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-warning">5</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee mesas de centro con láminas de vidrio?  </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros15_1" name="optMatrizPeligros15">
+                          <label for="optMatrizPeligros15_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros15_2" name="optMatrizPeligros15">
+                          <label for="optMatrizPeligros15_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-warning">6</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Los cubiertos de la alacena están situados en lugares adecuados? </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros16_1" name="optMatrizPeligros16">
+                          <label for="optMatrizPeligros16_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros16_2" name="optMatrizPeligros16">
+                          <label for="optMatrizPeligros16_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fin Step Comedor -->
+          <!-- Inicia Step Baño -->
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-danger">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿El suelo de la bañera o la ducha es antideslizante?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="optMatrizPeligros17_1" name="optMatrizPeligros17">
+                          <label for="optMatrizPeligros17_1">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optMatrizPeligros17_2" name="optMatrizPeligros17">
+                          <label for="optMatrizPeligros17_2">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-danger">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿En la ducha o bañera hay untapete antideslizante para sostenerse los niños y niñas?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-danger">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Utiliza aparatos eléctricos en el baño? Ejemplo secadores, planchas para cabello, celulares entre otros.</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-danger">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee medicamentos en las repisas del baño?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-danger">5</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿El piso del baño permanece seco? </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fin Step Baño -->
+
+          <!-- Inicia Step Habitaciones -->
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-success">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Los closet de los niños y niñas cuentan con seguridad para que no se abra con facilidad  los cajones?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-success">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Si hay televisores en los cuartos de los niños, se encuentran fijados de una forma segura, que evite que se caiga?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-success">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Las ventanas de los cuartos de los niños y niñas  cuentan con reja o película de seguridad?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-success">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Las repisas o estantes se encuentran fijadas?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fin Step Habitaciones -->
+
+    <!-- Inicia Step Instalaciones Agua Gas Electr -->
+          <div class="wizard-pane" id="SeccionInstalaciones" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-primary">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Las llaves de paso del agua y del gas están fuera del alcance de los niños?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-primary">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Cierra las llaves del agua y del gas en las noches y/o cuándo  se ausenta de la casa?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-primary">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Sabe dónde está el interruptor general de la luz y puede apagarlo? </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-primary">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee extintor para casos de emergencia?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-primary">5</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee botiquín con su dotación completa para casos de emergencia?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fin Step Instalaciones Agua Gas Electr -->
+
+   <!-- Inicia Step Escaleras -->
+          <div class="wizard-pane" id="SeccionEscaleras" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-info">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Sus escaleras tienen barandas de seguridad?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-info">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Sus escaleras tienen reja de seguridad?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-info">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Las escaleras de su casa tienen cinta antideslizante? </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-info">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee objetos como cuadros, u artesanías colgados en las paredes de las escaleras?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fin Step Escaleras -->
+
+   <!-- Inicia Step Jardin o Patio -->
+          <div class="wizard-pane" id="SeccionPatio" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-default">1</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Mantiene agua estancada en Valdez o en el lavadero?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-default">2</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Cierra la puerta del jardín y/o el patio cuando sale del hogar y va a dormir?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-default">3</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Sabe dónde está el interruptor general de la luz y puede apagarlo? </label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-default">4</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee extintor para casos de emergencia?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                <span class="badge badge-radius badge-default">5</span>
+                  <div class="panel-body">
+                    <div class="col-md-9">
+                      <label class="control-label" for="inputUserNameOne">¿Posee botiquín con su dotación completa para casos de emergencia?</label>
+                    </div>
+                    <div class="col-md-3 list-unstyled">
+                      <li>
+                        <div class="radio-custom radio-success">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">SI</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="inputRadiosUnchecked" name="inputRadios">
+                          <label for="inputRadiosUnchecked">NO</label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fin Step Jardin o Patio -->
+        </form>
+        <!-- Wizard Content -->
+      </div>
+    </div>
+    <!-- End Panel Wizard Form Container -->
+  </div>
+</div>
+<!-- End Page-->
+
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/matrizPeligros.js", function(ev)
+        {
+          controlarPermisos();
+          funMatrizPeligros();
+        });
+      });
+</script>
