@@ -13,17 +13,13 @@
    }
 
    $sql = "SELECT
-            madres.*,
-            Municipios.Nombre AS CentroZonal,
-            CONCAT(Archivos.Ruta, '/', Archivos.Nombre) AS Foto
+            madres_Observaciones.*,
+            datosUsuarios.Nombre
           FROM
-            madres
-            LEFT JOIN Municipios ON Municipios.id = madres.Localidad
-            LEFT JOIN Archivos ON Archivos.Prefijo = madres.Prefijo AND Archivos.Proceso = 'Foto Madre'
-         WHERE
-            madres.id = '$idMadre'
-         GROUP BY
-            madres.id;";
+            madres_Observaciones
+            LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = madres_Observaciones.Usuario
+         WHERE madres_Observaciones.idMadre = '$idMadre'
+         ORDER BY madres_Observaciones.fechaCargue DESC;";
 
    $result = $link->query($sql);
 
@@ -33,10 +29,10 @@
       $Resultado = array();
       while ($row = mysqli_fetch_assoc($result))
       {
-         //$Resultado[$idx] = array();
+         $Resultado[$idx] = array();
          foreach ($row as $key => $value) 
          {
-            $Resultado[$key] = utf8_encode($value);
+            $Resultado[$idx][$key] = utf8_encode($value);
          }
          $idx++;
       }

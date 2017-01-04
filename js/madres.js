@@ -15,6 +15,8 @@ function funMadres()
 			{
 				$("#frmResponsable")[0].reset();
 				$("#txtResponsable_Prefijo").val(obtenerPrefijo());
+				$("#btnResponsable_VerPrograma").hide();
+				$("#lblResponsable_NombreMadre").text("");
 			});
 	});
 
@@ -74,10 +76,13 @@ function funMadres()
 				$("#lblMadres_Detalle_Correo").text(data.Correo);
 				$("#lblMadres_Detalle_Correo").attr("href", 'mailto:' + data.Correo);
 
-				madreMapa.setCenter(parseFloat(data.Latitud), parseFloat(data.Longitud), function()
-					{
-						madreMarker.setPosition({lat : parseFloat(data.Latitud), lng : parseFloat(data.Longitud)});
-					});
+				if (data.Latitud != "")
+				{
+					madreMapa.setCenter(parseFloat(data.Latitud), parseFloat(data.Longitud), function()
+						{
+							madreMarker.setPosition({lat : parseFloat(data.Latitud), lng : parseFloat(data.Longitud)});
+						});
+				}
 
 			} 
 		}, 'json');
@@ -107,7 +112,7 @@ function funMadres()
 		} 
 	}, 'json');
 
-	$("#btnMadres_Dellate_Editar").on("click", function()
+	$("#btnMadres_Detalle_Editar").on("click", function()
 	{
 		$.post('../server/php/proyecto/madres_cargarDetalleHome.php', {Usuario: Usuario.id, idMadre : $("#lblMadres_Detalle_Codigo").text()}, function(data, textStatus, xhr) 
 		{
@@ -115,6 +120,8 @@ function funMadres()
 			{
 				cargarModulo("madres/crearMadre.html", "Editar Madre", function()
 				{
+					$("#lblResponsable_NombreMadre").text($("#lblMadres_Detalle_Nombre").text());
+					$("#btnResponsable_VerPrograma").show();
 
 					if (data.Foto == "")
 					{
@@ -132,10 +139,15 @@ function funMadres()
 						 }
 					});
 
-					responsableMapa.setCenter(parseFloat(data.Latitud), parseFloat(data.Longitud), function()
+					$("#txtResponsable_FechaNacimiento").trigger('change');
+
+					if (data.Latitud != "")
 					{
-						responsableMarker.setPosition({lat : parseFloat(data.Latitud), lng : parseFloat(data.Longitud)});
-					});
+						responsableMapa.setCenter(parseFloat(data.Latitud), parseFloat(data.Longitud), function()
+						{
+							responsableMarker.setPosition({lat : parseFloat(data.Latitud), lng : parseFloat(data.Longitud)});
+						});
+					}
 					
 				});
 
@@ -143,14 +155,106 @@ function funMadres()
 		}, 'json');
 	});
 
-	$("#btnMadres_Dellate_Programa").on("click", function()
+	$("#btnMadres_Detalle_Programa").on("click", function()
 	{
-		cargarModulo("madres/programa.html", "Programa", function()
+		$.post('../server/php/proyecto/madres_cargarPrograma.php', {Usuario: Usuario.id, idMadre : $("#lblMadres_Detalle_Codigo").text()}, function(data, textStatus, xhr) 
 		{
-			$("#txtMadrePrograma_id").val($("#lblMadres_Detalle_Codigo").text());
-			$("#txtMadrePrograma_Prefijo").val($("#txtMadre_Prefijo").val());
-			$("#lblMadrePrograma_NombreMadre").text($("#lblMadres_Detalle_Nombre").text());
+			if (data != 0)
+			{
+				cargarModulo("madres/programa.html", "Programa", function()
+				{
+					$("#txtMadrePrograma_id").val($("#lblMadres_Detalle_Codigo").text());
+					$("#txtMadrePrograma_Prefijo").val($("#txtMadre_Prefijo").val());
+					$("#lblMadrePrograma_NombreMadre").text($("#lblMadres_Detalle_Nombre").text());
 
-		});
+					$.each(data, function(index, val) 
+					{
+						 if ($("#txtMadrePrograma_" + index).length > 0)
+						 {
+						 	$("#txtMadrePrograma_" + index).val(val);
+						 }
+					});
+
+					$("#txtMadrePrograma_GrupoEtnico").trigger('change');
+					$("#txtMadrePrograma_FechaResolucion").trigger('change');
+
+					madres_cargarNinosAsignados();
+				});
+			}
+		}, 'json');
 	});
+}
+
+function madres_cargarNinosAsignados()
+{
+	$("#cntMadrePrograma_Novedades li").remove();
+	$.post('../server/php/proyecto/madres_cargarObservaciones.php', {Usuario: Usuario.id, idMadre : $("#lblMadres_Detalle_Codigo").text()}, function(data, textStatus, xhr) 
+	{
+		if (data != 0)
+		{
+			var tdsO = "";
+			var valorO = '';
+			$.each(data, function(index, val) 
+			{
+				tdsO += '<li class="list-group-item">';
+                  tdsO += '<div class="media">';
+                    tdsO += '<div class="media-left">';
+			            tdsO += '<i class="icon wb-chevron-right" aria-hidden="true"></i>';
+                    tdsO += '</div>';
+                    tdsO += '<div class="media-body">';
+                      tdsO += '<h4 class="media-heading">' + val.Nombre;
+                        tdsO += '<span> <small>registró un </small> <strong>' + val.Tipo + '<strong></span>';
+                      tdsO += '</h4>';
+                      tdsO += '<small class="pull-right">' + calcularTiempoPublicacion(val.fechaCargue) + '</small>';
+                      tdsO += '<div class="profile-brief">' + val.Observaciones + ' <small> desde el ' + val.Fecha + '</small></div>';
+                    tdsO += '</div>';
+                  tdsO += '</div>';
+                tdsO += '</li>';
+			});
+
+			$("#cntMadrePrograma_Novedades").append(tdsO);
+		}
+	}, 'json');
+
+
+
+	$("#cntMadrePrograma_NinosAsignados li").remove();
+
+	$.post('../server/php/proyecto/madres_cargarNinosAsignados.php', {Usuario: Usuario.id, idMadre : $("#lblMadres_Detalle_Codigo").text()}, function(data, textStatus, xhr) 
+	{
+		if (data != 0)
+		{
+			var tds = "";
+			var icon = 'male';
+			var valor = '';
+			$.each(data, function(index, val) 
+			{
+				valor = calcularEdad(val.FechaNacimiento);
+				valor = valor.anios + " años, " + valor.meses + " meses y " + valor.dias + " días";
+
+				icon = 'male';
+				if (val.Genero == 'F')
+				{
+					icon = 'female';
+				}
+				tds += '<li class="list-group-item">';
+                  tds += '<div class="media">';
+                    tds += '<div class="media-left">';
+                      tds += '<i class="icon fa-' + icon + ' font-size-20"></i>';
+                    tds += '</div>';
+                    tds += '<div class="media-body">';
+                      tds += '<h4 class="media-heading">';
+                        tds += '<small class="pull-right">' + calcularTiempoPublicacion(val.fechaIngreso) + ' el ' + val.fechaIngreso + '</small>';
+                        tds += '<a class="name">' + val.Nombre1 + ' ' + val.Nombre2 + ' ' + val.Apellido1 + ' ' + val.Apellido2 + '</a> ';
+                      tds += '</h4>';
+                      tds += '<small>' + val.TipoDocumento + ':</small> <strong>' + val.Documento + '</strong><br>';
+                      tds += '<small>Edad:</small> <strong>' + valor + '</strong>';
+                    tds += '</div>';
+                  tds += '</div>';
+                tds += '</li>';
+			});
+
+			$("#cntMadrePrograma_NinosAsignados").append(tds);
+		}
+	}, 'json');
 }

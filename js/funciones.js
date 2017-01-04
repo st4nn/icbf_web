@@ -527,3 +527,51 @@ function iniciarWizard(elemento, controles, funFinish, funBeforeChange)
 
   var wizard = elemento.wizard(options).data('wizard');
 }
+
+function calcularTiempoPublicacion(fecha)
+{
+    fecha = new Date(fecha.replace(" ", "T") + "Z");
+    var fechaActual = new Date();
+    
+    var tiempo = fecha.getTime();
+    var tiempoActual = fechaActual.getTime();
+
+    var diferencia = tiempoActual-tiempo;
+
+    diferencia = parseInt(((diferencia/1000)/60)-300);
+
+    var respuesta = "";
+    if (diferencia < 2)
+    {
+      respuesta = "hace un momento";
+    } else
+    {
+      if (diferencia < 60)
+      {
+        respuesta = "hace " + diferencia + " minutos";
+      } else
+      {
+          if (diferencia < 120)
+          {
+            respuesta = "hace " + 1 + " hora";
+          } else
+          {
+            if (diferencia < 1440)
+            {
+              respuesta = "hace " + parseInt(diferencia/60) + " horas";
+            } else
+            {
+              if (diferencia < 43200)
+              {
+                respuesta = "hace " + parseInt(diferencia/60/24) + " dias";
+              } else
+              {
+                respuesta = "hace " + parseInt(diferencia/60/24/30) + " meses";
+              }
+            }
+          }
+      }
+    }
+
+    return respuesta;
+}

@@ -13,17 +13,13 @@
    }
 
    $sql = "SELECT
-            madres.*,
-            Municipios.Nombre AS CentroZonal,
-            CONCAT(Archivos.Ruta, '/', Archivos.Nombre) AS Foto
+            madres_Programa.*
           FROM
-            madres
-            LEFT JOIN Municipios ON Municipios.id = madres.Localidad
-            LEFT JOIN Archivos ON Archivos.Prefijo = madres.Prefijo AND Archivos.Proceso = 'Foto Madre'
+            madres_Programa
          WHERE
-            madres.id = '$idMadre'
+            madres_Programa.id = '$idMadre'
          GROUP BY
-            madres.id;";
+            madres_Programa.id;";
 
    $result = $link->query($sql);
 

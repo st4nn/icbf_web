@@ -85,7 +85,7 @@ function funMadre_Crear()
 		}
 	});
 
-	$.post('../server/php/proyecto/configuracion_CargarCentrosZonales.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
+	$.post('../server/php/proyecto/configuracion_CargarMunicipios.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
 	{
 		$("#txtResponsable_Localidad option").remove();
 		if (data == 0)
@@ -109,6 +109,36 @@ function funMadre_Crear()
 			}
 		}
 	}, "json");
+
+	$("#btnResponsable_VerPrograma").on("click", function(evento)
+	{
+		evento.preventDefault();
+		$.post('../server/php/proyecto/madres_cargarPrograma.php', {Usuario: Usuario.id, idMadre : $("#lblMadres_Detalle_Codigo").text()}, function(data, textStatus, xhr) 
+		{
+			if (data != 0)
+			{
+				cargarModulo("madres/programa.html", "Programa", function()
+				{
+					$("#txtMadrePrograma_id").val($("#lblMadres_Detalle_Codigo").text());
+					$("#txtMadrePrograma_Prefijo").val($("#txtMadre_Prefijo").val());
+					$("#lblMadrePrograma_NombreMadre").text($("#lblMadres_Detalle_Nombre").text());
+
+					$.each(data, function(index, val) 
+					{
+						 if ($("#txtMadrePrograma_" + index).length > 0)
+						 {
+						 	$("#txtMadrePrograma_" + index).val(val);
+						 }
+					});
+
+					$("#txtMadrePrograma_GrupoEtnico").trigger('change');
+					$("#txtMadrePrograma_FechaResolucion").trigger('change');
+
+					madres_cargarNinosAsignados();
+				});
+			}
+		}, 'json');
+	});
 
 	
 	$("#cntResponable_Mapa").iniciarMapa({fClick : function(ev)

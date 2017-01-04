@@ -12,6 +12,9 @@
           <div class="panel panel-primary panel-bordered">
             <div class="panel-heading">
               <h3 class="panel-title">Datos del Programa</h3>
+              <div class="panel-actions">
+                <button id="btnMadrePrograma_Editar" class="btn text-left btn-warning btn-block"><i class="icon wb-pencil"></i> Datos Básicos</button>
+              </div>
             </div>
             <div class="panel-body">
 
@@ -141,8 +144,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_GrupoEtnico" class="control-label">Pertenece a algún grupo étnico</label>
                     <select class="form-control guardar" id="txtMadrePrograma_GrupoEtnico" required>
-                      <option value="No">No</option>
-                      <option value="Si">Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -215,9 +218,9 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_AfiliadaFondoPension" class="control-label">Afiliada a Fondo de Pensión</label>
                     <select class="form-control guardar" id="txtMadrePrograma_AfiliadaFondoPension">
-                      <option value='No'>No</option>
-                      <option value='Si'>Si</option>
-                      <option value='Pensionada'>Pensionada</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                      <option value='PENSIONADA'>Pensionada</option>
                     </select>
                   </div>
                 </div>
@@ -235,9 +238,9 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_ActivoFondoPension" class="control-label">Activo en Fondo de Pensión</label>
                     <select class="form-control guardar" id="txtMadrePrograma_ActivoFondoPension">
-                      <option value='Si'>Si</option>
-                      <option value='No'>No</option>
-                      <option value='Pensionada'>Pensionada</option>
+                      <option value="SI">Si</option>
+                      <option value="NO">No</option>
+                      <option value='PENSIONADA'>Pensionada</option>
                       <option value='Sin Información'>Sin Información</option>
                     </select>
                   </div>
@@ -247,8 +250,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_BeneficiarioPension" class="control-label">Beneficiario de Pensión</label>
                     <select class="form-control guardar" id="txtMadrePrograma_BeneficiarioPension">
-                      <option value='No'>No</option>
-                      <option value='Si'>Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -268,8 +271,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_AfiliadoSalud" class="control-label">Afiliado al Sistema General de Seguridad Social</label>
                     <select class="form-control guardar" id="txtMadrePrograma_AfiliadoSalud">
-                      <option value="No">No</option>
-                      <option value="Si">Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -309,8 +312,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_RegimenEspecial" class="control-label">Régimen Especial</label>
                     <select class="form-control guardar" id="txtMadrePrograma_RegimenEspecial">
-                      <option value="No">No</option>
-                      <option value="Si">Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -319,8 +322,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_Discapacidad" class="control-label">Madre con Discapacidad</label>
                     <select class="form-control guardar" id="txtMadrePrograma_Discapacidad">
-                      <option value="No">No</option>
-                      <option value="Si">Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -331,8 +334,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_EnfermedadCronica" class="control-label">Madre con Enfermedad Crónica</label>
                     <select class="form-control guardar" id="txtMadrePrograma_EnfermedadCronica">
-                      <option value="No">No</option>
-                      <option value="Si">Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -350,8 +353,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_AfiliacionCajaCompensacionFamiliar" class="control-label">Afiliación a Caja de Compensación Familiar</label>
                     <select class="form-control guardar" id="txtMadrePrograma_AfiliacionCajaCompensacionFamiliar">
-                      <option value='No'>No</option>
-                      <option value='Si'>Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -360,10 +363,10 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_TipoVivienda" class="control-label">Tipo de Vivienda</label>
                     <select class="form-control guardar" id="txtMadrePrograma_TipoVivienda">
-                      <option value='Sin Información'>Sin Información</option>
-                      <option value='Propia'>Propia</option>
-                      <option value='Arriendo'>Arriendo</option>
-                      <option value='Familiar'>Familiar</option>
+                      <option value='SIN INFORMACIÓN'>Sin Información</option>
+                      <option value='PROPIA'>Propia</option>
+                      <option value='ARRIENDO'>Arriendo</option>
+                      <option value='FAMILIAR'>Familiar</option>
                     </select>
                   </div>
                 </div>
@@ -374,8 +377,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_CarnetManipulacionAlimentos" class="control-label">Tiene Carnet de Manipulación de Alimentos</label>
                     <select class="form-control guardar" id="txtMadrePrograma_CarnetManipulacionAlimentos">
-                      <option value='No'>No</option>
-                      <option value='Si'>Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -384,8 +387,8 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_CursoPrimerosAuxilios" class="control-label">Tiene Curso de Primeros Auxilios</label>
                     <select class="form-control guardar" id="txtMadrePrograma_CursoPrimerosAuxilios">
-                      <option value='No'>No</option>
-                      <option value='Si'>Si</option>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
                     </select>
                   </div>
                 </div>
@@ -396,14 +399,55 @@
                   <div class="form-group">
                     <label for="txtMadrePrograma_ActivoFondoPension" class="control-label">Afiliada como Madre Sustituta al SGSSS?</label>
                     <select class="form-control guardar" id="txtMadrePrograma_ActivoFondoPension">
-                      <option value='Si'>Si</option>
-                      <option value='No'>No</option>
+                      <option value="SI">Si</option>
+                      <option value="NO">No</option>
                       <option value='Sin Información'>Sin Información</option>
                     </select>
                   </div>
                 </div>
 
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Datos de la Cuenta</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Banco" class="control-label">Banco</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_Banco">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NoCuenta" class="control-label">Número de Cuenta</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NoCuenta">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Niños Asignados</h3>
+              <span id="lblMadrePrograma_NinosAsignados" class="pull-right label label-round label-success"></span>
+            </div>
+            <div class="panel-body">
+              <ul id="cntMadrePrograma_NinosAsignados" class="list-group list-group-dividered list-group-full">
+
+              </ul>
             </div>
           </div>
         </div>
@@ -416,10 +460,26 @@
               <h3 class="panel-title">Observaciones</h3>
             </div>
             <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="txtMadrePrograma_FechaNovedad" class="control-label">Fecha de la Novedad</label>
+                  <input type="text" class="form-control datepicker" id="txtMadrePrograma_FechaNovedad">
+                </div>
 
+                <div class="col-md-6 form-group">
+                  <label for="txtMadrePrograma_TipoNovedad" class="control-label">Tipo de Novedad</label>
+                  <select type="text" class="form-control" id="txtMadrePrograma_TipoNovedad">
+                    <option value="Ingreso">Ingreso</option>
+                    <option value="Observación">Observación</option>
+                    <option value="Suspensión Temporal">Pérdida Inmediata</option>
+                    <option value="Suspensión Temporal">Suspensión Temporal</option>
+                  </select>
+                </div>
+                
+              </div>
               <div class="col-md-12 form-group">
                 <div class="form-group">
-                  <label for="txtMadrePrograma_Nombre2" class="control-label">Observacion</label>
+                  <label for="txtMadrePrograma_Observaciones" class="control-label">Observacion</label>
                   <textarea  class="form-control" rows="12" id="txtMadrePrograma_Observaciones"></textarea>
                 </div>
               </div>
@@ -427,7 +487,7 @@
            
             </div>
             <div class="panel-footer">
-              <button type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
+              <button id="btnMadrePrograma_AgregarNovedad" type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
             </div>
           </div>
         </div>
@@ -438,7 +498,8 @@
               <h3 class="panel-title">Historial de Observaciones</h3>
             </div>
             <div class="panel-body">
-
+              <ul id="cntMadrePrograma_Novedades" class="list-group">
+              </ul>
             </div>
           </div>
         </div>

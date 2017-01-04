@@ -28,7 +28,7 @@
    
    $fecha = date('Y-m-d h:i:s');
 
-   $sql = "INSERT INTO madres(id, Latitud, Longitud, Prefijo, Codigo, Cedula, Apellido1, Apellido2, Nombre1, Nombre2, Telefono1, Telefono2, Celular1, Celular2, Correo, FechaNacimiento, Direccion, Barrio, Localidad, Usuario, fechaCargue) VALUES 
+   $sql = "INSERT INTO madres(id, Latitud, Longitud, Prefijo, Codigo, Cedula, Apellido1, Apellido2, Nombre1, Nombre2, Telefono1, Telefono2, Celular1, Celular2, Correo, FechaNacimiento, Direccion, Barrio, Localidad, Urbano, Usuario, fechaCargue) VALUES 
          ('" . $id . "', 
          '" . $datos->Latitud . "', 
          '" . $datos->Longitud . "', 
@@ -48,6 +48,7 @@
          '" . $datos->Direccion . "', 
          '" . $datos->Barrio . "', 
          '" . $datos->Localidad . "', 
+         '" . $datos->Urbano . "', 
          '" . $datos->Usuario . "', 
          '" . $fecha . "')
          ON DUPLICATE KEY UPDATE
@@ -67,6 +68,7 @@
             Direccion = VALUES(Direccion), 
             Barrio = VALUES(Barrio), 
             Localidad = VALUES(Localidad), 
+            Urbano = VALUES(Urbano), 
             Usuario = VALUES(Usuario), 
             fechaCargue = VALUES(fechaCargue);";
             
