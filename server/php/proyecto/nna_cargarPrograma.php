@@ -4,7 +4,7 @@
    $link = Conectar();
 
    $idUsuario = addslashes($_POST['Usuario']);
-   $idMadre = addslashes($_POST['idMadre']);
+   $idNNA = addslashes($_POST['idNNA']);
    $Usuario = datosUsuario($idUsuario);
 
    if ($Usuario['idPerfil'] <> 1)
@@ -13,13 +13,15 @@
    }
 
    $sql = "SELECT
-            nna.*,
-            nna_Programa.FechaIngreso AS fechaIngreso
+            nna_Programa.*,
+            nna.idMadre
           FROM
-            nna
-            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
-            WHERE nna.idMadre = '$idMadre'
-            AND (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL);";
+            nna_Programa
+            INNER JOIN nna ON nna.id = nna_Programa.id
+         WHERE
+            nna_Programa.id = '$idNNA'
+         GROUP BY
+            nna_Programa.id;";
 
    $result = $link->query($sql);
 
@@ -29,10 +31,10 @@
       $Resultado = array();
       while ($row = mysqli_fetch_assoc($result))
       {
-         $Resultado[$idx] = array();
+         //$Resultado[$idx] = array();
          foreach ($row as $key => $value) 
          {
-            $Resultado[$idx][$key] = utf8_encode($value);
+            $Resultado[$key] = utf8_encode($value);
          }
          $idx++;
       }

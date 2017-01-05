@@ -12,8 +12,10 @@
             nna.Documento  AS mail 
          FROM 
             nna 
+            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
          WHERE
-            nna.Nombre1 LIKE '%$Parametro%' OR nna.Nombre2 LIKE '%$Parametro%'  OR nna.Apellido1 LIKE '%$Parametro%'  OR nna.Apellido2 LIKE '%$Parametro%'
+            nna.Nombre1 LIKE '%$Parametro%' OR nna.Nombre2 LIKE '%$Parametro%'  OR nna.Apellido1 LIKE '%$Parametro%'  OR nna.Apellido2 LIKE '%$Parametro%' 
+            AND (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL)
          LIMIT 0, 10;";
 
 

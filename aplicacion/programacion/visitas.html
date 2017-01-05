@@ -13,18 +13,11 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-md-12 form-group">
-                <label for="Equipos">Seleccione un Equipo </label>
-                <select name="Equipos" id="Equipos" class="form-control">
-                  <option value="Equipo 1">Equipo 1</option>
-                  <option value="Equipo 2">Equipo 2</option>
-                  <option value="Equipo 3">Equipo 3</option>
-                  <option value="Equipo 4">Equipo 4</option>
-                  <option value="Equipo 5">Equipo 5</option>
-                  <option value="Equipo 6">Equipo 6</option>
-                  <option value="Equipo 7">Equipo 7</option>
-                  <option value="Equipo 8">Equipo 8</option>
-                  <option value="Equipo 9">Equipo 9</option>
-                  <option value="Equipo 10">Equipo 10</option>
+              </div>
+              <div class="col-md-12 form-group">
+                <label for="txtProgramacion_Equipos">Seleccione un Equipo </label>
+                <select id="txtProgramacion_Equipos" class="form-control">
+                  
                 </select>
               </div>
               <table id="tblProgramacion_Integrantes" class="table table-condensed table-hover">
@@ -62,7 +55,21 @@
       <div class="col-sm-4">
         <div class="panel panel-primary panel-bordered">
           <div class="panel-heading">
-            <h3 class="panel-title">Últimas Programaciones</h3>
+            <h3 class="panel-title">Fecha Propuesta</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <div id="inlineDatepicker" data-autoclose="false" data-date="03/12/2015"></div>
+                <input type="hidden" id="inputHiddenInline" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-primary panel-bordered">
+          <div class="panel-heading">
+            <h3 class="panel-title">NNA Sugeridos</h3>
           </div>
           <div class="panel-body">
             <div class="row">
@@ -82,65 +89,11 @@
   </div>
 </div>
 
-<script>
-  $("#Equipos").on("change", function()
-  {
-    $("#tblProgramacion_Integrantes tbody tr").remove();
-    var valor = $(this).val();
-    $.post('../server/php/proyecto/equipos_cargarEquipo.php', {Usuario: Usuario.id, idEquipo : valor}, function(data, textStatus, xhr) 
-    {
-      if (data == 0)
-      {
-        Mensaje("Error", "No hay datos en la Tabla", "danger");
-      } else
-      {
-        if (typeof(data) == "object")
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/programacion.js", function(ev)
         {
-          var tds = "";
-          var objIntegrantes = {};
-          var objIntegrante = {};
-          $.each(data, function(index, val) 
-          {
-            if (val.Integrantes != "")
-            {
-              objIntegrantes = val.Integrantes.split(",");
-              $.each(objIntegrantes, function(idIntegrante, integrante) 
-              {
-                objIntegrante = integrante.split(":");
-                tds += "<tr><td data-id='" + objIntegrante[0] + "' cargo='" + objIntegrante[2] + "'>" + objIntegrante[1] + " " + objIntegrante[2] + "</td></tr>"
-              });
-              $("#tblProgramacion_Integrantes tbody").append(tds);
-            }
-          });
-        }
-      }
-    },'json');
-  });
-
-  $.post('../server/php/proyecto/equipos_cargarEquipos.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
-  {
-    $("#Equipos option").remove();
-    if (data == 0)
-    {
-      Mensaje("Error", "No hay datos en la Tabla", "danger");
-    } else
-    {
-      if (typeof(data) == "object")
-      {
-        var tds = "<option value='0'></option>";
-        
-        $.each(data, function(index, val) 
-        {
-          tds += '<option value="' + val.id + '">' + val.Nombre + '</option>';
+          funProgramacion();
         });
-
-        $("#Equipos").append(tds);
-      } else
-      {
-        Mensaje("Error", data, "danger");
-      }
-    }
-  }, "json");
-
-  $("#cntProgramacion_NNA").iniciarResponsables({url : 'typeahead_cargarNNA'});
+      });
 </script>

@@ -17,7 +17,9 @@
             nna.Documento,
             nna.FechaNacimiento
           FROM
-            nna;";
+            nna
+            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
+            WHERE (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL);";
 
    $result = $link->query($sql);
 

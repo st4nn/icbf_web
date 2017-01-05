@@ -1,5 +1,6 @@
 <?php
    include("../conectar.php"); 
+   error_reporting(0);
    $link = Conectar();
 
    date_default_timezone_set('America/Bogota');

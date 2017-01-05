@@ -84,6 +84,12 @@ function funNNA_Crear()
 		}
 	});
 
+	$("#btnNNA_VerPrograma").on("click", function(evento)
+	{
+		evento.preventDefault();
+		nna_VerPrograma();
+	});
+
 
 	$("#frmNNA").on("submit", function(evento)
 	{

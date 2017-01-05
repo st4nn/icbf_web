@@ -219,11 +219,13 @@ function madres_cargarNinosAsignados()
 
 
 	$("#cntMadrePrograma_NinosAsignados li").remove();
+	$("#lblMadrePrograma_NinosAsignados").text('0 NNA');
 
 	$.post('../server/php/proyecto/madres_cargarNinosAsignados.php', {Usuario: Usuario.id, idMadre : $("#lblMadres_Detalle_Codigo").text()}, function(data, textStatus, xhr) 
 	{
 		if (data != 0)
 		{
+			$("#lblMadrePrograma_NinosAsignados").text(data.length + ' NNA');
 			var tds = "";
 			var icon = 'male';
 			var valor = '';

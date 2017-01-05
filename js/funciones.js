@@ -414,8 +414,44 @@ $.fn.iniciarMapa = function(parametros, callback)
   }
 }
 
-$.fn.iniciarResponsables = function(parametros)
+$.fn.iniciarResponsables = function(parametros, funcionSelect, callback)
 {
+  if (funcionSelect === undefined || funcionSelect == null)
+  {
+    funcionSelect = function(ev, suggestion) {
+      var obj = $('#cnt' + idObj + '_Correos').find('.list-group-item[idUsuario=' + suggestion.id + ']');
+      if (obj.length == 0)
+      {
+        var tds = "";
+          tds += '<li class="list-group-item" idUsuario="' + suggestion.id + '">';
+            tds += '<div class="media">';
+              tds += '<div class="media-left text-center">';
+                  tds += '<i class="icon wb-user margin-left-10 font-size-20"></i>';
+              tds += '</div>';
+              tds += '<div class="media-body">';
+                tds += '<h4 class="media-heading">' + suggestion.name + '</h4>';
+                tds += '<small>' + suggestion.mail + '</small>';
+              tds += '</div>';
+              tds += '<div class="media-right">';
+                tds += '<a class="btnResponsables_Quitar" href="javascript:void(0)">';
+                  tds += '<i class="icon wb-close">';
+                tds += '</a>';
+              tds += '</div>';
+            tds += '</div>';
+          tds += '</li>';
+
+        $('#cnt' + idObj + '_Correos').append(tds);
+      }
+
+      $('#txt' + idObj + '_Responsable').typeahead('val', '');
+    }
+  }
+
+  if (callback === undefined)
+  {
+    callback = function(){};
+  }
+
   var idObj = $(this).attr("id").replace("cnt", "");
   var tds = ""
   tds += '<div class="col-md-12 form-group">';
@@ -468,34 +504,10 @@ $.fn.iniciarResponsables = function(parametros)
     });
     
 
-    $('#txt' + idObj + '_Responsable').bind('typeahead:select', function(ev, suggestion) {
-      var obj = $('#cnt' + idObj + '_Correos').find('.list-group-item[idUsuario=' + suggestion.id + ']');
-      if (obj.length == 0)
-      {
-        var tds = "";
-          tds += '<li class="list-group-item" idUsuario="' + suggestion.id + '">';
-            tds += '<div class="media">';
-              tds += '<div class="media-left text-center">';
-                  tds += '<i class="icon wb-user margin-left-10 font-size-20"></i>';
-              tds += '</div>';
-              tds += '<div class="media-body">';
-                tds += '<h4 class="media-heading">' + suggestion.name + '</h4>';
-                tds += '<small>' + suggestion.mail + '</small>';
-              tds += '</div>';
-              tds += '<div class="media-right">';
-                tds += '<a class="btnResponsables_Quitar" href="javascript:void(0)">';
-                  tds += '<i class="icon wb-close">';
-                tds += '</a>';
-              tds += '</div>';
-            tds += '</div>';
-          tds += '</li>';
-
-        $('#cnt' + idObj + '_Correos').append(tds);
-      }
-
-      $('#txt' + idObj + '_Responsable').typeahead('val', '');
-    });
+    $('#txt' + idObj + '_Responsable').bind('typeahead:select', funcionSelect);
+    callback();
 }
+
 function controlarPermisos()
 {
   

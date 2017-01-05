@@ -4,7 +4,7 @@
    $link = Conectar();
 
    $idUsuario = addslashes($_POST['Usuario']);
-   $idMadre = addslashes($_POST['idMadre']);
+   $idNNA = addslashes($_POST['idNNA']);
    $Usuario = datosUsuario($idUsuario);
 
    if ($Usuario['idPerfil'] <> 1)
@@ -13,13 +13,13 @@
    }
 
    $sql = "SELECT
-            nna.*,
-            nna_Programa.FechaIngreso AS fechaIngreso
+            nna_Observaciones.*,
+            datosUsuarios.Nombre
           FROM
-            nna
-            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
-            WHERE nna.idMadre = '$idMadre'
-            AND (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL);";
+            nna_Observaciones
+            LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = nna_Observaciones.Usuario
+         WHERE nna_Observaciones.idNNA = '$idNNA'
+         ORDER BY nna_Observaciones.fechaCargue DESC;";
 
    $result = $link->query($sql);
 
