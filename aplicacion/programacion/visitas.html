@@ -1,89 +1,76 @@
 <!-- Page -->
 <div class="page">
-  <br><button id="btnResponsable_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
   <div class="page-content container-fluid">
     <form id="frmNNAObservaciones">
       
       
-      <div class="col-sm-4">
+      <div class="col-sm-12">
         <div class="panel panel-primary panel-bordered">
           <div class="panel-heading">
             <h3 class="panel-title">Equipos</h3>
           </div>
           <div class="panel-body">
             <div class="row">
-              <div class="col-md-12 form-group">
+              <div class="col-md-4 form-group">
+                <label for="txtProgramacion_Fecha" class="control-label">Fecha Propuesta</label>
+                <input type="text" class="form-control datepicker guardar" id="txtProgramacion_Fecha" required>
               </div>
-              <div class="col-md-12 form-group">
+              <div class="col-md-4 form-group">
                 <label for="txtProgramacion_Equipos">Seleccione un Equipo </label>
                 <select id="txtProgramacion_Equipos" class="form-control">
                   
                 </select>
               </div>
-              <table id="tblProgramacion_Integrantes" class="table table-condensed table-hover">
-                <thead>
-                  <tr>
-                    <th>Integrantes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-success panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">NNA</h3>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-12 form-group">
-                <div class="form-group">
-                  <div id="cntProgramacion_NNA">
-                
-                  </div> 
-                </div>
+              <div class="col-md-4">
+                <table id="tblProgramacion_Integrantes" class="table table-condensed table-hover">
+                  <thead>
+                    <tr>
+                      <th>Integrantes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <div class="panel panel-primary panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">Fecha Propuesta</h3>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-12 form-group">
-                <div id="inlineDatepicker" data-autoclose="false" data-date="03/12/2015"></div>
-                <input type="hidden" id="inputHiddenInline" />
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="panel panel-primary panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">NNA Sugeridos</h3>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-12 form-group">
-                <div class="form-group">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="col-sm-3 text-right" style="position: fixed; bottom: 100px; right: 20px; z-index:1000;">
+        <div class="col-sm-12"><input id="txtProgramacion_Filtrar" type="text" class="form-control" placeholder="Filtrar..."></div>
+        <br><br><br>
+        <div class="alert dark alert-icon alert-info" role="alert">
+          <i class="icon wb-info" aria-hidden="true"></i> Se han cargado <strong id="lblProgramacion_PanelNNA_Cargados">0</strong> NNA
         </div>
-      </div>
-      <div class="col-sm-12">
+        <div class="alert dark alert-icon alert-success" role="alert">
+          <i class="icon wb-check" aria-hidden="true"></i> Han sido programados <strong id="lblProgramacion_PanelNNA_Programados">0</strong> NNA
+        </div>
+        <div class="alert dark alert-icon alert-warning" role="alert">
+          <i class="icon wb-alert" aria-hidden="true"></i> Quedan <strong id="lblProgramacion_PanelNNA_PorProgramar">0</strong> NNA por programar
+        </div>
+        
         <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
+      </div>
+
+      <div id="cntProgramacion_PanelNNA" class="col-md-8 panel row">
+        <div class="panel-body table-responsive">
+          <table id="tblProgramacion_NNA" class="table table-condensed table-hover">
+            <thead>
+              <tr>
+                <th>Hogar</th>
+                <th>
+                  <button id="btnProgramacion_ProgramarTodos" class="btn btn-primary" type="button"><i class="icon wb-check"></i> Marcar Todos</button>
+                  <button id="btnProgramacion_DesprogramarTodos" class="btn btn-warning" type="button"><i class="icon fa-square-o"></i> Desmarcar Todos</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
       </div>
     </form>
   </div>

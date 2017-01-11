@@ -1,0 +1,938 @@
+<!-- Todo Suyo don Jh-->
+<div class="page">
+	<!-- page -->
+	<div class="page-content container-fluid">
+		<!-- PageContent -->
+		<div class="row">
+			<!-- row1 -->
+			<div class="col-md-12">
+				<!-- Columna1 -->
+				<div class="panel panel-primary panel-bordered">
+					<!-- Panel1 -->
+					<div class="panel-heading">
+						<!-- panel heading -->
+						<h4 class="panel-title">Valoración Nutricional Inicial</h4>
+					</div>
+					<!-- panel heading -->
+					<div class="panel-body">
+						<!-- panel-body -->
+						<div class="form-group">
+							<label class="control-label">
+								<h5> Esquema de Vacunación </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="InptVacunasCompletas" name="InptVacunasCompletas">
+									<label for="InptVacunasCompletas">Completo </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="InptVacunasIncompletas" name="InptVacunasCompletas">
+									<label for="InptVacunasIncompletas">Incompleto </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Antecedentes Clínicos y/o patológicos </h5></label>
+							<textarea class="form-control" name="AntClinicos" id="AntClinicos" cols="30" rows="3"></textarea>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Medicamentos </h5></label>
+							<textarea class="form-control" name="txtMedicamentos" id="txtMedicamentos" cols="30" rows="3"></textarea>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Complementos y/o Sumplementos </h5></label>
+							<textarea class="form-control" name="txtComplementos" id="txtComplementos" cols="30" rows="3"></textarea>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Alergias alimentarias </h5></label>
+							<textarea class="form-control" name="txtAlergiasAliment" id="txtAlergiasAliment" cols="30" rows="3"></textarea>
+						</div>
+					</div>
+					<!-- panel-body -->
+				</div>
+				<!-- Panel1 -->
+			</div>
+			<!-- Columna1 -->
+			<div class="col-md-12">
+				<!-- Columna2 -->
+				<div class="panel panel-primary panel-bordered">
+					<!-- Panel1 -->
+					<div class="panel-heading">
+						<!-- panel heading -->
+						<h4 class="panel-title">Valoración Física</h4>
+					</div>
+					<!-- panel heading -->
+					<div class="panel-body">
+						<!-- panel-body -->
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Proceso de Deglusión </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="InptDeglusionSI" name="radProcesoDeglusion">
+									<label for="InptDeglusionSI">Completo </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="InptDeglusionNO" name="radProcesoDeglusion">
+									<label for="InptDeglusionNO">Incompleto </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="InptDeglusionNA" name="radProcesoDeglusion">
+									<label for="InptDeglusionNA">N/A </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Proceso de Succion </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="InptSuccionSI" name="radProcesoSuccion">
+									<label for="InptSuccionSI">Completo </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="InptSuccionNO" name="radProcesoSuccion">
+									<label for="InptSuccionNO">Incompleto </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="InptSuccionNA" name="radProcesoSuccion">
+									<label for="InptSuccionNA">N/A </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-12">
+							<label class="control-label">
+								<h5> Diuresis </h5></label>
+							<textarea class="form-control" name="txtDiuresis" id="txtDiuresis" cols="30" rows="3"></textarea>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Frecuencia </h5></label>
+							<input type="text" class="form-control" id="inptFrecuenciaHabintest" name="inptFrecuenciaHabintest">
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Tolerancia a la Alimentación </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkToleraAlimentacionSI" name="chkToleraAlimentacion">
+									<label for="chkToleraAlimentacionSI">Si </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkToleraAlimentacionNO" name="chkToleraAlimentacion">
+									<label for="chkToleraAlimentacionNO">No </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Apetito </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkApetitoAdecuado" name="chkApetito">
+									<label for="chkApetitoAdecuado">Adecuado </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkApetitoNoAdecuado" name="chkApetito">
+									<label for="chkApetitoNoAdecuado">No Adecuado </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Piel </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkPielNormal" name="chkPiel">
+									<label for="chkPielNormal">Normal </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkPielSeca" name="chkPiel">
+									<label for="chkPielSeca">Seca </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Ojos </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkOjosNormales" name="chkOjos">
+									<label for="chkOjosNormales">Normales </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="chkOjosHundidos" name="chkOjos">
+									<label for="chkOjosHundidos">Hundidos </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkOjosEnrojecidos" name="chkOjos">
+									<label for="chkOjosEnrojecidos">Enrojecidos </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Boca </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkBocaNormal" name="chkBoca">
+									<label for="chkBocaNormal">Normal </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="chkBocaComisuras" name="chkBoca">
+									<label for="chkBocaComisuras">Comisuras Partidas </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkBocaLengua" name="chkBoca">
+									<label for="chkBocaLengua">Lengua </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Dientes </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkDientesNormal" name="chkDientes">
+									<label for="chkDientesNormal">Normal </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="chkDientesCaries" name="chkDientes">
+									<label for="chkDientesCaries">Caries </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkDientescaries" name="chkDientes">
+									<label for="chkDientescaries">Manchados </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Cabello </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkCabelloNormal" name="chkCabello">
+									<label for="chkCabelloNormal">Normal </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="chkCabelloQuebradizo" name="chkCabello">
+									<label for="chkCabelloQuebradizo">Caries </label>
+								</div>
+								<div class="radio-custom radio-danger radio-inline">
+									<input type="radio" id="chkCabelloOpaco" name="chkCabello">
+									<label for="chkCabelloOpaco">Manchados </label>
+								</div>
+								<div class="form-group">
+									<!-- Esta debería ser una opcion alterna al checkbox-->
+									<label for="txtCabelloSignoBandera">Signo Bandera </label>
+									<input type="text" id="txtCabelloSignoBandera" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Uñas </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkUniasNormal" name="chkUnias">
+									<label for="chkUniasNormal">Normal </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="chkUniasOnicofagia" name="chkUnias">
+									<label for="chkUniasOnicofagia">Onicofagia </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">
+								<h5> Estómago </h5></label>
+							<div>
+								<div class="radio-custom radio-success radio-inline">
+									<input type="radio" id="chkEstomagonormal" name="chkEstomago">
+									<label for="chkEstomagonormal">Normal </label>
+								</div>
+								<div class="radio-custom radio-warning radio-inline">
+									<input type="radio" id="chkEstomagoGloboso" name="chkEstomago">
+									<label for="chkEstomagoGloboso">Globoso </label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label class="control-label">
+									<h5> Piernas </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline col-md-4">
+										<input type="radio" id="chkPiernasNormal" name="chkPiernas">
+										<label for="chkPiernasNormal">Normales </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline col-md-4">
+										<input type="radio" id="chkPiernasMMII" name="chkPiernas">
+										<label for="chkPiernasMMII">MMII FORMA () </label>
+									</div>
+									<div class="input-group col-md-4">
+										<span class="input-group-addon">
+                      <span class="radio-custom radio-default">
+                        <input type="radio" id="txtPiernasOtro" name="chkPiernas">
+                        <label for="txtPiernasOtro">Otro </label>
+                      </span>
+										</span>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- panel-body -->
+				</div>
+				<!-- Panel1 -->
+			</div>
+			<!-- Columna2 -->
+			<div class="col-md-12">
+				<!-- Columna1 -->
+				<div class="panel panel-primary panel-bordered">
+					<!-- Panel1 -->
+					<div class="panel-heading">
+						<!-- panel heading -->
+						<h4 class="panel-title">Recordatorio de 24 Horas</h4>
+					</div>
+					<!-- panel heading -->
+					<div class="panel-body">
+						<!-- panel-body -->
+						<table class="table table-hovered table-striped">
+							<tr>
+								<td>Desayuno</td>
+								<td>
+									<input type="text" class="form-control">
+								</td>
+							</tr>
+							<tr>
+								<td>Refrigerio</td>
+								<td>
+									<input type="text" class="form-control">
+								</td>
+							</tr>
+							<tr>
+								<td>Almuerzo</td>
+								<td>
+									<input type="text" class="form-control">
+								</td>
+							</tr>
+							<tr>
+								<td>Refrigerio</td>
+								<td>
+									<input type="text" class="form-control">
+								</td>
+							</tr>
+							<tr>
+								<td>Cena</td>
+								<td>
+									<input type="text" class="form-control">
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- panel-body -->
+				</div>
+				<!-- Panel1 -->
+			</div>
+			<!-- Columna1 -->
+			<div class="col-md-12">
+				<!-- Columna1 -->
+				<div class="panel panel-primary panel-bordered">
+					<!-- Panel1 -->
+					<div class="panel-heading">
+						<!-- panel heading -->
+						<h4 class="panel-title">Frecuencia Consumo de alimentos</h4>
+					</div>
+					<!-- panel heading -->
+					<div class="panel-body">
+						<!-- panel-body -->
+						<div class="col-md-6">
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Frutas </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkFrutasDiario" name="chkFrutas">
+										<label for="chkFrutasDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chk3porSemana" name="chkFrutas">
+										<label for="chk3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkFrutasSemanal" name="chkFrutas">
+										<label for="chkFrutasSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkFrutasQuincenal" name="chkFrutas">
+										<label for="chkFrutasQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkFrutasMensual" name="chkFrutas">
+										<label for="chkFrutasMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Verduras </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkVerdurasDiario" name="chkVerduras">
+										<label for="chkVerdurasDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkVerduras3porSemana" name="chkVerduras">
+										<label for="chkVerduras3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkVerdurasSemanal" name="chkVerduras">
+										<label for="chkVerdurasSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkVerdurasQuincenal" name="chkVerduras">
+										<label for="chkVerdurasQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkVerdurasMensual" name="chkVerduras">
+										<label for="chkVerdurasMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Carnes </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkCarnesDiario" name="chkCarnes">
+										<label for="chkCarnesDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkCarnes3porSemana" name="chkCarnes">
+										<label for="chkCarnes3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkCarnesSemanal" name="chkCarnes">
+										<label for="chkCarnesSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkCarnesQuincenal" name="chkCarnes">
+										<label for="chkCarnesQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkCarnesMensual" name="chkCarnes">
+										<label for="chkCarnesMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Huevo </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkHuevoDiario" name="chkHuevo">
+										<label for="chkHuevoDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkHuevo3porSemana" name="chkHuevo">
+										<label for="chkHuevo3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkHuevoSemanal" name="chkHuevo">
+										<label for="chkHuevoSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkHuevoQuincenal" name="chkHuevo">
+										<label for="chkHuevoQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkHuevoMensual" name="chkHuevo">
+										<label for="chkHuevoMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Lácteos </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkLacteosDiario" name="chkLacteos">
+										<label for="chkLacteosDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkLacteos3porSemana" name="chkLacteos">
+										<label for="chkLacteos3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkLacteosSemanal" name="chkLacteos">
+										<label for="chkLacteosSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkLacteosQuincenal" name="chkLacteos">
+										<label for="chkLacteosQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkLacteosMensual" name="chkLacteos">
+										<label for="chkLacteosMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Bienestarina </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkBienestarinaDiario" name="chkBienestarina">
+										<label for="chkBienestarinaDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkBienestarina3porSemana" name="chkBienestarina">
+										<label for="chkBienestarina3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkBienestarinaSemanal" name="chkBienestarina">
+										<label for="chkBienestarinaSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkBienestarinaQuincenal" name="chkBienestarina">
+										<label for="chkBienestarinaQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkBienestarinaMensual" name="chkBienestarina">
+										<label for="chkBienestarinaMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Cereales y Derivados </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkCerealesDiario" name="chkCereales">
+										<label for="chkCerealesDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkCereales3porSemana" name="chkCereales">
+										<label for="chkCereales3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkCerealesSemanal" name="chkCereales">
+										<label for="chkCerealesSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkCerealesQuincenal" name="chkCereales">
+										<label for="chkCerealesQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkCerealesMensual" name="chkCereales">
+										<label for="chkCerealesMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-12">
+								<label class="control-label">
+									<h5> Azúcares </h5></label>
+								<div>
+									<div class="radio-custom radio-success radio-inline">
+										<input type="radio" id="chkAzucaresDiario" name="chkAzucares">
+										<label for="chkAzucaresDiario">Diario </label>
+									</div>
+									<div class="radio-custom radio-default radio-inline">
+										<input type="radio" id="chkAzucares3porSemana" name="chkAzucares">
+										<label for="chkAzucares3porSemana">Tres veces a la semana </label>
+									</div>
+									<div class="radio-custom radio-primary radio-inline">
+										<input type="radio" id="chkAzucaresSemanal" name="chkAzucares">
+										<label for="chkAzucaresSemanal">Semanal </label>
+									</div>
+									<div class="radio-custom radio-warning radio-inline">
+										<input type="radio" id="chkAzucaresQuincenal" name="chkAzucares">
+										<label for="chkAzucaresQuincenal">Quincenal </label>
+									</div>
+									<div class="radio-custom radio-danger radio-inline">
+										<input type="radio" id="chkAzucaresMensual" name="chkAzucares">
+										<label for="chkAzucaresMensual">Mensual </label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-body -->
+			</div>
+			<!-- Panel1 -->
+		</div>
+		<div class="col-md-12">
+			<!-- Columna1 -->
+			<div class="panel panel-primary panel-bordered">
+				<!-- Panel1 -->
+				<div class="panel-heading">
+					<!-- panel heading -->
+					<h4 class="panel-title">Datos Antropométricos</h4>
+				</div>
+				<!-- panel heading -->
+				<div class="panel-body">
+					<!-- panel-body -->
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inputPeso">Peso </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inputPeso" name="inputPeso" placeholder="Peso">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptTalla">Talla / Longitud </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptTalla" name="inptTalla" placeholder="Talla / Longitud">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptPC">PC </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptPC" name="inptPC" placeholder="Talla / Longitud">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptIMC">IMC (NNA Mayores de 5 años) </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptIMC" name="inptIMC" placeholder="IMC (NNA Mayores de 5 años)">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptPesoTalla">Peso/Talla-longitud </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+								</span>
+								<input type="text" class="form-control" id="inptPesoTalla" name="inptPesoTalla" placeholder="Peso/Talla-longitud">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptPesoTallaInterpretacion">Interpretación </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptPesoTallaInterpretacion" name="inptPesoTallaInterpretacion" placeholder="Interpretación">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptPesoEdad">Peso/Edad </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptPesoEdad" name="inptPesoEdad" placeholder="Peso/Edad">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptPesoEdadInterpretacion">Interpretación </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptPesoEdadInterpretacion" name="inptPesoEdadInterpretacion" placeholder="Interpretación">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptTallLongitudEdad">Talla-Longitud/Edad </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptTallLongitudEdad" name="inptTallLongitudEdad" placeholder="Talla-Longitud/Edad">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptTallLongitudEdadInterpretacion">Interpretación </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptTallLongitudEdadInterpretacion" name="inptTallLongitudEdadInterpretacion" placeholder="Interpretación">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptIMCEdad">IMC/Edad </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptIMCEdad" name="inptIMCEdad" placeholder="IMC/Edad">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label class="control-label" for="inptIMCEdadInterpretacion">Interpretación </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptIMCEdadInterpretacion" name="inptIMCEdadInterpretacion" placeholder="Interpretación">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="txtConceptoNutricional">Concepto Nutricional </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<textarea class="form-control" name="txtConceptoNutricional" id="txtConceptoNutricional" cols="30" rows="3" placeholder="Concepto Nutricional"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-body -->
+			</div>
+			<!-- Panel1 -->
+		</div>
+		<!-- Columna1 -->
+		<div class="col-md-12">
+			<!-- Columna1 -->
+			<div class="panel panel-primary panel-bordered">
+				<!-- Panel1 -->
+				<div class="panel-heading">
+					<!-- panel heading -->
+					<h4 class="panel-title">Hábitos Saludables</h4>
+				</div>
+				<!-- panel heading -->
+				<div class="panel-body">
+					<!-- panel-body -->
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="inptFrecuenciaLavadoManos">Frecuencia del lavado de manos </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptFrecuenciaLavadoManos" name="inptFrecuenciaLavadoManos" placeholder="Frecuencia del lavado de manos">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="inptFrecuenciaCepilladoDientes">Frecuencia de Cepillado de Dientes </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptFrecuenciaCepilladoDientes" name="inptFrecuenciaCepilladoDientes" placeholder="Frecuencia de Cepillado de Dientes">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="inptUsoCubiertos">Uso de Cubiertos </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<input type="text" class="form-control" id="inptUsoCubiertos" name="inptUsoCubiertos" placeholder="Uso de Cubiertos">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="txtActFisica">Actividad Física </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<textarea class="form-control" name="txtActFisica" id="txtActFisica" cols="30" rows="3" placeholder="Actividad Física"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-body -->
+			</div>
+			<!-- Panel1 -->
+		</div>
+		<!-- Columna1 -->
+		<div class="col-md-12">
+			<!-- Columna1 -->
+			<div class="panel panel-primary panel-bordered">
+				<!-- Panel1 -->
+				<div class="panel-heading">
+					<!-- panel heading -->
+					<h4 class="panel-title">Educación Nutricional</h4>
+				</div>
+				<!-- panel heading -->
+				<div class="panel-body">
+					<!-- panel-body -->
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="txtEducNutri">Educacion Nutricional </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<textarea class="form-control" name="txtEducNutri" id="txtEducNutri" cols="30" rows="3" placeholder="Educacón Nutricional"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Panel1 -->
+		</div>
+		<!-- Columna1 -->
+		<div class="col-md-12">
+			<!-- Columna1 -->
+			<div class="panel panel-primary panel-bordered">
+				<!-- Panel1 -->
+				<div class="panel-heading">
+					<!-- panel heading -->
+					<h4 class="panel-title">Area de Salud</h4>
+				</div>
+				<!-- panel heading -->
+				<div class="panel-body">
+					<!-- panel-body -->
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="txtAreaSalud">Área de Salud </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<textarea class="form-control" name="txtAreaSalud" id="txtAreaSalud" cols="30" rows="3" placeholder="Área Salud"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Panel1 -->
+		</div>
+		<!-- Columna1 -->
+		<div class="col-md-12">
+			<!-- Columna1 -->
+			<div class="panel panel-primary panel-bordered">
+				<!-- Panel1 -->
+				<div class="panel-heading">
+					<!-- panel heading -->
+					<h4 class="panel-title">Compromisos a nivel de salud</h4>
+				</div>
+				<!-- panel heading -->
+				<div class="panel-body">
+					<!-- panel-body -->
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label class="control-label" for="txtCompromisosSalud">Compromisos a nivel de salud </label>
+							<div class="input-group">
+								<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+								<textarea class="form-control" name="txtCompromisosSalud" id="txtCompromisosSalud" cols="30" rows="3" placeholder="Compromisos a nivel de salud"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<!-- Columna1 -->
+				<div class="panel panel-primary panel-bordered">
+					<!-- Panel1 -->
+					<div class="panel-heading">
+						<!-- panel heading -->
+					</div>
+					<!-- panel heading -->
+					<div class="panel-body">
+						<!-- panel-body -->
+						<div class="row">
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label" for="txtFechaProxSeguimiento">Próximo Seguimiento Nutricional </label>
+									<div class="input-group">
+										<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+										<input type="text" class="form-control" name="txtFechaProxSeguimiento" id="txtFechaProxSeguimiento" data-plugin="datepicker">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label" for="txtMadreSustituta">Madre Sustituta </label>
+									<div class="input-group">
+										<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+										<input type="text" class="form-control" name="txtMadreSustituta" id="txtMadreSustituta">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label" for="txtNombreNutricionista">Nombre Nutricionista / Dietista </label>
+									<div class="input-group">
+										<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+										<input type="text" class="form-control" name="txtNombreNutricionista" id="txtNombreNutricionista">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label" for="txtRegistroProfesional">Registro Profesional </label>
+									<div class="input-group">
+										<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+										<input type="text" class="form-control" name="txtRegistroProfesional" id="txtRegistroProfesional">
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<button class="btn btn-md btn-success ">Guardar</button>
+					</div>
+					<!-- panel-body -->
+				</div>
+				<!-- Panel1 -->
+			</div>
+			<!-- Columna1 -->
+			<!-- Panel1 -->
+		</div>
+		<!-- Columna1 -->
+		<!-- Columna1 -->
+	</div>
+	<!-- row1 -->
+</div>
+<!-- PageContent -->
+</div>
+<!-- page -->

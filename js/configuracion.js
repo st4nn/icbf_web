@@ -1,6 +1,7 @@
 function funConfiguracion()
 {
 	configuracion_CargarRegionales();
+	configuracion_CargarSedes();
 	configuracion_CargarCentrosZonales();
 	configuracion_CargarMunicipios();
 
@@ -72,6 +73,63 @@ function funConfiguracion()
     	}
     });
 
+    $("#frmConfiguracion_Sede_Crear").on("submit", function(evento)
+    {
+    	evento.preventDefault();
+    	if ($("#txtConfiguracion_Sede_Crear_Nombre").val() == "")
+    	{
+    		Mensaje("Error", "El nombre no puede estar vacío", "danger");
+    	} else
+    	{
+    		$("#frmConfiguracion_Sede_Crear").generarDatosEnvio("txtConfiguracion_Sede_Crear_", function(datos)
+			{
+	    		$.post('../server/php/proyecto/configuracion_CrearSede.php', {datos : datos}, function(data, textStatus, xhr) 
+				{
+					if (data.Error != "")	
+					{
+						Mensaje("Error", data.Error, "danger");
+					} else
+					{
+
+						var obj = $('#tblSedes .btnConfiguracion_Sede_Editar[idSede="' + data.datos + '"]');
+						if (obj.length == 0)
+						{
+							var tds = "";
+
+							tds += '<div>';
+								tds += '<button type="button" idSede="' + data.datos + '" class="btn btn-icon btn-info btnConfiguracion_Sede_Editar"><i class="icon wb-edit" aria-hidden="true"></i></button>';
+								tds += '<button type="button" idSede="' + data.datos + '" class="btn btn-icon btn-danger btnConfiguracion_Sede_Borrar margin-left-5"><i class="icon wb-trash" aria-hidden="true"></i></button>';
+							tds += '</div>';
+							
+							var t = $('#tblSedes').DataTable();
+
+							 t.row.add( [
+					            tds,
+							 	data.datos,
+					            $("#txtConfiguracion_Sede_Crear_Nombre").val(),
+					            '<div idRegional="' + $("#txtConfiguracion_Sede_Crear_idRegional").val() + '">' + $("#txtConfiguracion_Sede_Crear_idRegional option:selected").text() + '</div>',
+					            Usuario.nombre,
+					            obtenerFecha()
+					        ] ).draw( false );
+						} else
+						{
+							obj = $(obj).parent("div").parent("td").parent("tr").find("td");
+							$(obj[2]).text($("#txtConfiguracion_Sede_Crear_Nombre").val());
+							$(obj[3]).find("div").text($("#txtConfiguracion_Sede_Crear_idRegional option:selected").text());
+							$(obj[3]).find("div").attr("idRegional" , $("#txtConfiguracion_Sede_Crear_idRegional").val());
+							$(obj[4]).text(Usuario.nombre);
+							$(obj[5]).text(obtenerFecha());
+
+						}
+
+
+						$("#btnConfiguracion_Sede_Cancelar").trigger('click');						
+					}
+				}, "json");
+			});
+    	}
+    });
+
     $("#frmConfiguracion_CentrosZonales_Crear").on("submit", function(evento)
     {
     	evento.preventDefault();
@@ -106,7 +164,7 @@ function funConfiguracion()
 					            tds,
 							 	data.datos,
 					            $("#txtConfiguracion_CentrosZonales_Crear_Nombre").val(),
-					            '<div idRegional="' + $("#txtConfiguracion_CentrosZonales_Crear_idRegional").val() + '">' + $("#txtConfiguracion_CentrosZonales_Crear_idRegional option:selected").text() + '</div>',
+					            '<div idRegional="' + $("#txtConfiguracion_CentrosZonales_Crear_idSede").val() + '">' + $("#txtConfiguracion_CentrosZonales_Crear_idSede option:selected").text() + '</div>',
 					            Usuario.nombre,
 					            obtenerFecha()
 					        ] ).draw( false );
@@ -114,8 +172,8 @@ function funConfiguracion()
 						{
 							obj = $(obj).parent("div").parent("td").parent("tr").find("td");
 							$(obj[2]).text($("#txtConfiguracion_CentrosZonales_Crear_Nombre").val());
-							$(obj[3]).find("div").text($("#txtConfiguracion_CentrosZonales_Crear_idRegional option:selected").text());
-							$(obj[3]).find("div").attr("idRegional" , $("#txtConfiguracion_CentrosZonales_Crear_idRegional").val());
+							$(obj[3]).find("div").text($("#txtConfiguracion_CentrosZonales_Crear_idSede option:selected").text());
+							$(obj[3]).find("div").attr("idRegional" , $("#txtConfiguracion_CentrosZonales_Crear_idSede").val());
 							$(obj[4]).text(Usuario.nombre);
 							$(obj[5]).text(obtenerFecha());
 
@@ -206,6 +264,26 @@ function funConfiguracion()
     	$("#lblConfiguracion_Regional_Crear_Tipo").text("Editar");
     });
 
+     $(document).delegate('.btnConfiguracion_Sede_Editar', 'click', function(event) 
+    {
+    	var fila = $(this).parent("div").parent("td").parent("tr").find("td");
+    	
+    	$("#btnConfiguracion_Sede_Cancelar").slideDown();
+
+    	$("#txtConfiguracion_Sede_Crear_id").val($(fila[1]).text());
+    	$("#txtConfiguracion_Sede_Crear_idRegional").val($(fila[3]).find("div").attr("idRegional"));
+    	$("#txtConfiguracion_Sede_Crear_Nombre").val($(fila[2]).text());
+    	$("#lblConfiguracion_Sede_Crear_Tipo").text("Editar");
+    });
+
+    $("#btnConfiguracion_Sede_Cancelar").on("click", function()
+    {
+    	$("#btnConfiguracion_Sede_Cancelar").slideUp();
+    	$("#txtConfiguracion_Sede_Crear_id").val("");
+    	$("#txtConfiguracion_Sede_Crear_Nombre").val("");
+		$("#lblConfiguracion_Sede_Crear_Tipo").text("Crear");
+    });
+
     $(document).delegate('.btnConfiguracion_CentroZonal_Editar', 'click', function(event) 
     {
     	var fila = $(this).parent("div").parent("td").parent("tr").find("td");
@@ -213,7 +291,7 @@ function funConfiguracion()
     	$("#btnConfiguracion_CentrosZonales_Cancelar").slideDown();
 
     	$("#txtConfiguracion_CentrosZonales_Crear_id").val($(fila[1]).text());
-    	$("#txtConfiguracion_CentrosZonales_Crear_idRegional").val($(fila[3]).find("div").attr("idRegional"));
+    	$("#txtConfiguracion_CentrosZonales_Crear_idSede").val($(fila[3]).find("div").attr("idRegional"));
     	$("#txtConfiguracion_CentrosZonales_Crear_Nombre").val($(fila[2]).text());
     	$("#lblConfiguracion_CentrosZonales_Crear_Tipo").text("Editar");
     });
@@ -282,7 +360,49 @@ function configuracion_CargarRegionales()
 				});
 				
     			$("#tblRegionales").crearDataTable(tds, function(){});
-    			$("#txtConfiguracion_CentrosZonales_Crear_idRegional").append(tds2);
+    			$("#txtConfiguracion_Sede_Crear_idRegional").append(tds2);
+			} else
+			{
+				Mensaje("Error", data, "danger");
+			}
+		}
+	}, "json");
+}
+function configuracion_CargarSedes()
+{
+	$.post('../server/php/proyecto/configuracion_CargarSedes.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
+	{
+		if (data == 0)
+		{
+			Mensaje("Error", "No hay datos en la Tabla", "danger");
+		} else
+		{
+			if (typeof(data) == "object")
+			{
+				var tds = "";
+				var tds2 = "";
+				
+				$.each(data, function(index, val) 
+				{
+					tds += '<tr>';
+	    				tds += '<td>';
+	    					tds += '<div>';
+	    						tds += '<button type="button" idSede="' + val.id + '" class="btn btn-icon btn-info btnConfiguracion_Sede_Editar"><i class="icon wb-edit" aria-hidden="true"></i></button>';
+								tds += '<button type="button" idSede="' + val.id + '" class="btn btn-icon btn-danger btnConfiguracion_Sede_Borrar margin-left-5"><i class="icon wb-trash" aria-hidden="true"></i></button>';
+	    					tds += '</div>';
+	    				tds += '</td>';
+	    				tds += '<td>' + val.id + '</td>';
+	    				tds += '<td>' + val.Nombre + '</td>';
+	    				tds += '<td><div idRegional="' + val.idRegional + '">' + val.Regional + '</div></td>';
+	    				tds += '<td>' + val.Usuario_Nombre + '</td>';
+	    				tds += '<td>' + val.fechaCargue + '</td>';
+	    			tds += '</tr>';
+
+	    			tds2 += '<option value="' + val.id + '">' + val.Nombre + '</option>';
+				});
+				
+    			$("#tblSedes").crearDataTable(tds, function(){});
+    			$("#txtConfiguracion_CentrosZonales_Crear_idSede").append(tds2);
 			} else
 			{
 				Mensaje("Error", data, "danger");
@@ -316,7 +436,7 @@ function configuracion_CargarCentrosZonales()
 	    				tds += '</td>';
 	    				tds += '<td>' + val.id + '</td>';
 	    				tds += '<td>' + val.Nombre + '</td>';
-	    				tds += '<td><div idRegional="' + val.idRegional + '">' + val.Regional + '</div></td>';
+	    				tds += '<td><div idRegional="' + val.idSede + '">' + val.Sede + '</div></td>';
 	    				tds += '<td>' + val.Usuario_Nombre + '</td>';
 	    				tds += '<td>' + val.fechaCargue + '</td>';
 	    			tds += '</tr>';

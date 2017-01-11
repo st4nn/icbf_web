@@ -1,0 +1,755 @@
+<div class="page"> <!-- page -->
+<div class="page-content container-fluid"> <!-- PageContent -->
+<div class="row"> <!-- row1 -->
+<div class="col-md-6"> <!-- Columna1 -->
+<div class="panel panel-primary panel-bordered"><!-- Panel1 -->
+<div class="panel-heading"> <!-- panel heading -->
+<h4 class="panel-title">Datos de Ubicación</h4>
+</div> <!-- panel heading -->
+<div class="panel-body"> <!-- panel-body -->
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="txtNNA_Regional" class="control-label">Regional</label>
+        <select id="txtNNA_regional" class="form-control guardar">
+            <option value="R1">Regional 1</option> <!-- Opciones Inventadas -->
+            <option value="R2">Regional 2</option>
+            <option value="R3">regional 3</option>
+        </select>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="txtNNA_CentroZonal" class="control-label">CentroZonal</label>
+        <select id="txtNNA_CentroZonal" class="form-control guardar">
+            <option value="R1">CentroZonal 1</option> <!-- Opciones Inventadas -->
+            <option value="R2">CentroZonal 2</option>
+            <option value="R3">CentroZonal 3</option>
+        </select>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="txtNNA_CentroZonal" class="control-label">Centro Zonal</label>
+        <select class="form-control" data-plugin="select2" data-minimum-input-length="2">
+            <option value="XDefecto">Seleccione</option>
+            <optgroup label="Centro Zonal 1">
+                <option value="AK">Municipio</option>
+                <option value="HI">Municipio</option>
+            </optgroup>
+            <optgroup label="Centro Zonal 2">
+                <option value="CA">Municipio</option>
+                <option value="NV">Municipio</option>
+                <option value="OR">Municipio</option>
+                <option value="WA">Municipio</option>
+            </optgroup>
+            <optgroup label="Centro Zonal 3">
+                <option value="AZ">Municipio</option>
+                <option value="CO">Municipio</option>
+                <option value="ID">Municipio</option>
+                <option value="MT">Municipio</option>
+                <option value="NE">Municipio</option>
+                <option value="NM">Municipio </option>
+                <option value="ND">Municipio </option>
+                <option value="UT">Municipio</option>
+                <option value="WY">Municipio</option>
+            </optgroup>
+            
+        </select>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputNombreAutCompet" class="control-label">Autoridad administrativa competente</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputNombreAutCompet" name="inputNombreAutCompet" placeholder="Autoridad Competente">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputModalidadAtencion" class="control-label">Modalidad de Atención</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputModalidadAtencion" name="inputModalidadAtencion" placeholder="Modalidad de Atención">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputGrupoPoblacional" class="control-label">Grupo poblacional</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputGrupoPoblacional" name="inputGrupoPoblacional" placeholder="Grupo poblacional">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputOperadorinstitucion" class="control-label">Operador / Institución</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputOperadorinstitucion" name="inputOperadorinstitucion" placeholder="Operador / Institución">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label class="control-label" for="fechaIngreso">Fecha de Ingreso</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-calendar" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" data-plugin="datepicker" id="fechaIngreso">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputSede" class="control-label">Sede</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputSede" name="inputSede" placeholder="Sede">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputTelefonoSede" class="control-label">Teléfono</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputTelefonoSede" name="inputTelefonoSede" placeholder="Teléfono">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputDireccionSede" class="control-label">Dirección</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputDireccionSede" name="inputDireccionSede" placeholder="Dirección Sede">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputResponsablePrograma" class="control-label">Responsable Programa</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-user-add" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputResponsablePrograma" name="inputResponsablePrograma" placeholder="Dirección Sede">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label for="inputCorreoResposable" class="control-label">Correo</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-email" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" id="inputCorreoResposable" name="inputCorreoResposable" placeholder="Correo Electrónico del Responsable">
+        </div>
+    </div>
+</div>
+<div class="col-md-6 form-group">
+    <div class="form-group">
+        <label class="control-label" for="fechaElaboracionInforme">Fecha elaboración Informe</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-calendar" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" data-plugin="datepicker" id="fechaElaboracionInforme">
+        </div>
+    </div>
+</div>
+</div> <!-- panel-body -->
+</div> <!-- Panel1 -->
+</div> <!-- Columna1 -->
+<div class="col-md-6"> <!-- Columna1 -->
+<div class="panel panel-primary panel-bordered"><!-- Panel1 -->
+<div class="panel-heading"> <!-- panel heading -->
+<h4 class="panel-title">Información General</h4>
+</div> <!-- panel heading -->
+<div class="panel-body"> <!-- panel-body -->
+<div class="row">
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Apellido1" class="control-label">Primer Apellido</label>
+            <input type="text" class="form-control guardar" id="txtNNA_Apellido1" required>
+        </div>
+    </div>
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Apellido2" class="control-label">Segundo Apellido</label>
+            <input type="text" class="form-control guardar" id="txtNNA_Apellido2">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Nombre1" class="control-label">Primer Nombre</label>
+            <input type="text" class="form-control guardar" id="txtNNA_Nombre1" required>
+        </div>
+    </div>
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Nombre2" class="control-label">Segundo Nombre</label>
+            <input type="text" class="form-control guardar" id="txtNNA_Nombre2">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNumeroSim" class="control-label">Número SIM</label>
+            <input type="text" class="form-control guardar" id="txtNumeroSim" readonly="true">
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_TipoDocumento" class="control-label">Tipo Documento</label>
+            <select id="txtNNA_TipoDocumento" class="form-control guardar">
+                <option value="PN">Partida de Nacimiento</option> <!-- Opciones Inventadas -->
+                <option value="RC">Registro Civil</option>
+                <option value="TI">Tarjeta de Identidad</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Documento" class="control-label">Número Documento</label>
+            <input type="text" class="form-control guardar" id="txtNNA_Documento">
+        </div>
+    </div>
+</div>
+<!-- <span class="badge badge-success">Información Demográfica</span> -->
+<div class="row">
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label class="control-label" for="fechaNacimiento">Fecha de Nacimiento</label>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="icon wb-calendar" aria-hidden="true"></i>
+                </span>
+                <input type="text" class="form-control" data-plugin="datepicker" id="fechaNacimiento">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Edad" class="control-label">Edad</label>
+            <input type="text" class="form-control" id="txtNNA_Edad"  readonly="true" style="border:none; background: white;">
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Genero" class="control-label">Género</label>
+            <select id="txtNNA_Genero" class="form-control guadar">
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_PaísNacimiento" class="control-label">País de Nacimiento</label>
+            <input type="text" class="form-control guardar" id="txtNNA_PaisNacimiento">
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_DepartamentoNacimiento" class="control-label">Departamento de Nacimiento</label>
+            <input type="text" class="form-control guardar" id="txtNNA_CiudadNacimiento">
+        </div>
+    </div>
+    <div class="col-md-4 form-group">
+        <div class="form-group">
+            <label for="txtNNA_CiudadNacimiento" class="control-label">Ciudad de Nacimiento</label>
+            <input type="text" class="form-control guardar" id="txtNNA_CiudadNacimiento">
+        </div>
+    </div>
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Nacionalidad" class="control-label">Nacionalidad</label>
+            <input type="text" class="form-control guardar" id="txtNNA_Nacionalidad">
+        </div>
+    </div>
+    
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_Etnia" class="control-label">Pertenencia Étnica</label>
+            <select id="txtNNA_Genero" class="form-control guadar">
+                <option value="Indigena">Indígena</option> <!-- Datos Inventados -->
+                <option value="Afrodecendiente">Afrodecendiente</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_EscolaridadAprobada" class="control-label">Escolaridad Aprobada</label>
+            <select id="txtNNA_EscolaridadAprobada" class="form-control guadar">
+                <option value="Ninguna">Ninguna</option>
+                <option value="Prescolar">Prescolar</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Bachillerato">Bachillerato</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6 form-group">
+        <div class="form-group">
+            <label for="txtNNA_CiudadEscolaridad" class="control-label">Ciudad Escolaridad</label>
+            <input type="text" class="form-control guardar" id="txtNNA_CiudadEscolaridad">
+        </div>
+    </div>
+    </div> <!-- panel-body -->
+    </div> <!-- Panel1 -->
+    </div> <!-- Columna1 -->
+    </div> <!-- row1 -->
+    <div class="col-md-12">
+        <div class="row">
+            <div class="panel panel-primary panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Contacto</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-3 form-group">
+                        <div class="form-group">
+                            <label for="txtNNA_PersonaContacto" class="control-label">Persona de Contacto</label>
+                            <input type="text" class="form-control guardar" id="txtNNA_PersonaContacto">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <div class="form-group">
+                            <label for="txtNNA_Parentesco" class="control-label">Parentesco</label>
+                            <input type="text" class="form-control guardar" id="txtNNA_Parentesco">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <div class="form-group">
+                            <label for="txtNNA_DireccionContacto" class="control-label">Dirección</label>
+                            <input type="text" class="form-control guardar" id="txtNNA_DireccionContacto">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <div class="form-group">
+                            <label for="txtNNA_TelefonoContacto" class="control-label">Teléfono / Celular</label>
+                            <input type="text" class="form-control guardar" id="txtNNA_TelefonoContacto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="panel panel-primary panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Motivo ingreso</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <label class="control-label" for="inputBasicFirstName">Descripción del motivo de ingreso:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                </div> <!-- Row -->
+            </div> <!-- Columna -->
+
+
+        <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Proceso de atención</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="font-size-14 ">Realizaciones . Programa Vida Saludable : <br>
+                    -Cuenta con las condiciones necesarias para gozar de buena salud y adopta estilos de vida saludables <br>
+                    -Goza de un buen estado nutricional y adopta hábitos alimenticios saludables
+                    -Vive y expresa responsablemente su sexualidad</p>
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputResultadosVidaSaludable">Resultados</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputResultadosVidaSaludable" id="inputResultadosVidaSaludable" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputVidaSaludableNuevasAcciones">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputVidaSaludableNuevasAcciones" id="inputVidaSaludableNuevasAcciones" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+
+        </div> <!-- Fila -->
+
+
+        <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Realizaciones Programa Desarrollo de Potenciales</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="font-size-14 ">
+                        -Cuenta con una familia y /o cuidadores principales que le acogen (vínculos afectivos y de protección ) favorecen su desarrollo integral y le reconocen  como agente                        activo del mismo <br>                   
+                        -Desarrolla y potencia sus capacidades, habilidades y destrezas con procesos educativos formales e informales que favorecen su desarrollo integral. <br>
+                        -Disfruta de oportunidades de desarrollo cultural , deportivo y recreativo  para la construcción de sentido y consolidación de sus proyectos de vida</p>
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputResultadosDesarrolloPotenciales">Resultados</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputResultadosDesarrolloPotenciales" id="inputResultadosDesarrolloPotenciales" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputNuevasAccionesDesarrolloPotenciales">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputNuevasAccionesDesarrolloPotenciales" id="inputNuevasAccionesDesarrolloPotenciales" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+
+        <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Realizaciones. Programa Construcción de Ciudadanía:</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="font-size-14 ">
+                        -Expresa libremente sus sentimientos, ideas y opiniones e incide en todos los asuntos que son de su interés en ámbitos privados y públicos  
+                        -Construye su identidad en una marco de diversidad
+</p>
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputConstruccionCiudadania">Resultados</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputConstruccionCiudadania" id="inputConstruccionCiudadania" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputNuevasAccionesConstruccCiudadania">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputNuevasAccionesConstruccCiudadania" id="inputNuevasAccionesConstruccCiudadania" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+
+   <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Realizaciones Programa Fortalecimiento Personal y Fortalecimiento Familiar:</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="font-size-14 ">
+                        -Realiza prácticas de autoprotección y autocuidado y disfruta de entornos protectores y protegidos, frente a situaciones de riesgo o vulneración.
+                    </p>
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputResultadosFortalecimientoPersonal">Resultados</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputResultadosFortalecimientoPersonal" id="inputResultadosFortalecimientoPersonal" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputNuevasAccionesFortalecimientoPersonal">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputNuevasAccionesFortalecimientoPersonal" id="inputNuevasAccionesFortalecimientoPersonal" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+
+           <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Acciones que contribuyen a la reparación integral y a la reconciliación (Aplica solo para víctimas del conflicto armado)</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputResultadosReparacionintegral">Resultados</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputResultadosReparacionintegral" id="inputResultadosReparacionintegral" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputNuevasAccionesReparacionintegral">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputNuevasAccionesReparacionintegral" id="inputNuevasAccionesReparacionintegral" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+ <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Evaluación de compromiso del niño, niña o adolescente y su familia:</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputNNAEvalCompromiso">NNA</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputNNAEvalCompromiso" id="inputNNAEvalCompromiso" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputFamiliaEvalCompromiso">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputFamiliaEvalCompromiso" id="inputFamiliaEvalCompromiso" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+       
+<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-warning panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Nuevos Compromisos</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputNNANuevosCompromisos">NNA</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputNNANuevosCompromisos" id="inputNNANuevosCompromisos" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                    <div class="col-sm-6">
+                                        <label class="control-label" for="inputFamiliaNuevosCompromisos">Nuevas Acciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputFamiliaNuevosCompromisos" id="inputFamiliaNuevosCompromisos" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+
+<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Observaciones del equipo técnico interdisciplinario de la defensoría / equipo interdisciplinario de la modalidad</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <label class="control-label" for="inputObservacionesEquipoTecnico">Observaciones</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon fa-pencil" aria-hidden="true"></i>
+                                            </span>
+                                            <textarea class="form-control" name="inputObservacionesEquipoTecnico" id="inputObservacionesEquipoTecnico" cols="30" rows="3"></textarea>
+                                        </div> <!-- input grupo -->
+                                    </div> <!-- Columna -->
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+        <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success panel-bordered">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Equipo técnico interdisciplinario de la Autoridad Administrativa / Equipo interdisciplinario de la modalidad </h4>
+                </div>
+                <div class="panel-body">
+                <div class="row">
+                </div>
+                    <div class="form-group">
+                                   <div class="col-md-3 form-group">
+    <div class="form-group">
+        <label class="control-label" for="fechaIngreso">Fecha de Ingreso</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="icon wb-calendar" aria-hidden="true"></i>
+            </span>
+            <input type="text" class="form-control" data-plugin="datepicker" id="fechaIngreso">
+        </div>
+    </div>
+</div>
+                                    <div class="col-sm-12">
+                                        <label class="control-label" for="inputMetaTiempoCompromisoNNA">Meta / Tiempo</label>
+                                            <table class="table table-condensed table-striped table-hovered">	
+																								
+																									
+																									<thead>
+																										<tr>
+																											<th>Nombres y Apellidos</th>
+																											<th>Profesion</th>
+																											<th>Firma</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>data</td>
+																											<td>data</td>
+																											<td>data</td>
+																										</tr>
+																										<tr>
+																											<td>data</td>
+																											<td>data</td>
+																											<td>data</td>
+																										</tr>
+																										<tr>
+																											<td>data</td>
+																											<td>data</td>
+																											<td>data</td>
+																										</tr>
+																										<tr>
+																											<td>data</td>
+																											<td>data</td>
+																											<td>data</td>
+																										</tr>
+																										<tr>
+																											<td>data</td>
+																											<td>data</td>
+																											<td>data</td>
+																										</tr>
+																									</tbody>
+																								
+                                            </table>
+                                    </div> <!-- Columna -->
+                                    
+
+                                </div> <!-- F-Grupo -->
+                        </div> <!-- Panel-Body -->
+                    </div> <!-- Panel -->
+                    </div> <!-- Columna -->
+        </div> <!-- Fila -->
+
+        </div> <!-- PageContent -->
+        </div> <!-- page -->
+        <!-- Core  -->
+        <script src="../assets/vendor/jquery/jquery.js"></script>
+        <script src="../assets/vendor/bootstrap/bootstrap.js"></script>
+        <script src="../assets/vendor/animsition/jquery.animsition.js"></script>
+        <script src="../assets/vendor/asscroll/jquery-asScroll.js"></script>
+        <script src="../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
+        <script src="../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+        <script src="../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+        <!-- Scripts For This Page -->
+        <script src="../assets/js/components/select2.js"></script>
+        <script src="../assets/js/components/bootstrap-tokenfield.js"></script>
+        <script src="../assets/js/components/bootstrap-tagsinput.js"></script>
+        <script src="../assets/js/components/bootstrap-select.js"></script>
+        <script src="../assets/js/components/icheck.js"></script>
+        <script src="../assets/js/components/switchery.js"></script>
+        <script src="../assets/js/components/asrange.js"></script>
+        <script src="../assets/js/components/asspinner.js"></script>
+        <script src="../assets/js/components/clockpicker.js"></script>
+        <script src="../assets/js/components/ascolorpicker.js"></script>
+        <script src="../assets/js/components/bootstrap-maxlength.js"></script>
+        <script src="../assets/js/components/jquery-knob.js"></script>
+        <script src="../assets/js/components/bootstrap-touchspin.js"></script>
+        <script src="../assets/js/components/card.js"></script>
+        <script src="../assets/js/components/jquery-labelauty.js"></script>
+        <script src="../assets/js/components/bootstrap-datepicker.js"></script>
+        <script src="../assets/js/components/jt-timepicker.js"></script>
+        <script src="../assets/js/components/datepair-js.js"></script>
+        <script src="../assets/js/components/jquery-strength.js"></script>
+        <script src="../assets/js/components/multi-select.js"></script>
+        <script src="../assets/js/components/jquery-placeholder.js"></script>
+        <script src="../assets/examples/js/forms/advanced.js"></script> 

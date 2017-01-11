@@ -6,6 +6,9 @@
 		          <h3><a href="#cntConfiguracion_Regionales">Regionales</a></h3>
 		        </div>
 		        <div>
+		          <h3><a href="#cntConfiguracion_Sedes">Sedes</a></h3>
+		        </div>
+		        <div>
 		          <h3><a href="#cntConfiguracion_CentrosZonales">Centros Zonales</a></h3>
 		        </div>
 		        <div>
@@ -37,7 +40,7 @@
 				        			<tr>
 				        				<th class="width-100"></th>
 				        				<th>id</th>
-				        				<th>Nombre de Equipo</th>
+				        				<th>Nombre de Regional</th>
 				        				<th>Creada por</th>
 				        				<th>Fecha Creación</th>
 				        			</tr>
@@ -81,6 +84,85 @@
 			</div>
 		</div>
 
+		<div id="cntConfiguracion_Sedes" class="col-sm-12 cntConfiguracion_Tab hide">
+			<div class="row">
+				<h3>Sedes:
+					<span class="panel-desc"></span>
+				</h3>
+				<input type="hidden" id="txtConfiguracion_Sedes_id">
+			</div>
+			<div class="col-sm-8">
+				<div class="panel panel-primary panel-bordered">
+			        <div class="panel-heading">
+			        	<h3 class="panel-title">Sedes Creadas</h3>
+			        </div>
+			        <div class="panel-body">
+			        	<button id="btnEquipos_VerSedes_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+			        	<div class="table-responsive">
+				        	<table id="tblSedes" class="table table-hover table-striped">
+				        		<thead>
+				        			<tr>
+				        				<th class="width-100"></th>
+				        				<th>id</th>
+				        				<th>Nombre de la Sede</th>
+				        				<th>Regional</th>
+				        				<th>Creada por</th>
+				        				<th>Fecha Creación</th>
+				        			</tr>
+				        		</thead>
+				        		<tbody>
+				        		</tbody>			        		
+				        	</table>
+			        	</div>
+			        </div>
+			    </div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-primary panel-bordered">
+			        <div class="panel-heading">
+			        	<h3 class="panel-title"><span id="lblConfiguracion_Sede_Crear_Tipo">Crear</span> Sede</h3>
+			        </div>
+			        <div class="panel-body">
+			        	<form id="frmConfiguracion_Sede_Crear" class="form-horizontal">
+			        		<input type="hidden" class="form-control guardar" id="txtConfiguracion_Sede_Crear_id" >
+			        		<div class="form-group">
+								<label class="col-lg-12 col-sm-3 control-label">Regional
+									<span class="required">*</span>
+								</label>
+								<div class=" col-lg-12 col-sm-9">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="icon wb-flag" aria-hidden="true"></i>
+										</span>
+										<select class="form-control guardar" id="txtConfiguracion_Sede_Crear_idRegional" placeholder="Nombre de la Regional" required>
+										</select>
+									</div>
+								</div>
+							</div>
+			        		<div class="form-group">
+								<label class="col-lg-12 col-sm-3 control-label">Nombre de la Sede
+									<span class="required">*</span>
+								</label>
+								<div class=" col-lg-12 col-sm-9">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="icon wb-flag" aria-hidden="true"></i>
+										</span>
+										<input type="text" class="form-control guardar" id="txtConfiguracion_Sede_Crear_Nombre" placeholder="Nombre de la Sede" required>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 text-right padding-top-m">
+								<br>
+								<button id="btnConfiguracion_Sede_Cancelar" type="button" class="btn btn-danger btn-outline hide"><i class="icon glyphicon-floppy-remove"></i> Cancelar</button>
+								<button type="submit" class="btn btn-primary"><i class="icon glyphicon-floppy-save"></i> Guardar</button>
+							</div>
+			        	</form>
+			        </div>
+			    </div>
+			</div>
+		</div>
+
 		<div id="cntConfiguracion_CentrosZonales" class="col-sm-12 cntConfiguracion_Tab hide">
 			<div class="row">
 				<h3>Centros Zonales:
@@ -102,7 +184,7 @@
 				        				<th class="width-100"></th>
 				        				<th>id</th>
 				        				<th>Nombre</th>
-				        				<th>Regional</th>
+				        				<th>Sede</th>
 				        				<th>Creada por</th>
 				        				<th>Fecha Creación</th>
 				        			</tr>
@@ -123,7 +205,7 @@
 			        	<form id="frmConfiguracion_CentrosZonales_Crear" class="form-horizontal">
 			        		<input type="hidden" class="form-control guardar" id="txtConfiguracion_CentrosZonales_Crear_id" >
 			        		<div class="form-group">
-								<label class="col-lg-12 col-sm-3 control-label">Regional
+								<label class="col-lg-12 col-sm-3 control-label">Sede
 									<span class="required">*</span>
 								</label>
 								<div class=" col-lg-12 col-sm-9">
@@ -131,13 +213,13 @@
 										<span class="input-group-addon">
 											<i class="icon wb-flag" aria-hidden="true"></i>
 										</span>
-										<select class="form-control guardar" id="txtConfiguracion_CentrosZonales_Crear_idRegional" placeholder="Nombre de la Regional" required>
+										<select class="form-control guardar" id="txtConfiguracion_CentrosZonales_Crear_idSede" placeholder="Nombre de la Sede" required>
 										</select>
 									</div>
 								</div>
 							</div>
 			        		<div class="form-group">
-								<label class="col-lg-12 col-sm-3 control-label">Nombre del Centro Zonal
+								<label class="col-lg-12 col-sm-3 control-label">Nombre de la Sede
 									<span class="required">*</span>
 								</label>
 								<div class=" col-lg-12 col-sm-9">
@@ -145,7 +227,7 @@
 										<span class="input-group-addon">
 											<i class="icon glyphicon-tower" aria-hidden="true"></i>
 										</span>
-										<input type="text" class="form-control guardar" id="txtConfiguracion_CentrosZonales_Crear_Nombre" placeholder="Nombre de la Regional" required>
+										<input type="text" class="form-control guardar" id="txtConfiguracion_CentrosZonales_Crear_Nombre" placeholder="Nombre de la Sede" required>
 									</div>
 								</div>
 							</div>

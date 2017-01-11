@@ -1,0 +1,549 @@
+<div class="page">
+	<div class="page-header">
+		<button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlMapa">Atrás</button>
+		<h1 class="page-title"> </h1>
+	</div>
+	<div class="page-content container-fluid" id="cntMatrizPeligros_Wizard">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Panel Wizard Form Container -->
+				<div class="panel">
+					<div class="panel-heading">
+						<h3 class="panel-title">Valoracion Inicial Trabajo Social</h3>
+					</div>
+					<div class="panel-body">
+						<div class="example-wrap">
+							<label class="control-label" or="FechaDiligenciamiento">Fecha Diligenciamiento</label>
+							<div class="col-md-2 input-group">
+								<span class="input-group-addon">
+									<i class="icon wb-calendar" aria-hidden="true"></i>
+								</span>
+								<input type="text" class="form-control" data-plugin="datepicker" id="FechaDiligenciamiento">
+							</div>
+							<div class="example padding-10">
+								<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+								<h4 class="example-title">Identificación del niño, Niña o Adolecente (NNA)</h4>
+								<form autocomplete="off" lpformnum="2" _lpchecked="1">
+									<div class="row">
+										<div class="form-group">
+											<div class="col-sm-12">
+												<label class="control-label" for="inputBasicFirstName">Nombres y Apellidos Completos</label>
+												<div class="input-group">
+													<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+													<input type="text" class="form-control" id="inputBasicNombreCompleto" name="inputNombreCompleto" placeholder="Nombres y Apellidos">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<!-- Fila Datos Demográficos -->
+										<div class="form-group">
+											<div class="col-md-3">
+												<label class="control-label" for="inputBasicLastName">Lugar de Nacimiento</label>
+												<div class="input-group">
+													<span class="input-group-addon">
+												<i class="icon fa-map-marker" aria-hidden="true"></i>
+											</span>
+													<input type="text" class="form-control" id="inputLugarNacimiento" name="inputLugarNacimiento" placeholder="Lugar de Nacimiento" autocomplete="off">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-2">
+													<label class="control-label" for="fechaNacimiento">Fecha de Nacimiento</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+													<i class="icon wb-calendar" aria-hidden="true"></i>
+												</span>
+														<input type="text" class="form-control" data-plugin="datepicker" id="FechaDiligenciamiento">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-2">
+													<label class="control-label" for="fechaNacimiento">Edad</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+													<i class="icon fa-arrows-v" aria-hidden="true"></i>
+												</span>
+														<input type="text" class="form-control" data-plugin="datepicker" id="FechaDiligenciamiento">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label">Sexo</label>
+													<div>
+														<div class="radio-custom radio-default radio-inline">
+															<input type="radio" id="inputBasicMale" name="inputGender">
+															<label for="inputBasicMale">Masculino</label>
+														</div>
+														<div class="radio-custom radio-default radio-inline">
+															<input type="radio" id="inputBasicFemale" name="inputGender" checked="">
+															<label for="inputBasicFemale">Femenino</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Fin Fila Datos Demográficos -->
+									<div class="row">
+										<!-- Fila Datos Defensor -->
+										<div class="form-group">
+											<div class="col-md-2">
+												<label class="control-label" for="fechaIngresoH">Fecha de Ingreso</label>
+												<div class="input-group">
+													<span class="input-group-addon">
+												<i class="icon wb-calendar" aria-hidden="true"></i>
+											</span>
+													<input type="text" class="form-control" data-plugin="datepicker" id="FechaDiligenciamiento">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-5">
+												<label class="control-label" for="nombreDefendor">Nombre Defensor</label>
+												<div class="input-group">
+													<span class="input-group-addon">
+												<i class="icon fa-arrows-v" aria-hidden="true"></i>
+											</span>
+													<input type="text" class="form-control" id="FechaDiligenciamiento" placeholder="Nombre Defensor">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-5">
+												<label class="control-label" for="nombreDefendor">Centro Zonal</label>
+												<div class="input-group">
+													<span class="input-group-addon">
+												<i class="icon fa-map-marker" aria-hidden="true"></i>
+											</span>
+													<input type="text" class="form-control" id="FechaDiligenciamiento" placeholder="Nombre Defensor">
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Fin Fila Datos Defensor -->
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">Identificación Responsable del hogar Sustituto</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicFirstName">Nombres y Apellidos Completos</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+													<i class="icon wb-user-add" aria-hidden="true"></i>
+												</span>
+														<input type="text" class="form-control" id="inputBasicNombreCompletoR" name="inputNombreCompletoR" placeholder="Nombres y Apellidos">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<!-- Fila Datos Demográficos -->
+											<div class="form-group">
+												<div class="col-md-2">
+													<label class="control-label" for="inputBasicLastName">Número de Identificación</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+												<i class="icon fa-list-alt" aria-hidden="true"></i>
+											</span>
+														<input type="text" class="form-control" id="inputLugarNacimiento" name="inputLugarNacimiento" placeholder="Lugar de Nacimiento" autocomplete="off">
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-2">
+														<label class="control-label" for="fechaNacimiento">Barrio</label>
+														<div class="input-group">
+															<span class="input-group-addon">
+													<i class="icon fa-map-marker" aria-hidden="true"></i>
+												</span>
+															<input type="text" class="form-control" id="FechaDiligenciamiento">
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-2">
+														<label class="control-label" for="fechaNacimiento">Teléfono Fijo</label>
+														<div class="input-group">
+															<span class="input-group-addon">
+													<i class="icon fa-phone" aria-hidden="true"></i>
+												</span>
+															<input type="text" class="form-control" data-plugin="datepicker" id="FechaDiligenciamiento">
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-md-2">
+															<label class="control-label" for="fechaNacimiento">Teléfono Celular</label>
+															<div class="input-group">
+																<span class="input-group-addon">
+														<i class="icon fa-mobile-phone" aria-hidden="true"></i>
+													</span>
+																<input type="text" class="form-control" data-plugin="datepicker" id="FechaDiligenciamiento">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-md-2">
+															<label class="control-label" for="fechaNacimiento">Dirección</label>
+															<div class="input-group">
+																<span class="input-group-addon">
+														<i class="icon fa-map-marker" aria-hidden="true"></i>
+													</span>
+																<input type="text" class="form-control" id="FechaDiligenciamiento">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-md-2">
+															<label class="control-label" for="fechaNacimiento">Localidad</label>
+															<div class="input-group">
+																<span class="input-group-addon">
+														<i class="icon fa-map-marker" aria-hidden="true"></i>
+													</span>
+																<input type="text" class="form-control" id="FechaDiligenciamiento">
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Fin Fila Datos Demográficos -->
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">MOTIVO DE INGRESO DEL NIÑO, NIÑA O ADOLESCENTE AL  HOGAR SUSTITUTO</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicFirstName">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+												<i class="icon fa-pencil" aria-hidden="true"></i>
+											</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">ANTECEDENTES PERSONALES (Prenatales-perinatales-posnatales y condiciones culturales) Si se conocen.</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicAntecedentesPersonales">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+											<i class="icon fa-pencil" aria-hidden="true"></i>
+										</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">ANTECEDENTES EDUCATIVOS (Si se conocen.)</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicAntecedentesEducativos">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+										<i class="icon fa-pencil" aria-hidden="true"></i>
+									</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">OTROS ANTECEDENTES</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicAntecedentesOtros">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+									<i class="icon fa-pencil" aria-hidden="true"></i>
+								</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">DINAMICA FAMILIAR DEL HOGAR SUSTITUTO: (Manejo de autoridad, roles, toma de decisiones, límites intrafamiliares y sistemas de creencias)</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicDinamicaFamiliar">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+								<i class="icon fa-pencil" aria-hidden="true"></i>
+							</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">EVALUACION DEL NIÑO, NIÑA O ADOLESCENTE: (Percepción Física (Autoimagen) Fortalezas y aspectos a mejorar. Hábitos de higiene y auto-cuidado.)</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicEvaluacion">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+							<i class="icon fa-pencil" aria-hidden="true"></i>
+						</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">CARACTERISTICAS EMOCIONALES: (Resolución de conflictos, manejo de emociones, empatía, solidaridad) </h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputBasicCaractEmocionales">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+						<i class="icon fa-pencil" aria-hidden="true"></i>
+					</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h4 class="example-title">CONCEPTOS </h4>
+									<div class="example padding-10 ">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">A.  Aspectos  Intelectuales: </h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputAspectosintelectuales">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+					<i class="icon fa-pencil" aria-hidden="true"></i>
+				</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10 ">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">B.  Interacción Interpersonal: (habilidades para establecer y mantener relaciones interpersonales)</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputInteraccionInterpersonal">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+				<i class="icon fa-pencil" aria-hidden="true"></i>
+			</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10 ">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">C.  Aspecto Psicosexual:(Descripción de las manifestaciones sexuales, identificación, masturbación, abuso sexual -teniendo en cuanta su ciclo vital-).</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputAspectoPsicosexual">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+			<i class="icon fa-pencil" aria-hidden="true"></i>
+		</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10 ">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">D.  Nivel de Ajuste Social</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputNivelAjusteSocial">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+		<i class="icon fa-pencil" aria-hidden="true"></i>
+	</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10 ">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">PROYECTO DE VIDA Expectativas, proyectos, metas frente a su vida (Ciclo Vital)</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<label class="control-label" for="inputProyectodeVida">Descripción</label>
+													<div class="input-group">
+														<span class="input-group-addon">
+	<i class="icon fa-pencil" aria-hidden="true"></i>
+</span>
+														<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="example padding-10 ">
+										<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+										<h4 class="example-title">REGISTRO DE INSTRUMENTO DE EVALUACION </h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-12">
+													<table class="editable-table table table-striped" id="editableTable">
+														<thead>
+															<tr>
+																<th>Fecha</th>
+																<th>Instrumento</th>
+																<th>Objeto</th>
+																<th>Resultado</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+															</tr>
+															<tr>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+															</tr>
+															<tr>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+															</tr>
+															<tr>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+															</tr>
+															<tr>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+																<td>Demo Dato</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+							<div class="example padding-10 ">
+								<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+								<h4 class="example-title">DIAGNOSTICO DEL NIÑO, NIÑA O ADOLESCENTE</h4>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<label class="control-label" for="inputDiagnosticoNNA">Descripción</label>
+											<div class="input-group">
+												<span class="input-group-addon">
+<i class="icon fa-pencil" aria-hidden="true"></i>
+</span>
+												<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="example padding-10 ">
+								<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+								<h4 class="example-title">PLAN DE INTERVENCION </h4>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<label class="control-label" for="inputPlanintervencion">Descripción</label>
+											<div class="input-group">
+												<span class="input-group-addon">
+<i class="icon fa-pencil" aria-hidden="true"></i>
+</span>
+												<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="example padding-10 ">
+								<!-- << Proporciona el fondo gris al formulario dentro del panel -->
+								<h4 class="example-title">OBSERVACIONES</h4>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<label class="control-label" for="inputObservaciones">Descripción</label>
+											<div class="input-group">
+												<span class="input-group-addon">
+<i class="icon fa-pencil" aria-hidden="true"></i>
+</span>
+												<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../assets/vendor/jquery/jquery.js"></script>
+		<script src="../assets/vendor/bootstrap/bootstrap.js"></script>
+		<script src="../assets/vendor/animsition/jquery.animsition.js"></script>
+		<script src="../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
+		<script src="../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+		<!-- Plugins For This Page -->
+		<script src="../assets/vendor/editable-table/mindmup-editabletable.js"></script>
+		<script src="../assets/vendor/editable-table/numeric-input-example.js"></script>
+		<script src="../assets/js/core.js"></script>
+		<script src="../assets/js/site.js"></script>
+		<script src="../assets/js/sections/menu.js"></script>
+		<script src="../assets/js/sections/menubar.js"></script>
+		<script src="../assets/js/sections/gridmenu.js"></script>
+		<script src="../assets/js/sections/sidebar.js"></script>
+		<script src="../assets/js/configs/config-colors.js"></script>
+		<script src="../assets/js/configs/config-tour.js"></script>
+		<script src="../assets/js/components/animsition.js"></script>
+		<script src="../assets/js/components/slidepanel.js"></script>
+		<script src="../assets/js/components/switchery.js"></script>
+		<script src="../assets/js/components/editable-table.js"></script>
+		<script src="../assets/examples/js/tables/editable.js"></script>
