@@ -10,7 +10,8 @@
                Datos.Nombre AS 'Nombre',
                Datos.Correo AS 'Correo',
                Datos.Cargo AS 'Cargo',
-               Datos.idPerfil AS 'idPerfil'
+               Datos.idPerfil AS 'idPerfil',
+               Datos.idSede AS 'idSede'
             FROM 
                Login AS Login
                INNER JOIN datosUsuarios AS Datos ON Datos.idLogin = Login.idLogin

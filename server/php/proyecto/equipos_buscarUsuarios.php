@@ -9,10 +9,10 @@
 
    $Parametro ="%" . str_replace(" ", "%", $Parametro) . '%';
 
-
+   $Perfil = "";
    if ($Usuario['idPerfil'] <> 1)
    {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      $Perfil = " AND datosUsuarios.idSede = '" . $Usuario['idSede'] . "'";
    }
 
    $sql = "SELECT
@@ -30,7 +30,7 @@
             AND (
                datosUsuarios.Nombre LIKE '$Parametro'
                OR datosUsuarios.Cargo LIKE '$Parametro'
-            ) LIMIT 0, 30;";
+            ) $Perfil LIMIT 0, 30;";
 
    $result = $link->query($sql);
 

@@ -6,9 +6,10 @@
    $idUsuario = $_POST['Usuario'];
    $Usuario = datosUsuario($idUsuario);
 
+   $Perfil = "";
    if ($Usuario['idPerfil'] <> 1)
    {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      $Perfil = " AND datosUsuarios.idSede = '" . $Usuario['idSede'] . "'";
    }
 
    $sql = "SELECT
@@ -20,6 +21,7 @@
             LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = equipos_has_usuarios.idUsuario 
          WHERE
             equipos.Estado = 1
+            $Perfil
          GROUP BY
             equipos.id;";
 

@@ -111,7 +111,7 @@
                $sql = "UPDATE Login SET Estado = '" . $datos->Estado . "' WHERE idLogin = $nuevoId";
                $link->query(utf8_decode($sql));
                            
-               $sql = "INSERT INTO datosUsuarios (idLogin, Nombre, Cargo, Correo, idPerfil, idCentroZonal, fechaCargue) 
+               $sql = "INSERT INTO datosUsuarios (idLogin, Nombre, Cargo, Correo, idPerfil, idSede, fechaCargue) 
                         VALUES 
                         (
                            $nuevoId, 
@@ -119,13 +119,13 @@
                            '" . $datos->Cargo . "', 
                            '" . $datos->Correo . "', 
                            '" . $datos->idPerfil . "', 
-                           '" . $datos->idCentroZonal . "', 
+                           '" . $datos->idSede . "', 
                            '" . $fecha . "'
                         ) ON DUPLICATE KEY UPDATE 
                         Nombre = VALUES(Nombre), 
                         Cargo = VALUES(Cargo), 
                         idPerfil = VALUES(idPerfil), 
-                        idCentroZonal = VALUES(idCentroZonal), 
+                        idSede = VALUES(idSede), 
                         fechaCargue = VALUES(fechaCargue);";
                   
                $link->query(utf8_decode($sql));

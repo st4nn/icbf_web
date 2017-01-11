@@ -7,9 +7,10 @@
    $idNNA = addslashes($_POST['idNNA']);
    $Usuario = datosUsuario($idUsuario);
 
+   $Perfil = "";
    if ($Usuario['idPerfil'] <> 1)
    {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      $Perfil = " AND (Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL)";
    }
 
    $sql = "SELECT
@@ -18,8 +19,12 @@
           FROM
             nna
             LEFT JOIN Archivos ON Archivos.Prefijo = nna.Prefijo AND Archivos.Proceso = 'Foto NNA'
+            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
+            LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
+            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede 
          WHERE
             nna.id = '$idNNA'
+            $Perfil
          GROUP BY
             nna.id;";
 

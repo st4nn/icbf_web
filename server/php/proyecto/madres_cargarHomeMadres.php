@@ -6,9 +6,10 @@
    $idUsuario = addslashes($_POST['Usuario']);
    $Usuario = datosUsuario($idUsuario);
 
+   $Perfil = "";
    if ($Usuario['idPerfil'] <> 1)
    {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      $Perfil = " WHERE Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL";
    }
 
    $sql = "SELECT
@@ -21,7 +22,9 @@
             0 AS CD
           FROM
             madres
-            LEFT JOIN CentrosZonales ON CentrosZonales.id = madres.Localidad;";
+            LEFT JOIN CentrosZonales ON CentrosZonales.id = madres.Localidad
+            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede
+         $Perfil;";
 
    $result = $link->query($sql);
 

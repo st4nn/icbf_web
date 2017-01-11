@@ -31,6 +31,7 @@
             LEFT JOIN madres ON nna.idMadre = madres.id
             LEFT JOIN Municipios ON Municipios.id = madres.Localidad
             LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
+            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede
          WHERE 
             (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL)
          ORDER BY

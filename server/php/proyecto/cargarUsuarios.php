@@ -19,13 +19,13 @@
             datosUsuarios.Correo,
             datosUsuarios.Cargo,
             datosUsuarios.idPerfil,
-            datosUsuarios.idCentroZonal,
+            datosUsuarios.idSede,
             Perfiles.Nombre AS 'Perfil',
-            CentrosZonales.Nombre AS 'CentroZonal'
+            Sedes.Nombre AS 'Sede'
           FROM
             Login
             INNER JOIN datosUsuarios ON Login.idLogin = datosUsuarios.idLogin
-            LEFT JOIN CentrosZonales ON datosUsuarios.idCentroZonal = CentrosZonales.id
+            LEFT JOIN Sedes ON datosUsuarios.idSede = Sedes.id
             LEFT JOIN Perfiles ON datosUsuarios.idPerfil = Perfiles.idPerfil;";
 
    $result = $link->query($sql);

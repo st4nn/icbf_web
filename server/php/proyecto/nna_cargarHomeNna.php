@@ -6,9 +6,10 @@
    $idUsuario = addslashes($_POST['Usuario']);
    $Usuario = datosUsuario($idUsuario);
 
+   $Perfil = "";
    if ($Usuario['idPerfil'] <> 1)
    {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      $Perfil = " AND (Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL)";
    }
 
    $sql = "SELECT
@@ -18,8 +19,12 @@
             nna.FechaNacimiento
           FROM
             nna
-            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
-            WHERE (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL);";
+            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id 
+            LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
+            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede 
+         WHERE 
+            (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL)
+            $Perfil;";
 
    $result = $link->query($sql);
 

@@ -6,21 +6,12 @@
    $idUsuario = $_POST['Usuario'];
    $Usuario = datosUsuario($idUsuario);
 
-   if ($Usuario['idPerfil'] <> 1)
-   {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
-   }
-
    $sql = "SELECT
-            Municipios.*,
-            CentrosZonales.Nombre AS CentroZonal,
-            Sedes.Nombre AS Regional,
-            datosUsuarios.Nombre AS Usuario_Nombre 
+            Perfiles.*
           FROM
-            Municipios
-            INNER JOIN CentrosZonales ON CentrosZonales.id = Municipios.idCentroZonal
-            INNER JOIN Sedes ON Sedes.id = CentrosZonales.idSede
-            LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = CentrosZonales.Usuario;";
+            Perfiles
+         WHERE
+            Perfiles.idPerfil >= '" . $Usuario['idPerfil'] . "';";
 
    $result = $link->query($sql);
 

@@ -3,6 +3,7 @@ function funUsuarios()
 	$("#tblUsuarios").crearDataTable("");
 	usuarios_CargarUsuarios();	
 	usuarios_CargarCentrosZonales();
+	usuarios_CargarPerfiles();
 
 	$("#btnUsuarios_CrearUsuario").on("click", function()
 	{
@@ -35,7 +36,7 @@ function funUsuarios()
 		$("#txtUsuarios_Crear_Cargo").val($(fila[4]).text());
 		$("#txtUsuarios_Crear_idPerfil").val($(fila[5]).attr("idPerfil"));
 		$("#txtUsuarios_Crear_Correo").val($(fila[6]).text());
-		$("#txtUsuarios_Crear_idCentroZonal").val($(fila[7]).attr("idCentroZonal"));
+		$("#txtUsuarios_Crear_idSede").val($(fila[7]).attr("idSede"));
 		$("#txtUsuarios_Crear_Estado").val($(fila[8]).text());
 
 		$("#txtUsuarios_Crear_nUsuario").val($(fila[2]).text());
@@ -109,7 +110,7 @@ function usuarios_CargarUsuarios()
 	    				tds += '<td>' + val.Cargo + '</td>';
 	    				tds += '<td idPerfil="' + val.idPerfil + '">' + val.Perfil + '</td>';
 	    				tds += '<td>' + val.Correo + '</td>';
-	    				tds += '<td idCentroZonal="' + val.idCentroZonal + '">' + val.CentroZonal + '</td>';
+	    				tds += '<td idSede="' + val.idSede + '">' + val.Sede + '</td>';
 	    				tds += '<td>' + val.Estado + '</td>';
 	    			tds += '</tr>';
 
@@ -126,8 +127,8 @@ function usuarios_CargarUsuarios()
 
 function usuarios_CargarCentrosZonales()
 {
-	$("#txtUsuarios_Crear_idCentroZonal option").remove();
-	$.post('../server/php/proyecto/configuracion_CargarCentrosZonales.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
+	$("#txtUsuarios_Crear_idSede option").remove();
+	$.post('../server/php/proyecto/configuracion_CargarSedes.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
 	{
 		if (data == 0)
 		{
@@ -144,7 +145,36 @@ function usuarios_CargarCentrosZonales()
 	    			tds2 += '<option value="' + val.id + '">' + val.Nombre + '</option>';
 				});
 				
-    			$("#txtUsuarios_Crear_idCentroZonal").append(tds2);
+    			$("#txtUsuarios_Crear_idSede").append(tds2);
+			} else
+			{
+				Mensaje("Error", data, "danger");
+			}
+		}
+	}, "json");
+}
+
+function usuarios_CargarPerfiles()
+{
+	$("#txtUsuarios_Crear_idPerfil option").remove();
+	$.post('../server/php/proyecto/configuracion_CargarPerfiles.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
+	{
+		if (data == 0)
+		{
+			Mensaje("Error", "No hay datos en la Tabla", "danger");
+		} else
+		{
+			if (typeof(data) == "object")
+			{
+				var tds = "";
+				var tds2 = "";
+				
+				$.each(data, function(index, val) 
+				{
+	    			tds2 += '<option value="' + val.id + '">' + val.Nombre + '</option>';
+				});
+				
+    			$("#txtUsuarios_Crear_idPerfil").append(tds2);
 			} else
 			{
 				Mensaje("Error", data, "danger");
