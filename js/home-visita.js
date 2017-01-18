@@ -65,7 +65,7 @@ function funHome_Visita()
 
 	$(document).delegate('.btn_VolverAlPanel', 'click', function(evento) {
 		evento.preventDefault();
-        cargarModulo("formatos/home.html", "Hogar Visitado", function()
+        cargarModulo("nna/homeVisita.html", "Hogar Visitado", function()
           {
             
           });

@@ -1,0 +1,72 @@
+<div class="page">
+	<div class="page-content container-fluid">
+
+		<div id="cntVerProgramacion_Tabla" class="col-sm-7">
+			<div class="panel panel-primary panel-bordered">
+		        <div class="panel-heading">
+		        	<h3 class="panel-title">Programación</h3>
+		        	<div class="panel-actions">
+		            </div>
+		        </div>
+
+		        <div class="panel-body">
+		        	<button id="btnVerProgramacion_VerProgramacion_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+		        	<div class="table-responsive">
+			        	<table id="tblVerProgramacion" class="table table-hover table-striped">
+			        		<thead>
+			        			<tr>
+			        				<th></th>
+			        				<th>Equipo</th>
+			        				<th>Integrantes</th>
+			        				<th>Sede</th>
+			        				<th>Niños Programados</th>
+			        			</tr>
+			        		</thead>
+			        		<tbody>
+			        		</tbody>			        		
+			        	</table>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="col-sm-5">
+			<div class="panel panel-primary panel-bordered">
+		        <div class="panel-heading">
+		        	<h3 class="panel-title">NNA sin programar</h3>
+		        	<div class="panel-actions">
+		            </div>
+		        </div>
+
+		        <div class="panel-body">
+		        	<button id="btnVerProgramacion_NNA_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+		        	<div class="table-responsive">
+			        	<table id="tblVerProgramacion_NNASinProgramar" class="table table-hover table-striped">
+			        		<thead>
+			        			<tr>
+			        				<th></th>
+			        				<th></th>
+			        				<th>Nombre</th>
+			        				<th>Documento</th>
+			        				<th>Edad</th>
+			        			</tr>
+			        		</thead>
+			        		<tbody>
+			        		</tbody>			        		
+			        	</table>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/VerProgramacion.js", function(ev)
+        {
+          funVerProgramacion();
+        });
+      });
+</script>

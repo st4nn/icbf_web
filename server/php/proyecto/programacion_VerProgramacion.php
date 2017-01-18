@@ -13,18 +13,25 @@
    }
 
    $sql = "SELECT
-            nna.id as id,
-            CONCAT(nna.Nombre1, ' ', nna.Nombre2, ' ', nna.Apellido1, ' ', nna.Apellido2) AS Nombre,
-            nna.Documento,
-            nna.FechaNacimiento
+            equipos.id,
+            equipos.Nombre,
+            datosUsuarios.idSede AS idSede,
+            GROUP_CONCAT(concat(datosUsuarios.Nombre, ' (', datosUsuarios.Cargo, ')') SEPARATOR ', ') AS Integrantes ,
+            Sedes.Nombre AS Sede,
+            COUNT(DISTINCT Programacion.idNNA) AS NNA
           FROM
-            nna
-            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id 
-            LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
-            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede 
+            equipos
+            INNER JOIN equipos_has_usuarios ON equipos_has_usuarios.idEquipo = equipos.id
+            INNER JOIN datosUsuarios ON equipos_has_usuarios.idUsuario = datosUsuarios.idLogin
+            LEFT JOIN Sedes ON datosUsuarios.idSede = Sedes.id
+            LEFT JOIN Programacion ON Programacion.idEquipo = equipos.id
          WHERE 
-            (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL)
-            $Perfil;";
+            equipos.Estado = '1' 
+            $Perfil
+         GROUP BY
+            equipos.id
+         ORDER BY
+            Programacion.fecha DESC;";
 
    $result = $link->query($sql);
 

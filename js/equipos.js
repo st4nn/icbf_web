@@ -1,4 +1,3 @@
-
 function funEquipos()
 {
 	$("#tblEquipos").crearDataTable("");
@@ -6,7 +5,7 @@ function funEquipos()
 
 	$("#btnEquipos_VerEquipos_Actualizar").on("click", function()
 	{
-		usuarios_CargarEquipos();		
+		usuarios_CargarEquipos();
 	});
 
 	$('.dd').nestable({

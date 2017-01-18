@@ -4,27 +4,23 @@
    $link = Conectar();
 
    $idUsuario = addslashes($_POST['Usuario']);
+   $idEquipo = addslashes($_POST['idEquipo']);
    $Usuario = datosUsuario($idUsuario);
 
-   $Perfil = "";
    if ($Usuario['idPerfil'] > 3)
    {
-      $Perfil = " AND (Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL)";
+      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
    }
 
    $sql = "SELECT
-            nna.id as id,
-            CONCAT(nna.Nombre1, ' ', nna.Nombre2, ' ', nna.Apellido1, ' ', nna.Apellido2) AS Nombre,
-            nna.Documento,
-            nna.FechaNacimiento
+            Programacion.idNNA,
+            Programacion.fecha
           FROM
-            nna
-            LEFT JOIN nna_Programa ON nna_Programa.id = nna.id 
-            LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
-            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede 
+            Programacion
          WHERE 
-            (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL)
-            $Perfil;";
+            Programacion.idEquipo = '$idEquipo'
+         ORDER BY
+            Programacion.fecha;";
 
    $result = $link->query($sql);
 

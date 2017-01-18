@@ -7,7 +7,7 @@
    $Usuario = datosUsuario($idUsuario);
 
    $Perfil = "";
-   if ($Usuario['idPerfil'] <> 1)
+   if ($Usuario['idPerfil'] > 3)
    {
       $Perfil = " WHERE Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL";
    }
@@ -16,15 +16,21 @@
             madres.id as id,
             CONCAT(madres.Nombre1, ' ', madres.Nombre2, ' ', madres.Apellido1, ' ', madres.Apellido2) AS Nombre,
             CentrosZonales.Nombre AS CentroZonal,
-            '--' AS ultimaAsignacion,
-            0 AS Cupos,
-            0 AS CV,
-            0 AS CD
+            MAX(Fecha) AS ultimaAsignacion,
+            3 AS Cupos,
+            COUNT(DISTINCT nnaDiscapacitados.id) AS CD,
+            COUNT(DISTINCT nnaVulnerables.id) AS CV
           FROM
             madres
             LEFT JOIN CentrosZonales ON CentrosZonales.id = madres.Localidad
             LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede
-         $Perfil;";
+            LEFT JOIN madres_Observaciones ON madres_Observaciones.idMadre = madres.id AND madres_Observaciones.Tipo = 'Ingreso de NNA'
+            LEFT JOIN nna ON nna.idMadre = madres.id
+            LEFT JOIN nna_Programa AS nnaDiscapacitados ON nna.id = nnaDiscapacitados.id AND nnaDiscapacitados.Discapacidad = 'SI'
+            LEFT JOIN nna_Programa AS nnaVulnerables ON nna.id = nnaVulnerables.id AND nnaVulnerables.Discapacidad <> 'SI'
+         $Perfil
+         GROUP BY 
+            madres.id;";
 
    $result = $link->query($sql);
 

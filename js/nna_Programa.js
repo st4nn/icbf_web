@@ -86,7 +86,7 @@ function funnna_Programa()
 		    $("#txtNNAPrograma_NObservaciones").focus();
 		  } else
 		  {
-		  	if ($("#txtNNAPrograma_TipoNovedad").val() == 'Retiro')
+		  	if ($("#txtNNAPrograma_TipoNovedad").val() == 'Retiro' || $("#txtNNAPrograma_TipoNovedad").val() == 'Retiro por Muerte')
 		  	{
 		  		$.post('../server/php/proyecto/nna_AsignarHogar.php', {idUsuario: Usuario.id, idNNA : $("#txtNNAPrograma_id").val(), idMadre : $("#txtNNAMadre_id").val(), idNuevaMadre : 0, Tipo : 1, Fecha : $("#txtNNAPrograma_FechaNovedad").val(), Observacion: $("#txtNNAPrograma_NObservaciones").val()}, function(data, textStatus, xhr) 
 				{

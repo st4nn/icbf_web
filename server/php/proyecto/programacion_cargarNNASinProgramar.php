@@ -4,7 +4,6 @@
    $link = Conectar();
 
    $idUsuario = addslashes($_POST['Usuario']);
-   $idNNA = addslashes($_POST['idNNA']);
    $Usuario = datosUsuario($idUsuario);
 
    $Perfil = "";
@@ -14,19 +13,23 @@
    }
 
    $sql = "SELECT
-            nna.*,
-            CONCAT(Archivos.Ruta, '/', Archivos.Nombre) AS Foto
+            nna.id,
+            CONCAT(nna.Nombre1, ' ', nna.Nombre2, ' ', nna.Apellido1, ' ', nna.Apellido2) AS Nombre,
+            CONCAT(nna.TipoDocumento, ': ', nna.Documento) AS Documento,
+            nna.Genero,
+            nna.FechaNacimiento
           FROM
             nna
-            LEFT JOIN Archivos ON Archivos.Prefijo = nna.Prefijo AND Archivos.Proceso = 'Foto NNA'
             LEFT JOIN nna_Programa ON nna_Programa.id = nna.id
             LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
-            LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede 
-         WHERE
-            nna.id = '$idNNA'
+            LEFT JOIN Sedes ON CentrosZonales.idSede = Sedes.id
+            LEFT JOIN Programacion ON Programacion.idNNA = nna.id
+         WHERE 
+            (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL) 
+            AND Programacion.idNNA IS NULL
             $Perfil
-         GROUP BY
-            nna.id;";
+         ORDER BY
+            nna.Apellido1;";
 
    $result = $link->query($sql);
 
@@ -36,10 +39,10 @@
       $Resultado = array();
       while ($row = mysqli_fetch_assoc($result))
       {
-         //$Resultado[$idx] = array();
+         $Resultado[$idx] = array();
          foreach ($row as $key => $value) 
          {
-            $Resultado[$key] = utf8_encode($value);
+            $Resultado[$idx][$key] = utf8_encode($value);
          }
          $idx++;
       }

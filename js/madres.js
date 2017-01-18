@@ -102,8 +102,10 @@ function funMadres()
 				 	tds += '<td>' + val.CentroZonal + '</td>';
 				 	tds += '<td>' + val.ultimaAsignacion + '</td>';
 				 	tds += '<td>' + val.Cupos + '</td>';
+				 	tds += '<td>' + (parseInt(val.CV) + parseInt(val.CD)) + '</td>';
 				 	tds += '<td>' + val.CV + '</td>';
 				 	tds += '<td>' + val.CD + '</td>';
+				 	tds += '<td></td>';
 				 tds += '</tr>';
 			});
 

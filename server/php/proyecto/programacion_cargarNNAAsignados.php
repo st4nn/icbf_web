@@ -6,10 +6,9 @@
    $idUsuario = addslashes($_POST['Usuario']);
    $Usuario = datosUsuario($idUsuario);
 
-   $Perfil = "";
    if ($Usuario['idPerfil'] > 3)
    {
-      $Perfil = " AND (Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL)";
+      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
    }
 
    $sql = "SELECT
@@ -33,9 +32,13 @@
             LEFT JOIN Municipios ON Municipios.id = madres.Localidad
             LEFT JOIN CentrosZonales ON CentrosZonales.id = nna_Programa.idCentroZonal
             LEFT JOIN Sedes ON Sedes.id = CentrosZonales.idSede
+            INNER JOIN Programacion ON Programacion.idNNA = nna.id
+            INNER JOIN equipos_has_usuarios ON equipos_has_usuarios.idEquipo = Programacion.idEquipo
+            INNER JOIN equipos ON equipos.id = equipos_has_usuarios.idEquipo
+            INNER JOIN datosUsuarios ON datosUsuarios.idLogin = equipos_has_usuarios.idUsuario AND datosUsuarios.idLogin = '$idUsuario'
          WHERE 
-            (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL) 
-            $Perfil
+            (nna_Programa.Salio <> 'SI' OR nna_Programa.Salio IS NULL)
+            AND equipos.Estado = 1
          ORDER BY
             nna.idMadre;";
 

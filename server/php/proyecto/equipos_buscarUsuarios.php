@@ -10,7 +10,7 @@
    $Parametro ="%" . str_replace(" ", "%", $Parametro) . '%';
 
    $Perfil = "";
-   if ($Usuario['idPerfil'] <> 1)
+   if ($Usuario['idPerfil'] > 3)
    {
       $Perfil = " AND datosUsuarios.idSede = '" . $Usuario['idSede'] . "'";
    }

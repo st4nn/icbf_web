@@ -86,6 +86,7 @@ function funProgramacion()
         });
 
         $("#txtProgramacion_Equipos").append(tds);
+
       } else
       {
         Mensaje("Error", data, "danger");
@@ -93,27 +94,34 @@ function funProgramacion()
     }
   }, "json");
 
-  	/*$("#cntProgramacion_NNA").iniciarResponsables({url : 'typeahead_cargarNNA'}, null, function()
-	{
-		$("#cntProgramacion_NNA label").text("Nombre del NNA a Agregar");
-	});*/
-
 	$(document).delegate('.chkProgramacion_NNA', 'click', function(event) 
 	{
-		var obj = $(this).parent('div').find('label');
-
-		if ($(this).is(':checked'))
+		if ($("#txtProgramacion_Equipos").val() == "" || $("#txtProgramacion_Equipos").val() == "0")
 		{
-			$(obj).text($("#txtProgramacion_Fecha").val());
+			event.preventDefault();
+			Mensaje("Error", "Debe seleccionar primero un Equipo", "danger");
+			$("#txtProgramacion_Equipos").focus();
+			return false;
 		} else
 		{
-			$(obj).text("");
+			var obj = $(this).parent('div').find('label');
+			var idNNA = $(this).attr("id").replace("chkProgramacion_NNA_", "");
+
+			if ($(this).is(':checked'))
+			{
+				$(obj).text($("#txtProgramacion_Fecha").val());
+			} else
+			{
+				var str = $("#txtProgramacion_Borrados").val();
+				str += "{idEquipo : " + $("#txtProgramacion_Equipos").val() + ", idNNA : " + idNNA + ", Fecha : '" + $(obj[0]).text() + "'},";
+				$("#txtProgramacion_Borrados").val(str);
+				$(obj).text("");
+			}
+
+			obj = $("#cntProgramacion_PanelNNA").find(".chkProgramacion_NNA:checked");
+			$("#lblProgramacion_PanelNNA_Programados").text($(obj).length);
+			$("#lblProgramacion_PanelNNA_PorProgramar").text(parseInt($("#lblProgramacion_PanelNNA_Cargados").text())- $(obj).length);
 		}
-
-		obj = $("#cntProgramacion_PanelNNA").find(".chkProgramacion_NNA:checked");
-		$("#lblProgramacion_PanelNNA_Programados").text($(obj).length);
-		$("#lblProgramacion_PanelNNA_PorProgramar").text(parseInt($("#lblProgramacion_PanelNNA_Cargados").text())- $(obj).length);
-
 	});
 
 	$(document).delegate('.btnProgramacion_ProgramarHogar', 'click', function(event) 
@@ -135,6 +143,54 @@ function funProgramacion()
 		evento.preventDefault();
 		var checks = $("#tblProgramacion_NNA").find('input[type=checkbox]:visible:checked');
 		$(checks).trigger('click');
+	});
+
+	$("#frmProgramacion").on("submit", function(evento)
+	{
+		evento.preventDefault();
+		if ($("#txtProgramacion_Equipos").val() == "" || $("#txtProgramacion_Equipos").val() == "0")
+		{
+			Mensaje("Error", "Debe seleccionar primero un Equipo", "danger");
+		} else
+		{
+			var Borrados = $("#txtProgramacion_Borrados").val();
+			if (Borrados != "")
+			{
+				Borrados = Borrados.substr(0, Borrados.length-1);
+			}
+			Borrados = eval('[' + Borrados + ']');
+
+			var datos = [];
+			var idx = 0;
+			var objFecha = {};
+			var idNNA
+
+			var checks = $("#tblProgramacion_NNA").find('input[type=checkbox]:checked');
+			if (checks.length > 0)
+			{
+				$.each(checks, function(index, val) 
+				{
+					 objFecha = $(val).parent('div').find('label');
+					 idNNA = $(val).attr("id").replace("chkProgramacion_NNA_", "");
+
+					 datos[idx] = {idNNA : idNNA, Fecha : $(objFecha).text()};
+					 idx++;
+				});
+			}
+			
+			$.post('../server/php/proyecto/programacion_CrearProgramacion.php', {Usuario: Usuario.id, Borrados :  Borrados, datos : datos, idEquipo : $("#txtProgramacion_Equipos").val()}, function(data, textStatus, xhr) 
+			{
+				if (isNaN(data))
+				{
+					Mensaje("Error", data, "danger");
+				} else
+				{
+					Mensaje("Hey", 'La programación ha sido guardada', "success");
+					$("#txtProgramacion_Borrados").val("");
+				}
+			});
+
+		}
 	});
 
 	$.post('../server/php/proyecto/programacion_cargarNNA.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
@@ -171,13 +227,7 @@ function funProgramacion()
 		              tds += '<br><button class="btn btn-primary btnProgramacion_ProgramarHogar" type="button"><i class="icon wb-home"></i> Marcar Hogar</button>';
 		            tds += '</td>';
 		            tds += '<td><table class="table table-condensed table-hover">';
-			} /*else
-			{
-				if (index > 0)
-				{
-					tds += '</tr><tr>';
-				}
-			}*/
+			} 
 
 			idxNNA++;
 
@@ -193,7 +243,7 @@ function funProgramacion()
 			tds += '<td>';
 	          	tds += '<div class="checkbox-custom checkbox-primary">';
 	              tds += '<input type="checkbox" id="chkProgramacion_NNA_' + val.id + '" class="chkProgramacion_NNA">';
-	              tds += '<label for="chkProgramacion_NNA_' + val.id + '"></label>';
+	              tds += '<label class="lblChkProgramacion_NNA" for="chkProgramacion_NNA_' + val.id + '"></label>';
 	            tds += '</div>';
 	        tds += '</td>';
 
@@ -216,10 +266,39 @@ function funProgramacion()
 		{
 			tds += '</table></td>';
 			tds += '</tr>';
-			//tds = tds.replace('aquiVaElRowSpan', idxNNA);
 		}
 
 		$("#tblProgramacion_NNA tbody").append(tds);
 
+		if ($("#txtProgramacion_idEquipo").val() != "")
+        {
+        	$("#txtProgramacion_Equipos").val($("#txtProgramacion_idEquipo").val());
+        	$("#txtProgramacion_Equipos").trigger('change');
+        	$("#txtProgramacion_idEquipo").val("");
+
+        }
+
 	}, 'json');
+
+	$("#txtProgramacion_Equipos").on("change", function()
+	{
+		var idEquipo = $("#txtProgramacion_Equipos").val();
+		$(".chkProgramacion_NNA").prop("checked", false);
+		$(".lblChkProgramacion_NNA").text("");
+		$("#txtProgramacion_Borrados").val("");
+
+		$.post('../server/php/proyecto/programacion_cargarNNAProgramados.php', {Usuario: Usuario.id, idEquipo : idEquipo}, function(data, textStatus, xhr) 
+		{
+			var tmpFecha = $("#txtProgramacion_Fecha").val();
+			if (data != "0")
+			{
+				$.each(data, function(index, val) 
+				{
+					 $("#txtProgramacion_Fecha").val(val.fecha);
+					$("#chkProgramacion_NNA_" + val.idNNA).trigger('click');
+				});
+				$("#txtProgramacion_Fecha").val(tmpFecha);
+			}
+		}, 'json');
+	});
 }
