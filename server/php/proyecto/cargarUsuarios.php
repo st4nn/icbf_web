@@ -6,9 +6,10 @@
    $idUsuario = $_POST['Usuario'];
    $Usuario = datosUsuario($idUsuario);
 
-   if ($Usuario['idPerfil'] <> 1)
+   $where = "";
+   if ($Usuario['idPerfil'] > 3)
    {
-      //$empresa = " AND Login.idEmpresa = '" . $Usuario['idEmpresa'] . "'";
+      $where = " WHERE datosUsuarios.idSede = '" . $Usuario['idSede']  . "' AND datosUsuarios.idPerfil >= '" . $Usuario['idPerfil'] . "'";
    }
 
    $sql = "SELECT
@@ -26,7 +27,8 @@
             Login
             INNER JOIN datosUsuarios ON Login.idLogin = datosUsuarios.idLogin
             LEFT JOIN Sedes ON datosUsuarios.idSede = Sedes.id
-            LEFT JOIN Perfiles ON datosUsuarios.idPerfil = Perfiles.idPerfil;";
+            LEFT JOIN Perfiles ON datosUsuarios.idPerfil = Perfiles.idPerfil
+         $where;";
 
    $result = $link->query($sql);
 

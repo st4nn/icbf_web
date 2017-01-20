@@ -143,57 +143,6 @@
           <!-- End Navbar Toolbar -->
           <!-- Navbar Toolbar Right -->
           <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
-            <!--
-            <li class="dropdown" id="toggleNotifications">
-              <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
-                data-animation="scale-up" role="button">
-                <i class="icon wb-bell" aria-hidden="true"></i>
-                <span class="badge badge-danger up">2</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
-                <li class="dropdown-menu-header" role="presentation">
-                  <h5>NOTIFICACIONES</h5>
-                  <span class="label label-round label-danger">Nuevas 2</span>
-                </li>
-                <li class="list-group" role="presentation">
-                  <div data-role="container">
-                    <div data-role="content">
-                      <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                        <div class="media">
-                          <div class="media-left padding-right-10">
-                            <i class="icon wb-order bg-red-600 white icon-circle" aria-hidden="true"></i>
-                          </div>
-                          <div class="media-body">
-                            <h6 class="media-heading">Está pendiente el Alcance de PR_2014_PG_PROYECTO VILLA ESTRELLA</h6>
-                            <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">Hace 5 días</time>
-                          </div>
-                        </div>
-                      </a>
-                      <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                        <div class="media">
-                          <div class="media-left padding-right-10">
-                            <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
-                          </div>
-                          <div class="media-body">
-                            <h6 class="media-heading">No ha iniciado el poyecto 2015_TRAFOS_QUEMADOS_MAR_BOLC</h6>
-                            <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Hace 29 días</time>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="dropdown-menu-footer" role="presentation">
-                  <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
-                    <i class="icon wb-settings" aria-hidden="true"></i>
-                  </a>
-                  <a href="javascript:void(0)" role="menuitem">
-                    All notifications
-                  </a>
-                </li>
-              </ul>
-            </li>
-            -->
             <li>
               <a class="label" id="lblNombreUsuario"></a>
             </li>
@@ -227,25 +176,96 @@
           <div id="contenedorMenu">
             <ul class="site-menu">
               <li class="site-menu-category"></li>
-              <li class="site-menu-item">
+              <li id="lnkMenu_Inicio" class="site-menu-item">
                 <a vinculo="Inicio.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                   <i class="site-menu-icon fa-home" aria-hidden="true"></i>
                   <span class="site-menu-title">Inicio</span>
                 </a>
               </li>
 
-              <li class="site-menu-category">Programación</li>
-               
-                <li class="site-menu-item">
+              <li id="lnkMenu_Administracion" class="site-menu-category">Administración</li>
+                <li id="lnkMenu_Administracion_Usuarios" class="site-menu-item">
+                  <a vinculo="usuarios/usuarios.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-users" aria-hidden="true"></i>
+                    <span class="site-menu-title">Usuarios</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Administracion_Equipos" class="site-menu-item">
+                  <a vinculo="equipos/equipos.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-user-plus" aria-hidden="true"></i>
+                    <span class="site-menu-title">Equipos</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Administracion_Configuracion" class="site-menu-item">
+                  <a vinculo="configuracion/configuracion.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-cogs" aria-hidden="true"></i>
+                    <span class="site-menu-title">Configuración</span>
+                  </a>
+                </li>
+
+              <li id="lnkMenu_Programa" class="site-menu-category">Programa</li>
+                <li id="lnkMenu_Programa_Madres" class="site-menu-item">
+                  <a vinculo="madres/madres.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-female" aria-hidden="true"></i>
+                    <span class="site-menu-title">Madres</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Programa_NNA" class="site-menu-item">
+                  <a vinculo="nna/nna.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-child" aria-hidden="true"></i>
+                    <span class="site-menu-title">NNA</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Programa_Formatos" class="site-menu-item">
+                  <a vinculo="nna/homeVisita.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-newspaper-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">Formatos</span>
+                  </a>
+                </li>
+
+              <li id="lnkMenu_Programacion" class="site-menu-category">Programación</li>
+                <li id="lnkMenu_Programacion_Asignaciones" class="site-menu-item">
+                  <a vinculo="programacion/visitas.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-cab" aria-hidden="true"></i>
+                    <span class="site-menu-title">Asignaciones</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Programacion_VerProgramacion" class="site-menu-item">
+                  <a vinculo="programacion/verProgramacion.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-bookmark" aria-hidden="true"></i>
+                    <span class="site-menu-title">Ver Programacion</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Programacion_Calendario" class="site-menu-item">
                   <a vinculo="programacion/calendario.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-calendar" aria-hidden="true"></i>
                     <span class="site-menu-title">Calendario</span>
                   </a>
                 </li>
-                <li class="site-menu-item">
+                <li id="lnkMenu_Programacion_VerAsignados" class="site-menu-item">
                   <a vinculo="programacion/asignados.html" href="javascript:void(0)" class="lnkMenuBar_Item">
                     <i class="site-menu-icon fa-check-square-o" aria-hidden="true"></i>
                     <span class="site-menu-title">Ver Asignados</span>
+                  </a>
+                </li>
+
+              <li id="lnkMenu_Reportes" class="site-menu-category">Reportes</li>
+                <li id="lnkMenu_Reportes_Formatos" class="site-menu-item">
+                  <a vinculo="na.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon glyphicon-th-list" aria-hidden="true"></i>
+                    <span class="site-menu-title">Formatos</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Reportes_Estadisticas" class="site-menu-item">
+                  <a vinculo="na.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-line-chart" aria-hidden="true"></i>
+                    <span class="site-menu-title">Estadísticas</span>
+                  </a>
+                </li>
+                <li id="lnkMenu_Reportes_Mapas" class="site-menu-item">
+                  <a vinculo="na.html" href="javascript:void(0)" class="lnkMenuBar_Item">
+                    <i class="site-menu-icon fa-map-marker" aria-hidden="true"></i>
+                    <span class="site-menu-title">Mapas</span>
                   </a>
                 </li>
             </ul>

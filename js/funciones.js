@@ -1,4 +1,5 @@
 var Usuario = null;
+var usuarioPermisos = null;
 
 $(document).ready(function() {
 	aplicacion();
@@ -7,6 +8,9 @@ $(document).ready(function() {
   if (Usuario == null || Usuario == undefined)
   {
     cerrarSesion();
+  } else
+  {
+    llenarRestricciones();
   }
 
   document.addEventListener("backbutton", function(e)
@@ -508,9 +512,25 @@ $.fn.iniciarResponsables = function(parametros, funcionSelect, callback)
     callback();
 }
 
+function llenarRestricciones()
+{
+  usuarioPermisos = {};
+  $.post('../server/php/proyecto/configuracion_CargarRestricciones.php', {Usuario : Usuario.id}, function(data, textStatus, xhr) 
+  {
+    if (data != 0)
+    {
+      usuarioPermisos = data;
+    }
+    controlarPermisos();
+  }, 'json');
+}
+
 function controlarPermisos()
 {
-  
+  $.each(usuarioPermisos, function(index, val) 
+  {
+     $(val.control).hide();
+  });
 }
 
 function iniciarWizard(elemento, controles, funFinish, funBeforeChange)

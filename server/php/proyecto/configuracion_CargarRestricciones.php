@@ -6,21 +6,11 @@
    $idUsuario = $_POST['Usuario'];
    $Usuario = datosUsuario($idUsuario);
 
-   $Perfil = "";
-   if ($Usuario['idPerfil'] > 3)
-   {
-      $Perfil = " WHERE Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL";
-   }
-
    $sql = "SELECT
-            Sedes.*,
-            Regionales.Nombre AS Regional,
-            datosUsuarios.Nombre AS Usuario_Nombre 
+            Funciones.control
           FROM
-            Sedes
-            INNER JOIN Regionales ON Regionales.id = Sedes.idRegional
-            LEFT JOIN datosUsuarios ON datosUsuarios.idLogin = Sedes.Usuario
-         $Perfil;";
+            Perfiles_hasnot_Funciones
+            INNER JOIN Funciones ON Funciones.id = Perfiles_hasnot_Funciones.idFuncion AND idPerfil = '" .  $Usuario['idPerfil'] . "';";
 
    $result = $link->query($sql);
 

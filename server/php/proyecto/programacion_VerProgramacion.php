@@ -12,6 +12,11 @@
       $Perfil = " AND (Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL)";
    }
 
+   if ($Usuario['idPerfil'] > 4)
+   {
+      $Perfil = " AND (datosUsuarios.idLogin = '" . $idUsuario . "'";
+   }
+
    $sql = "SELECT
             equipos.id,
             equipos.Nombre,

@@ -171,7 +171,7 @@ function usuarios_CargarPerfiles()
 				
 				$.each(data, function(index, val) 
 				{
-	    			tds2 += '<option value="' + val.id + '">' + val.Nombre + '</option>';
+	    			tds2 += '<option value="' + val.idPerfil + '">' + val.Nombre + '</option>';
 				});
 				
     			$("#txtUsuarios_Crear_idPerfil").append(tds2);
