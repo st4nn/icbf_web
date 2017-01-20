@@ -109,8 +109,10 @@ function funAsignados()
 	$(document).delegate('.lnkAsignados_AbrirNNA', 'click', function(evento) {
 		evento.preventDefault();
 		var nombreNNA = $(this).text();
+		var idNNA = $(this).attr("idNNA");
 		cargarModulo("nna/homeVisita.html", "Visita", function()
 		{
+			$("#txtHomeVisita_idNNA").val(idNNA);
 			$("#lblHomeVisita_NombreNNA").text(nombreNNA);
 		});
 	});

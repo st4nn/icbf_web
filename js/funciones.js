@@ -607,3 +607,10 @@ function calcularTiempoPublicacion(fecha)
 
     return respuesta;
 }
+
+$(document).delegate('.rdbFormato input', 'click', function(event) 
+{
+  var valor = $(this).val();
+  var obj = $(this).parent("div").parent("div").find(".rdbFormato_Value");
+  $(obj).val(valor);  
+});
