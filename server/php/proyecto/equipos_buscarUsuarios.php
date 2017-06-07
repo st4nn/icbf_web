@@ -26,7 +26,8 @@
             AND (
                datosUsuarios.Nombre LIKE '$Parametro'
                OR datosUsuarios.Cargo LIKE '$Parametro'
-            ) $Perfil LIMIT 0, 30;";
+            ) $Perfil GROUP BY Login.idLogin LIMIT 0, 30;";
+
    $result = $link->query($sql);
    $idx = 0;
    if ( $result->num_rows > 0)
