@@ -16,7 +16,7 @@ function EnviarCorreo($Destinatario, $Asunto, $Mensaje)
 
 	// Datos de autenticación
 	$mail->Username = "app@simasus.com";
-	$mail->Password = "Holamundo.8";
+	$mail->Password = 'nHw}QWOs%Zo*';
 
 	$mail->From = "app@simasus.com";
 	$mail->FromName = utf8_decode("Sistema de Información de Madres Sustitutas");
