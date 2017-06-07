@@ -19,7 +19,7 @@
             datosUsuarios.idSede AS idSede,
             GROUP_CONCAT(DISTINCT concat(datosUsuarios.Nombre, ' (', datosUsuarios.Cargo, ')') SEPARATOR ', ') AS Integrantes ,
             Sedes.Nombre AS Sede,
-            COUNT(DISTINCT Programacion.idNNA) AS NNA
+            COUNT(DISTINCT Programacion.idMadre) AS NNA
           FROM
             equipos
             INNER JOIN equipos_has_usuarios ON equipos_has_usuarios.idEquipo = equipos.id

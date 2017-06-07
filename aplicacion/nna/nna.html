@@ -1,79 +1,74 @@
-<style>
-	#tblNnas tbody tr:hover
-	{
-		cursor: pointer;
-	}
-</style>
-
-<div class="page">
-	<div class="page-content container-fluid">
-		<div id="cntNNA_Tabla" class="col-sm-12">
-			<div class="panel panel-primary panel-bordered">
-		        <div class="panel-heading">
-		        	<h3 class="panel-title">NNAs Registrados</h3>
-		        	<div class="panel-actions">
-	    				<button id="btnNNA_CrearNNA" class="btn text-left btn-warning btn-block"><i class="icon fa-user-plus"></i> Crear NNA</button>
-		            </div>
-		        </div>
-
-		        <div class="panel-body">
-		        	<button id="btnNNA_VerNNA_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
-		        	<div class="table-responsive">
-			        	<table id="tblNnas" class="table table-hover table-striped">
-			        		<thead>
-			        			<tr>
-			        				<th></th>
-			        				<th>id</th>
-			        				<th>Nombre</th>
-			        				<th>Documento</th>
-			        				<th>Edad</th>
-			        			</tr>
-			        		</thead>
-			        		<tbody>
-			        		</tbody>			        		
-			        	</table>
-		        	</div>
-		        </div>
-		    </div>
-		</div>
-
-		<div id="cntNNA_Detalle" class="col-sm-4 hide">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-            	<h3 id="lblNNA_Detalle_Codigo" class="panel-title"></h3>
-              	<div class="panel-actions">
-					<button id="btnNNA_CerrarDetalle" class="btn btn-link white"><i class="icon wb-close"></i></button>
-	            </div>
-            </div>
-            <div class="panel-body">
-	      		<div class="row no-space">
-	      			<div class="btn-group col-md-12" role="group">
-	                    <button id="btnNNA_Dellate_Editar" type="button" class="btn btn-outline col-xs-6 btn-default"><i class="icon wb-pencil" aria-hidden="true"></i>Editar</button>
-	                    <button id="btnNNA_Dellate_Programa" type="button" class="btn btn-outline col-xs-6 btn-default"><i class="icon wb-home" aria-hidden="true"></i>Programa</button>
-	                </div>
-	                <br><br><br>
-	      		</div>
-              <div class="col-sm-12 text-center">
-              		<input type="hidden" id="txtNNA_Prefijo">
-					<img id="imgNNA_Foto" style="height: 266px;width:210px; border-radius: 28px;" src="" alt="...">
-					<h4 id="lblNNA_Detalle_Nombre" class="profile-user"></h4>
-					<p id="lblNNA_Detalle_Documento" class="profile-job"></p>
-					<p id="lblNNA_Detalle_Edad"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-	</div>
-</div>
-
-<script type="text/javascript">
-    jQuery(document).ready(function() { 
-        $.getScript("../js/NNA.js", function(ev)
-        {
-          funNNA();
-        });
-
-        $.getScript("../js/nna_Crear.js", function(){});
-        $.getScript("../js/nna_Programa.js", function(){});
-    });
+<style>
+	#tblNnas tbody tr:hover
+	{
+		cursor: pointer;
+	}
+</style>
+<div class="page">
+	<div class="page-content container-fluid">
+		<div id="cntNNA_Tabla" class="col-sm-12">
+			<div class="panel panel-primary panel-bordered">
+		        <div class="panel-heading">
+		        	<h3 class="panel-title">NNAs Registrados</h3>
+		        	<div class="panel-actions">
+	    				<button id="btnNNA_CrearNNA" class="btn text-left btn-warning btn-block"><i class="icon fa-user-plus"></i> Crear NNA</button>
+		            </div>
+		        </div>
+		        <div class="panel-body">
+		        	<button id="btnNNA_VerNNA_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+		        	<div class="table-responsive">
+			        	<table id="tblNnas" class="table table-hover table-striped">
+			        		<thead>
+			        			<tr>
+			        				<th></th>
+			        				<th>id</th>
+			        				<th>Nombre</th>
+			        				<th>Documento</th>
+			        				<th>Edad</th>
+			        			</tr>
+			        		</thead>
+			        		<tbody>
+			        		</tbody>			        		
+			        	</table>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+		<div id="cntNNA_Detalle" class="col-sm-4 hide">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+            	<h3 id="lblNNA_Detalle_Codigo" class="panel-title"></h3>
+              	<div class="panel-actions">
+					<button id="btnNNA_CerrarDetalle" class="btn btn-link white"><i class="icon wb-close"></i></button>
+	            </div>
+            </div>
+            <div class="panel-body">
+	      		<div class="row no-space">
+	      			<div class="btn-group col-md-12" role="group">
+	                    <button id="btnNNA_Dellate_Editar" type="button" class="btn btn-outline col-xs-6 btn-default"><i class="icon wb-pencil" aria-hidden="true"></i>Editar</button>
+	                    <button id="btnNNA_Dellate_Programa" type="button" class="btn btn-outline col-xs-6 btn-default"><i class="icon wb-home" aria-hidden="true"></i>Programa</button>
+	                </div>
+	                <br><br><br>
+	      		</div>
+              <div class="col-sm-12 text-center">
+              		<input type="hidden" id="txtNNA_Prefijo">
+					<img id="imgNNA_Foto" style="height: 266px;width:210px; border-radius: 28px;" src="" alt="...">
+					<h4 id="lblNNA_Detalle_Nombre" class="profile-user"></h4>
+					<p id="lblNNA_Detalle_Documento" class="profile-job"></p>
+					<p id="lblNNA_Detalle_Edad"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+	</div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/NNA.js", function(ev)
+        {
+          funNNA();
+        });
+        $.getScript("../js/nna_Crear.js", function(){});
+        $.getScript("../js/nna_Programa.js", function(){});
+    });
 </script>

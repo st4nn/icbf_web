@@ -107,16 +107,18 @@ function funProgramacion()
 			var obj = $(this).parent('div').find('label');
 			var idNNA = $(this).attr("id").replace("chkProgramacion_NNA_", "");
 
+			var str = $("#txtProgramacion_Borrados").val();
+			
 			if ($(this).is(':checked'))
 			{
 				$(obj).text($("#txtProgramacion_Fecha").val());
+				str = str.replace("{idEquipo : " + $("#txtProgramacion_Equipos").val() + ", idNNA : " + idNNA + ", Fecha : '" + $(obj[0]).text() + "'},", '');
 			} else
 			{
-				var str = $("#txtProgramacion_Borrados").val();
 				str += "{idEquipo : " + $("#txtProgramacion_Equipos").val() + ", idNNA : " + idNNA + ", Fecha : '" + $(obj[0]).text() + "'},";
-				$("#txtProgramacion_Borrados").val(str);
 				$(obj).text("");
 			}
+			$("#txtProgramacion_Borrados").val(str);
 
 			obj = $("#cntProgramacion_PanelNNA").find(".chkProgramacion_NNA:checked");
 			$("#lblProgramacion_PanelNNA_Programados").text($(obj).length);
@@ -205,32 +207,9 @@ function funProgramacion()
 
 		var idxNNA = 0;
 
+
 		$.each(data, function(index, val) 
 		{
-			if (tmpMadre != val.idMadre)
-			{
-				tmpMadre = val.idMadre;
-				if (index > 0)
-				{
-					tds += '</table></td>';
-					tds += '</tr>';
-					//tds = tds.replace('aquiVaElRowSpan', idxNNA);
-				}
-
-				idxNNA = 0;
-
-				tds += '<tr class="cntProgramacion_Madre">';
-					tds += '<td>';
-				      tds += '<h3 class="panel-title">' + val.Madre + '</h3>';
-		              tds += '<p>' + val.Direccion + '<br>' + val.Barrio + '<br>' + val.Municipio + '</p>';
-		              tds += '<small>Centro Zonal: </small> <strong>' + val.CentroZonal + '</strong>';
-		              tds += '<br><button class="btn btn-primary btnProgramacion_ProgramarHogar" type="button"><i class="icon wb-home"></i> Marcar Hogar</button>';
-		            tds += '</td>';
-		            tds += '<td><table class="table table-condensed table-hover">';
-			} 
-
-			idxNNA++;
-
 			valor = calcularEdad(val.FechaNacimiento);
 			valor = valor.anios + " años, " + valor.meses + " meses y " + valor.dias + " días";
 
@@ -239,26 +218,35 @@ function funProgramacion()
 			{
 				icon = 'female';
 			}
-			tds += '<tr>';
-			tds += '<td>';
-	          	tds += '<div class="checkbox-custom checkbox-primary">';
-	              tds += '<input type="checkbox" id="chkProgramacion_NNA_' + val.id + '" class="chkProgramacion_NNA">';
-	              tds += '<label class="lblChkProgramacion_NNA" for="chkProgramacion_NNA_' + val.id + '"></label>';
-	            tds += '</div>';
-	        tds += '</td>';
 
-	        tds += '<td>';
-			  	tds += '<i class="icon fa-' + icon + ' font-size-20"></i>';
-			tds += '</td>';
-
-
-			tds += '<td>';
-				tds += '<h4>';
-					tds += '<a class="name">' + val.Nombre + '</a> ';
-				tds += '</h4>';
-				tds += '<small>' + val.TipoDocumento + ':</small> <strong>' + val.Documento + '</strong><br>';
-				tds += '<small>Edad:</small> <strong>' + valor + '</strong>';
-				tds += '<small class="pull-right">ingreso ' + calcularTiempoPublicacion(val.FechaIngreso) + ' el ' + val.FechaIngreso + '</small>';
+			tds += '<tr class="cntProgramacion_Madre">';
+		        tds += '<td>';
+				  	tds += '<i class="icon fa-' + icon + ' font-size-20"></i>';
+				tds += '</td>';
+				tds += '<td>';
+		          	tds += '<div class="checkbox-custom checkbox-primary">';
+		              tds += '<input type="checkbox" id="chkProgramacion_NNA_' + val.id + '" class="chkProgramacion_NNA">';
+		              tds += '<label class="lblChkProgramacion_NNA" for="chkProgramacion_NNA_' + val.id + '"></label>';
+		            tds += '</div>';
+		        tds += '</td>';
+		        tds += '<td class="text-center">';
+		        	tds +='<a href="#" class="lnkProgramacion_VerProgramados" data-idMadre="' + val.id + '">' + val.Programados + '</a>';
+		        tds += '</td>';
+				tds += '<td>';
+					tds += '<h4>';
+						tds += '<a class="name">' + val.Nombre + '</a> <br>';
+					tds += '</h4>';
+					tds += '<small>Dirección: </small>' + val.Direccion;
+				tds += '</td>';
+				tds += '<td>';
+					tds += '<small>Telefono: </small>' + val.Telefono1;
+					tds += '<br><small>Celular: </small>' + val.Celular1;
+				tds += '</td>';
+				tds += '<td>';
+					tds += '<small>Documento: </small> <strong>' + val.Documento + '</strong><br>';
+					tds += '<small>Edad:</small> <strong>' + valor + '</strong>';
+					tds += '<small class="pull-right">ingresó ' + calcularTiempoPublicacion(val.FechaIngreso) + ' el ' + val.FechaIngreso + '</small>';
+				tds += '</td>';
 			tds += '</tr>';
 		});
 
