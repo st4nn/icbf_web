@@ -1,256 +1,256 @@
-<div class="page">
-  <br><button id="btnNNAPrograma_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
-  <div class="page-content container-fluid">
-    <form id="frmNNAPrograma">
-      <input type="hidden" class="form-control guardar" id="txtNNAPrograma_id">
-
-      <h3 id="lblNNAPrograma_NombreNNA"></h3>
-
-      <div class="col-sm-12">
-        <div class="col-sm-8">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">NNA Programa</h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-4 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_FechaIngreso" class="control-label">Fecha de ingreso</label>
-                    <input type="text" class="form-control guardar datepicker" id="txtNNAPrograma_FechaIngreso">
-                  </div>
-                </div>
-                <div class="col-md-4 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_TiempoHogar" class="control-label">Tiempo en el hogar</label>
-                    <input type="text" class="form-control" id="txtNNAPrograma_TiempoHogar" readonly="true" style="border:none; background: white;">
-                  </div>
-                </div>
-                <div class="col-md-4 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_SIM" class="control-label">SIM</label>
-                    <input type="text" class="form-control guardar" id="txtNNAPrograma_SIM">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_NumeroDeResolucion" class="control-label">Numero de Resolución</label>
-                    <input type="text" class="form-control guardar" id="txtNNAPrograma_NumeroDeResolucion">
-                  </div>
-                </div>
-                <div class="col-md-3 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_Discapacidad" class="control-label">Discapacidad</label>
-                    <select id="txtNNAPrograma_Discapacidad" class="form-control guardar">
-                      <option value="SIN">SIN INFORMACIÓN</option>
-                      <option value="SI">SI</option>
-                      <option value="NO">NO</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_Diagnostico" class="control-label">Diagnóstico</label>
-                    <textarea id="txtNNAPrograma_Diagnostico" rows="3" class="form-control guardar"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_PARD" class="control-label">Situación Jurídica del PARD</label>
-                    <select id="txtNNAPrograma_PARD" class="form-control guardar">
-                      <option value="SIN INFORMACIÓN">SIN INFORMACIÓN</option>
-                      <option value="ADOPTABILIDAD">ADOPTABILIDAD</option>
-                      <option value="PARD EN TÉRMINOS">PARD EN TÉRMINOS</option>
-                      <option value="VULNERABILIDAD">VULNERABILIDAD</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_DefensorDeFamilia" class="control-label">Defensor de Familia</label>
-                    <input type="text" class="form-control guardar" id="txtNNAPrograma_DefensorDeFamilia">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_idCentroZonal" class="control-label">Centro Zonal</label>
-                    <select id="txtNNAPrograma_idCentroZonal" class="form-control guardar">
-                      
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_DeclaradoAdoptabilidad" class="control-label">¿Declarado en Adoptabilidad?</label>
-                    <select id="txtNNAPrograma_DeclaradoAdoptabilidad" class="form-control guardar">
-                      <option value="SIN">SIN INFORMACIÓN</option>
-                      <option value="SI">SI</option>
-                      <option value="NO">NO</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_Desplazado" class="control-label">Desplazado</label>
-                    <select id="txtNNAPrograma_Desplazado" class="form-control guardar">
-                      <option value="SIN">SIN INFORMACIÓN</option>
-                      <option value="SI">SI</option>
-                      <option value="NO">NO</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_AutoridadAdministrativa" class="control-label">Nombre de la autoridad Administrativa a cargo del PARD</label>
-                    <select id="txtNNAPrograma_AutoridadAdministrativa" class="form-control guardar">
-                      <option value="SIN">SIN INFORMACIÓN</option>
-                      <option value="ICBF Defensoría">ICBF Defensoría</option>
-                      <option value="Comisaría">Comisaría</option>
-                      <option value="Inspección de Policía">Inspección de Policía</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_Observaciones" class="control-label">Observaciones</label>
-                    <textarea id="txtNNAPrograma_Observaciones" rows="3" class="form-control guardar"></textarea>
-                  </div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <div class="form-group">
-                    <label for="txtNNAPrograma_Modalidad" class="control-label">Modalidad</label>
-                    <textarea id="txtNNAPrograma_Modalidad" rows="3" class="form-control guardar"></textarea>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
-        </div>
-        <div id="cntNNAMadre_Detalle" class="col-sm-4 hide">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Hogar Asignado</h3>
-            </div>
-            <div class="panel-body">
-              <div class="col-sm-12 text-center">
-                  <input type="hidden" id="txtNNAMadre_id">
-                  <img id="imgNNAMadre_Foto" style="height: 266px;width:210px; border-radius: 28px;" src="" alt="...">
-                  <h4 id="lblNNAMadre_Detalle_Nombre" class="profile-user"></h4>
-                  <p id="lblNNAMadre_Detalle_Cedula" class="profile-job"></p>
-                  <p><span id="lblNNAMadre_Detalle_Ubicacion"></span> <strong id="lblNNAMadre_Detalle_CentroZonal"></strong></p>
-                  <p id="lblNNAMadre_Detalle_Edad"></p>
-                  <h5 class="icon fa-phone"> <span id="lblNNAMadre_Detalle_Telefonos"></span></h5>
-                  <h5><span class="icon fa-envelope"></span> <a id="lblNNAMadre_Detalle_Correo"></a></h5>
-              </div>
-              
-                <div class="col-md-12">
-                  <h3 class="panel-title blue-grey-600">Otros Niños Asignados</h3>
-                  <span id="lblNNAMadrePrograma_NinosAsignados" class="pull-right label label-round label-success"></span>
-                </div>
-                <div class="col-md-12">
-                  <ul id="cntNNAMadrePrograma_NinosAsignados" class="list-group list-group-dividered list-group-full">
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="cntNNAMadre_AsignarHogar" class="col-sm-4">
-            <div class="panel panel-primary panel-bordered">
-              <div class="panel-heading">
-                <h3 class="panel-title">Asignar Hogar</h3>
-              </div>
-              <div class="panel-body">
-                <div id="cntNNAPrograma_Responsable">
-                  
-                </div>              
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12">
-            
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-sm-12">
-        <div class="col-sm-6 col-md-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Observaciones</h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="txtNNAPrograma_FechaNovedad" class="control-label">Fecha de la Novedad</label>
-                  <input type="text" class="form-control datepicker" id="txtNNAPrograma_FechaNovedad">
-                </div>
-
-                <div class="col-md-6 form-group">
-                  <label for="txtNNAPrograma_TipoNovedad" class="control-label">Tipo de Novedad</label>
-                  <select type="text" class="form-control" id="txtNNAPrograma_TipoNovedad">
-                    <option value="Observación">Observación</option>
-                    <option value="Retiro">Retiro</option>
-                    <option value="Retiro por Muerte">Retiro por Muerte</option>
-                  </select>
-                </div>
-                
-              </div>
-              <div class="col-md-12 form-group">
-                <div class="form-group">
-                  <label for="txtNNAPrograma_NObservaciones" class="control-label">Observacion</label>
-                  <textarea  class="form-control" rows="12" id="txtNNAPrograma_NObservaciones"></textarea>
-                </div>
-              </div>
-
-           
-            </div>
-            <div class="panel-footer">
-              <button id="btnNNAPrograma_AgregarNovedad" type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Historial de Observaciones</h3>
-            </div>
-            <div class="panel-body">
-              <ul id="cntNNAPrograma_Novedades" class="list-group">
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      
-      
-    </form>
-  </div>
-</div>
-<!-- End Page -->
-<script type="text/javascript">
-  jQuery(document).ready(function() {
-    funnna_Programa();
-  });
+<div class="page">
+  <br><button id="btnNNAPrograma_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
+  <div class="page-content container-fluid">
+    <form id="frmNNAPrograma">
+      <input type="hidden" class="form-control guardar" id="txtNNAPrograma_id">
+
+      <h3 id="lblNNAPrograma_NombreNNA"></h3>
+
+      <div class="col-sm-12">
+        <div class="col-sm-8">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">NNA Programa</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_FechaIngreso" class="control-label">Fecha de ingreso</label>
+                    <input type="text" class="form-control guardar datepicker" id="txtNNAPrograma_FechaIngreso">
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_TiempoHogar" class="control-label">Tiempo en el hogar</label>
+                    <input type="text" class="form-control" id="txtNNAPrograma_TiempoHogar" readonly="true" style="border:none; background: white;">
+                  </div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_SIM" class="control-label">SIM</label>
+                    <input type="text" class="form-control guardar" id="txtNNAPrograma_SIM">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_NumeroDeResolucion" class="control-label">Numero de Resolución</label>
+                    <input type="text" class="form-control guardar" id="txtNNAPrograma_NumeroDeResolucion">
+                  </div>
+                </div>
+                <div class="col-md-3 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Discapacidad" class="control-label">Discapacidad</label>
+                    <select id="txtNNAPrograma_Discapacidad" class="form-control guardar">
+                      <option value="SIN">SIN INFORMACIÓN</option>
+                      <option value="SI">SI</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Diagnostico" class="control-label">Diagnóstico</label>
+                    <textarea id="txtNNAPrograma_Diagnostico" rows="3" class="form-control guardar"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_PARD" class="control-label">Situación Jurídica del PARD</label>
+                    <select id="txtNNAPrograma_PARD" class="form-control guardar">
+                      <option value="SIN INFORMACIÓN">SIN INFORMACIÓN</option>
+                      <option value="ADOPTABILIDAD">ADOPTABILIDAD</option>
+                      <option value="PARD EN TÉRMINOS">PARD EN TÉRMINOS</option>
+                      <option value="VULNERABILIDAD">VULNERABILIDAD</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_DefensorDeFamilia" class="control-label">Defensor de Familia</label>
+                    <input type="text" class="form-control guardar" id="txtNNAPrograma_DefensorDeFamilia">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_idCentroZonal" class="control-label">Centro Zonal</label>
+                    <select id="txtNNAPrograma_idCentroZonal" class="form-control guardar">
+                      
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_DeclaradoAdoptabilidad" class="control-label">¿Declarado en Adoptabilidad?</label>
+                    <select id="txtNNAPrograma_DeclaradoAdoptabilidad" class="form-control guardar">
+                      <option value="SIN">SIN INFORMACIÓN</option>
+                      <option value="SI">SI</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Desplazado" class="control-label">Desplazado</label>
+                    <select id="txtNNAPrograma_Desplazado" class="form-control guardar">
+                      <option value="SIN">SIN INFORMACIÓN</option>
+                      <option value="SI">SI</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_AutoridadAdministrativa" class="control-label">Nombre de la autoridad Administrativa a cargo del PARD</label>
+                    <select id="txtNNAPrograma_AutoridadAdministrativa" class="form-control guardar">
+                      <option value="SIN">SIN INFORMACIÓN</option>
+                      <option value="ICBF Defensoría">ICBF Defensoría</option>
+                      <option value="Comisaría">Comisaría</option>
+                      <option value="Inspección de Policía">Inspección de Policía</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Observaciones" class="control-label">Observaciones</label>
+                    <textarea id="txtNNAPrograma_Observaciones" rows="3" class="form-control guardar"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <div class="form-group">
+                    <label for="txtNNAPrograma_Modalidad" class="control-label">Modalidad</label>
+                    <textarea id="txtNNAPrograma_Modalidad" rows="3" class="form-control guardar"></textarea>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
+        </div>
+        <div id="cntNNAMadre_Detalle" class="col-sm-4 hide">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Hogar Asignado</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-sm-12 text-center">
+                  <input type="hidden" id="txtNNAMadre_id">
+                  <img id="imgNNAMadre_Foto" style="height: 266px;width:210px; border-radius: 28px;" src="" alt="...">
+                  <h4 id="lblNNAMadre_Detalle_Nombre" class="profile-user"></h4>
+                  <p id="lblNNAMadre_Detalle_Cedula" class="profile-job"></p>
+                  <p><span id="lblNNAMadre_Detalle_Ubicacion"></span> <strong id="lblNNAMadre_Detalle_CentroZonal"></strong></p>
+                  <p id="lblNNAMadre_Detalle_Edad"></p>
+                  <h5 class="icon fa-phone"> <span id="lblNNAMadre_Detalle_Telefonos"></span></h5>
+                  <h5><span class="icon fa-envelope"></span> <a id="lblNNAMadre_Detalle_Correo"></a></h5>
+              </div>
+              
+                <div class="col-md-12">
+                  <h3 class="panel-title blue-grey-600">Otros Niños Asignados</h3>
+                  <span id="lblNNAMadrePrograma_NinosAsignados" class="pull-right label label-round label-success"></span>
+                </div>
+                <div class="col-md-12">
+                  <ul id="cntNNAMadrePrograma_NinosAsignados" class="list-group list-group-dividered list-group-full">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cntNNAMadre_AsignarHogar" class="col-sm-4">
+            <div class="panel panel-primary panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Asignar Hogar</h3>
+              </div>
+              <div class="panel-body">
+                <div id="cntNNAPrograma_Responsable">
+                  
+                </div>              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-12">
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Observaciones</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="txtNNAPrograma_FechaNovedad" class="control-label">Fecha de la Novedad</label>
+                  <input type="text" class="form-control datepicker" id="txtNNAPrograma_FechaNovedad">
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="txtNNAPrograma_TipoNovedad" class="control-label">Tipo de Novedad</label>
+                  <select type="text" class="form-control" id="txtNNAPrograma_TipoNovedad">
+                    <option value="Observación">Observación</option>
+                    <option value="Retiro">Retiro</option>
+                    <option value="Retiro por Muerte">Retiro por Muerte</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div class="col-md-12 form-group">
+                <div class="form-group">
+                  <label for="txtNNAPrograma_NObservaciones" class="control-label">Observacion</label>
+                  <textarea  class="form-control" rows="12" id="txtNNAPrograma_NObservaciones"></textarea>
+                </div>
+              </div>
+
+           
+            </div>
+            <div class="panel-footer">
+              <button id="btnNNAPrograma_AgregarNovedad" type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Historial de Observaciones</h3>
+            </div>
+            <div class="panel-body">
+              <ul id="cntNNAPrograma_Novedades" class="list-group">
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      
+    </form>
+  </div>
+</div>
+<!-- End Page -->
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    funnna_Programa();
+  });
 </script>

@@ -10,6 +10,10 @@
 		        </div>
 		        <div class="panel-body">
 		        	<div class="table-responsive">
+	          			<div class="checkbox-custom checkbox-primary">
+		                  <input type="checkbox" id="chkUsuarios_VerActivos">
+		                  <label for="chkUsuarios_VerActivos">Ver usuarios inactivos</label>
+		                </div>
 			        	<table id="tblUsuarios" class="table table-hover table-striped">
 			        		<thead>
 			        			<tr>
@@ -33,7 +37,6 @@
 		</div>
 	</div>
 </div>
-
 <div id="cntUsuarios_CrearUsuario" class="page hide">
 	<div class="page-content">
 		<div class="row">
@@ -55,7 +58,6 @@
 									<h3 class="panel-title">Datos del Usuario</h3>
 								</div>
 								<div class="panel-body">
-									
 									<div class="form-group">
 										<label class="col-lg-12 col-sm-3 control-label">Nombre Completo
 											<span class="required">*</span>
@@ -95,7 +97,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group">
 										<label class="col-lg-12 col-sm-3 control-label">Perfil</label>
 										<div class="col-lg-12 col-sm-9">
@@ -126,7 +127,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group">
 										<label class="col-lg-12 col-sm-3 control-label">Estado
 											<span class="required">*</span>
@@ -180,7 +180,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group">
 										<label class="col-lg-12 col-sm-3 control-label">Nuevamente la clave, por favor
 											<span class="required">*</span>
@@ -206,7 +205,6 @@
 		</div>
 	</div>
 </div>
-
 <script type="text/javascript">
     jQuery(document).ready(function() { 
         $.getScript("../js/usuarios.js", function(ev)

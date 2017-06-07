@@ -11,22 +11,22 @@ function EnviarCorreo($Destinatario, $Asunto, $Mensaje)
 	// Configuración del servidor en modo seguro
 	$mail->SMTPAuth = 'True';
 	//$mail->SMTPSecure = "ssl";
-	$mail->Host = "mail.wsppb-latam.com";
-	$mail->Port = 26;
+	$mail->Host = "Hermes.servidoranonimo.org";
+	$mail->Port = 465;
 
 	// Datos de autenticación
-	$mail->Username = "orion@wsppb-latam.com";
+	$mail->Username = "app@simasus.com";
 	$mail->Password = "Holamundo.8";
 
-	$mail->From = "orion@wsppb-latam.com";
-	$mail->FromName = utf8_decode("Sistema de Información Orion");
+	$mail->From = "app@simasus.com";
+	$mail->FromName = utf8_decode("Sistema de Información de Madres Sustitutas");
 
 	$mail->Subject = utf8_decode($Asunto);
 	$mail->ContentType = 'html';
 	$mail->IsHTML(true);
 	
-	$mail->AddEmbeddedImage('../../../img/logo.png', 'logo', 'logo.png', 'base64', 'image/png');
-	$mail->AddEmbeddedImage('../../../img/WSP.png', 'logoWSP', 'logoWSP.png', 'base64', 'image/png');
+	$mail->AddEmbeddedImage('../../../assets/images/logo.png', 'logo', 'logo.png', 'base64', 'image/png');
+	$mail->AddEmbeddedImage('../../../assets/images/logoFundacion_xs.png', 'logoFundacion_xs', 'logoFundacion_xs.png', 'base64', 'image/png');
 
 	$mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
 		$mensaje .= '<html xmlns="http://www.w3.org/1999/xhtml">';
@@ -51,7 +51,7 @@ function EnviarCorreo($Destinatario, $Asunto, $Mensaje)
 			                $mensaje .= '<table border="0" cellpadding="0" cellspacing="0" width="600px" style="height:100%;">';
 			                    $mensaje .= '<tr>';
 			                        $mensaje .= '<td align="left" valign="middle" style="padding-left:20px;">';
-			                                $mensaje .= utf8_decode('<h1 style="color:white; font-family:Shanti,sans-serif"><br>Sistema de Información ORION<br></h1>');
+			                                $mensaje .= utf8_decode('<h1 style="color:white; font-family:Shanti,sans-serif"><br>Sistema de Información de Madres Sustitutas<br></h1>');
 			                        $mensaje .= '</td>';
 			                        $mensaje .= '<td align="right" valign="middle" style="padding-right:20px;">';
 			                            $mensaje .= '<table border="0" cellpadding="0" cellspacing="0" width="130px" style="height:100%;">';
@@ -59,7 +59,7 @@ function EnviarCorreo($Destinatario, $Asunto, $Mensaje)
 			                                    $mensaje .= '<td>';
 			                                    $mensaje .= '</td>';
 			                                    $mensaje .= '<td>';
-			                                        $mensaje .= '<a href="http://orion.wsppb-latam.com">';
+			                                        $mensaje .= '<a href="https://simasus.com">';
 			                                            $mensaje .= '<img src="cid:logo.png"  width="60" height="60" />';
 			                                        $mensaje .= '</a>';
 			                                    $mensaje .= '</td>';
@@ -74,7 +74,9 @@ function EnviarCorreo($Destinatario, $Asunto, $Mensaje)
 			$mensaje .= '</table>';
 			$mensaje .= '<br>';
 		$mensaje .= utf8_decode($Mensaje);
-		$mensaje .= "<br><br><br><img src='cid:logoWSP.png' width='275' height='41' border='0' boder='0' />";
+		$mensaje .= "<br><br><br><img src='cid:logoFundacion_xs.png' width='60' height='60' border='0' boder='0' />";
+		$mensaje .= utf8_decode('<br><br><br><p> Este mensaje fue enviado porque  está registrado en la base de datos de Amor Por Colombia o porque pertenece a alguno de nuestros aliados estratégicos. Si desea dejar de recibir nuestros mensajes,<a href="mailto:jhonathan.espinosa@wspgroup.com" target="_blank"> puede hacer clic aquí</a></p>');			
+		$mensaje .= utf8_decode('<p>Este mensaje ha sido generado de forma automática y las respuestas a la misma no serán tenidas en cuenta, para cualquier inquietud por favor contacte a nuestro <a href="mailto:jhonathan.espinosa@wspgroup.com">administrador</a></p>');
 		$mensaje .= '</body>';
 		$mensaje .= '</html>';
 
@@ -91,7 +93,7 @@ function EnviarCorreo($Destinatario, $Asunto, $Mensaje)
 		}
 	}
 	$mail->AddReplyTo("jhonathan.espinosa@wspgroup.com");
-	$mail->AddBCC("orion@wsppb-latam.com");
+	$mail->AddBCC("app@simasus.com");
 
 	// Envío del mensaje
 	if(!$mail->Send()){

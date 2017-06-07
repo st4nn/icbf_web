@@ -4,7 +4,6 @@ function funUsuarios()
 	usuarios_CargarUsuarios();	
 	usuarios_CargarCentrosZonales();
 	usuarios_CargarPerfiles();
-
 	$("#btnUsuarios_CrearUsuario").on("click", function()
 	{
 		$("#cntUsuarios_VerUsuarios").hide();
@@ -15,54 +14,41 @@ function funUsuarios()
 		$("#cntUsuarios_Crear_DatosUsuario .form-control").attr("disabled", false);
 		$("#cntUsuarios_Crear_DatosSesion .form-control").attr("disabled", false);
 	});
-
 	$("#btnUsuarios_VerUsuarios").on("click", function()
 	{
 		$("#cntUsuarios_CrearUsuario").hide();
 		$("#cntUsuarios_VerUsuarios").slideDown();
-
 		usuarios_CargarUsuarios();
 	});
-
 	$(document).delegate('#tblUsuarios tbody button', 'click', function(event) 
 	{
 		$("#lblUsuarios_Crear_Tipo").text("Edición");
-
 		var fila = $(this).parent("div").parent("td").parent("tr").find("td");
 		$("#txtUsuarios_Crear_idLogin").val($(fila[1]).text());
-
-		
 		$("#txtUsuarios_Crear_Nombre").val($(fila[3]).text());
 		$("#txtUsuarios_Crear_Cargo").val($(fila[4]).text());
 		$("#txtUsuarios_Crear_idPerfil").val($(fila[5]).attr("idPerfil"));
 		$("#txtUsuarios_Crear_Correo").val($(fila[6]).text());
 		$("#txtUsuarios_Crear_idSede").val($(fila[7]).attr("idSede"));
 		$("#txtUsuarios_Crear_Estado").val($(fila[8]).text());
-
 		$("#txtUsuarios_Crear_nUsuario").val($(fila[2]).text());
 		$("#txtUsuarios_Crear_Clave").val("laClaveEstaProtegida");
 		$("#txtUsuarios_Crear_Clave2").val("laClaveEstaProtegida");
-
 		$("#cntUsuarios_VerUsuarios").hide();
 		$("#cntUsuarios_CrearUsuario").slideDown();
 	});
-
 	$(document).delegate('.btnUsuarios_EditarDatos', 'click', function(event) 
 	{
 		$("#cntUsuarios_Crear_DatosUsuario .form-control").attr("disabled", false);
 		$("#cntUsuarios_Crear_DatosSesion .form-control").attr("disabled", true);
-		
-		$("#txtUsuarios_Crear_Correo").attr("disabled", true);
+		//$("#txtUsuarios_Crear_Correo").attr("disabled", true);
 	});
-
 	$(document).delegate('.btnUsuarios_EditarClave', 'click', function(event) 
 	{
 		$("#cntUsuarios_Crear_DatosUsuario .form-control").attr("disabled", true);
 		$("#cntUsuarios_Crear_DatosSesion .form-control").attr("disabled", false);
-
 		$("#txtUsuarios_Crear_nUsuario").attr("disabled", true);
 	});	
-
 	$("#frmUsuarios_Crear").on("submit", function(evento)
 	{
 		evento.preventDefault();
@@ -77,15 +63,20 @@ function funUsuarios()
 				{
 					$("#txtUsuarios_Crear_idLogin").val(data.datos);
 					Mensaje("Hey", "Los datos han sido ingresados", "success");
+					$("#btnUsuarios_VerUsuarios").trigger('click');
 				}
 			}, "json");
 		});
 	});
-}
 
+	$("#chkUsuarios_VerActivos").on("click", function()
+	{
+		usuarios_CargarUsuarios();
+	});
+}
 function usuarios_CargarUsuarios()
 {
-	$.post('../server/php/proyecto/cargarUsuarios.php', {Usuario: Usuario.id}, function(data, textStatus, xhr) 
+	$.post('../server/php/proyecto/cargarUsuarios.php', {Usuario: Usuario.id, activos : $("#chkUsuarios_VerActivos").is(":checked")}, function(data, textStatus, xhr) 
 	{
 		if (data == 0)
 		{
@@ -113,9 +104,7 @@ function usuarios_CargarUsuarios()
 	    				tds += '<td idSede="' + val.idSede + '">' + val.Sede + '</td>';
 	    				tds += '<td>' + val.Estado + '</td>';
 	    			tds += '</tr>';
-
 				});
-				
     			$("#tblUsuarios").crearDataTable(tds, function(){});
 			} else
 			{
@@ -124,7 +113,6 @@ function usuarios_CargarUsuarios()
 		}
 	}, "json");
 }
-
 function usuarios_CargarCentrosZonales()
 {
 	$("#txtUsuarios_Crear_idSede option").remove();
@@ -139,12 +127,10 @@ function usuarios_CargarCentrosZonales()
 			{
 				var tds = "";
 				var tds2 = "";
-				
 				$.each(data, function(index, val) 
 				{
 	    			tds2 += '<option value="' + val.id + '">' + val.Nombre + '</option>';
 				});
-				
     			$("#txtUsuarios_Crear_idSede").append(tds2);
 			} else
 			{
@@ -153,7 +139,6 @@ function usuarios_CargarCentrosZonales()
 		}
 	}, "json");
 }
-
 function usuarios_CargarPerfiles()
 {
 	$("#txtUsuarios_Crear_idPerfil option").remove();
@@ -168,12 +153,10 @@ function usuarios_CargarPerfiles()
 			{
 				var tds = "";
 				var tds2 = "";
-				
 				$.each(data, function(index, val) 
 				{
 	    			tds2 += '<option value="' + val.idPerfil + '">' + val.Nombre + '</option>';
 				});
-				
     			$("#txtUsuarios_Crear_idPerfil").append(tds2);
 			} else
 			{

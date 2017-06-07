@@ -2,14 +2,36 @@
   include("../conectar.php"); 
   include("datosUsuario.php"); 
    $link = Conectar();
+   $idUsuario = addslashes($_POST['Usuario']);
 
-   $idUsuario = $_POST['Usuario'];
+
    $Usuario = datosUsuario($idUsuario);
-
    $where = "";
    if ($Usuario['idPerfil'] > 3)
    {
       $where = " WHERE datosUsuarios.idSede = '" . $Usuario['idSede']  . "' AND datosUsuarios.idPerfil >= '" . $Usuario['idPerfil'] . "'";
+   }
+
+   if (array_key_exists('activos', $_POST))
+   {
+      if ($where <> '')
+      {
+         $where .= ' AND ';
+      } else
+      {
+         $where = ' WHERE ';
+      }
+
+      $verActivos = addslashes($_POST['activos']);
+      $strActivos = "'Activo'";
+
+      if ($verActivos == 'true')
+      {
+         $strActivos = "'Activo', 'Inactivo'";
+      }
+
+      
+      $where .= "Login.Estado IN (" .  $strActivos . ")";
    }
 
    $sql = "SELECT
@@ -31,7 +53,6 @@
          $where;";
 
    $result = $link->query($sql);
-
    $idx = 0;
    if ( $result->num_rows > 0)
    {

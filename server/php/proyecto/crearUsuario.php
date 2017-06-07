@@ -1,36 +1,25 @@
 <?php
    include("../conectar.php"); 
    include("../../../assets/mensajes/correo.php");  
-
    date_default_timezone_set('America/Bogota');
-
    $link = Conectar();
-
    $datos = json_decode($_POST['datos']);
-
    $id = "NULL";
-
    if ($datos->idLogin <> "")
    {
       $id = $datos->idLogin;
    }
-
    $pClave = $datos->Clave;
-
    $Respuesta = array();
    $Respuesta['Error'] = "";
-
    foreach ($datos as $key => $value) 
    {
       $datos->$key = addslashes($value);
    }
-
  
    $sql = "SELECT COUNT(*) AS 'Cantidad' FROM Login WHERE Usuario = '" . $datos->nUsuario . "';";
    $result = $link->query($sql);
-
    $fila =  $result->fetch_array(MYSQLI_ASSOC);
-
    if ($fila['Cantidad'] > 0 AND $id == "NULL")
    {
       $Respuesta['Error'] = "El Usuario ya existe, por favor selecciona otro.";
@@ -38,10 +27,8 @@
    {
       $sql = "SELECT COUNT(*) AS 'Cantidad' FROM datosUsuarios WHERE Correo = '" . $datos->Correo . "';";
       $result = $link->query($sql);
-
       $fila =  $result->fetch_array(MYSQLI_ASSOC);
-
-      if ($fila['Cantidad'] > 0 AND $id == "NULL")
+      if ($fila['Cantidad'] < 0 AND $id == "NULL")
       {
          $Respuesta['Error'] .= "\n El Correo ya tiene un usuario asignado, por favor selecciona otro.";
       } else
@@ -52,10 +39,8 @@
          } else
          {
             $nuevoId = $id;
-
             $fecha = date('Y-m-d H:i:s');
             $mensaje = "";
-
             if ($datos->Clave <> "laClaveEstaProtegida")
             {
                $sql = "INSERT INTO Login 
@@ -70,10 +55,8 @@
                               Clave = VALUES(Clave),
                               Estado = VALUES(Estado),
                               fechaCargue = VALUES(fechaCargue);";
-
                $link->query(utf8_decode($sql));
                $nuevoId = $link->insert_id;
-
                $Asunto = "Creación de Usuario " . $datos->Nombre;
                if ( $link->error <> "")
                {
@@ -87,7 +70,7 @@
                      <br><br>
                      Los datos de autenticación son:
                      <br><br>
-                     <br>Url de Acceso: <a href='http://icbf.mentortic.com/'>http://icbf.mentortic.com</a>
+                     <br>Url de Acceso: <a href='https://simasus.com/'>https://simasus.com</a>
                      <br>Usuario: " . $datos->nUsuario . "
                      <br>Clave: $pClave";
                   } else
@@ -97,39 +80,42 @@
                      <br><br>
                      Los datos de autenticación son:
                      <br><br>
-                     <br>Url de Acceso: <a href='http://icbf.mentortic.com/'>http://icbf.mentortic.com</a>
+                     <br>Url de Acceso: <a href='https://simasus.com/'>https://simasus.com</a>
                      <br>Usuario: " . $datos->nUsuario . "
                      <br>Clave: $pClave";
-
                      $Asunto = "Cambio de Clave " . $datos->Nombre;
                   }
                }
             } 
-
             if ($nuevoId <> "NULL")
             {
-               $sql = "UPDATE Login SET Estado = '" . $datos->Estado . "' WHERE idLogin = $nuevoId";
-               $link->query(utf8_decode($sql));
+
+               if ($datos->Estado == 'Inactivo')
+               {
+                  $sql = "UPDATE Login SET Usuario = CONCAT(Usuario, ' INACTIVO'), Clave = '', Estado = '" . $datos->Estado . "', fechaCargue = '" . date('Y-m-d H:i:s') . "' WHERE idLogin = $nuevoId";
+                 $link->query(utf8_decode($sql));
+               }
+                  $sql = "INSERT INTO datosUsuarios (idLogin, Nombre, Cargo, Correo, idPerfil, idSede, fechaCargue) 
+                           VALUES 
+                           (
+                              $nuevoId, 
+                              '" . $datos->Nombre . "', 
+                              '" . $datos->Cargo . "', 
+                              '" . $datos->Correo . "', 
+                              '" . $datos->idPerfil . "', 
+                              '" . $datos->idSede . "', 
+                              '" . $fecha . "'
+                           ) ON DUPLICATE KEY UPDATE 
+                           Nombre = VALUES(Nombre), 
+                           Correo = VALUES(Correo), 
+                           Cargo = VALUES(Cargo), 
+                           idPerfil = VALUES(idPerfil), 
+                           idSede = VALUES(idSede), 
+                           fechaCargue = VALUES(fechaCargue);";
+               
                            
-               $sql = "INSERT INTO datosUsuarios (idLogin, Nombre, Cargo, Correo, idPerfil, idSede, fechaCargue) 
-                        VALUES 
-                        (
-                           $nuevoId, 
-                           '" . $datos->Nombre . "', 
-                           '" . $datos->Cargo . "', 
-                           '" . $datos->Correo . "', 
-                           '" . $datos->idPerfil . "', 
-                           '" . $datos->idSede . "', 
-                           '" . $fecha . "'
-                        ) ON DUPLICATE KEY UPDATE 
-                        Nombre = VALUES(Nombre), 
-                        Cargo = VALUES(Cargo), 
-                        idPerfil = VALUES(idPerfil), 
-                        idSede = VALUES(idSede), 
-                        fechaCargue = VALUES(fechaCargue);";
                   
                $link->query(utf8_decode($sql));
-
                if ( $link->error <> "")
                {
                   $Respuesta['Error'] .= "\n Hubo un error desconocido " . $link->error;
@@ -137,16 +123,13 @@
                {
                   if ($mensaje <> "")
                   {
-                     $obj = EnviarCorreo($datos->Correo, $Asunto, $mensaje) ;
+                     //$obj = EnviarCorreo($datos->Correo, $Asunto, $mensaje) ;
                   }
-
                   $Respuesta['datos'] = $nuevoId;
                }
             } 
          }
       }
    }
-
    echo json_encode($Respuesta);
-
 ?>

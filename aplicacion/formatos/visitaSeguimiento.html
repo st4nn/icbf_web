@@ -1,628 +1,628 @@
-<div class="page">
-  <div class="page-header">
-    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel"><i class="icon fa-arrow-circle-left"></i> Atras</button>
-    <h1 class="page-title"> </h1>
-  </div>
-  <div class="page-content container-fluid" id="cntVisitaSeguimiento_Wizard">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- Panel Wizard Form Container -->
-        <div class="panel">
-          <div class="panel-heading">
-            <h3 class="panel-title">Visita de seguimiento a Niños, Niñas y Adolescentes ubicados en Hogares Sustitutos</h3>
-          </div>
-          <div class="panel-body">
-            <!-- Steps -->
-            <div class="pearls row">
-              <div id="cntVisitaSeguimiento_Pearls_Inicio" class="pearl current col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">1</i></div>
-                <span class="pearl-title">Objetivo</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">2</i></div>
-                <span class="pearl-title">Calidad de Vida</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">3</i></div>
-                <span class="pearl-title">Educación y Desarrollo</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">4</i></div>
-                <span class="pearl-title">Protección</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">5</i></div>
-                <span class="pearl-title">Participación</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">6</i></div>
-                <span class="pearl-title">Documentación</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">7</i></div>
-                <span class="pearl-title">Observaciones</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">8</i></div>
-                <span class="pearl-title">Compromisos</span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">9</i></div>
-                <span class="pearl-title">Actividades</span>
-              </div>      
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">10</i></div>
-                <span class="pearl-title">Resultados</span>
-              </div>      
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">11</i></div>
-                <span class="pearl-title">Responsable</span>
-              </div>      
-            </div>
-          </div>
-          
-          <div id="cntVisitaSeguimiento_Controles"></div><br><br>
-        </div>
-        <!-- End Steps -->
-        <!-- Wizard Content -->
-        <form id="frmVisitaSeguimiento" class="wizard-content">
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Objeto de la Visita</label><br>
-                      <div class="form-group cntRadio_Comentarios">
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_1_1" name="optVisitaSeguimiento_1">
-                          <label for="optVisitaSeguimiento_1_1">Seguimiento periódico</label>
-                        </div>
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_1_2" name="optVisitaSeguimiento_1">
-                          <label for="optVisitaSeguimiento_1_2">Plan Mejoramiento</label>
-                        </div>
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_1_3" name="optVisitaSeguimiento_1">
-                          <label for="optVisitaSeguimiento_1_3">Seguimiento extraordinario</label>
-                        </div>
-                        <textarea class="form-control"  placeholder="Comentarios" rows="3"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-sm-6">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Condiciones personales y de salud (niños, niñas o adolescentes presentes al momento de la visita, presentación personal, higiene, estado de salud; vinculación a salud física, oral, de rehabilitación o terapéutica; medicamentos)</label><br>
-                      <div class="form-group cntRadio_Comentarios">
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_2_1" name="optVisitaSeguimiento_2">
-                          <label for="optVisitaSeguimiento_2_1">Positivo</label>
-                        </div>
-                        <div class="radio-custom radio-danger">
-                          <input type="radio" id="optVisitaSeguimiento_2_2" name="optVisitaSeguimiento_2">
-                          <label for="optVisitaSeguimiento_2_2">Negativo</label>
-                        </div>
-                        <div class="radio-custom radio-info">
-                          <input type="radio" id="optVisitaSeguimiento_2_3" name="optVisitaSeguimiento_2" checked>
-                          <label for="optVisitaSeguimiento_2_3">Neutro</label>
-                        </div>
-                        <textarea class="form-control"  placeholder="Comentarios" rows="3"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col-sm-6">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Alimentación y nutrición (estado nutricional, hábitos alimenticios, recomendaciones nutricionales, minuta patrón del hogar, calidad y cantidad de alimentos servidos, condiciones de alimentos almacenados) </label><br>
-                      <div class="form-group cntRadio_Comentarios">
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_3_1" name="optVisitaSeguimiento_3">
-                          <label for="optVisitaSeguimiento_3_1">Positivo</label>
-                        </div>
-                        <div class="radio-custom radio-danger">
-                          <input type="radio" id="optVisitaSeguimiento_3_2" name="optVisitaSeguimiento_3">
-                          <label for="optVisitaSeguimiento_3_2">Negativo</label>
-                        </div>
-                        <div class="radio-custom radio-info">
-                          <input type="radio" id="optVisitaSeguimiento_3_3" name="optVisitaSeguimiento_3" checked>
-                          <label for="optVisitaSeguimiento_3_3">Neutro</label>
-                        </div>
-                        <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col-sm-6">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Alimentación y nutrición (estado nutricional, hábitos alimenticios, recomendaciones nutricionales, minuta patrón del hogar, calidad y cantidad de alimentos servidos, condiciones de alimentos almacenados) </label><br>
-                      <div class="form-group cntRadio_Comentarios">
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_4_1" name="optVisitaSeguimiento_4">
-                          <label for="optVisitaSeguimiento_4_1">Positivo</label>
-                        </div>
-                        <div class="radio-custom radio-danger">
-                          <input type="radio" id="optVisitaSeguimiento_4_2" name="optVisitaSeguimiento_4">
-                          <label for="optVisitaSeguimiento_4_2">Negativo</label>
-                        </div>
-                        <div class="radio-custom radio-info">
-                          <input type="radio" id="optVisitaSeguimiento_4_3" name="optVisitaSeguimiento_4" checked>
-                          <label for="optVisitaSeguimiento_4_3">Neutro</label>
-                        </div>
-                        <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col-sm-6">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Condiciones de la vivienda (seguridad, agua potable y saneamiento ambiental, riesgos, higiene, organización, iluminación, ventilación, basuras, plagas, otros)</label><br>
-                      <div class="form-group cntRadio_Comentarios">
-                        <div class="radio-custom radio-primary">
-                          <input type="radio" id="optVisitaSeguimiento_5_1" name="optVisitaSeguimiento_5">
-                          <label for="optVisitaSeguimiento_5_1">Positivo</label>
-                        </div>
-                        <div class="radio-custom radio-danger">
-                          <input type="radio" id="optVisitaSeguimiento_5_2" name="optVisitaSeguimiento_5">
-                          <label for="optVisitaSeguimiento_5_2">Negativo</label>
-                        </div>
-                        <div class="radio-custom radio-info">
-                          <input type="radio" id="optVisitaSeguimiento_5_3" name="optVisitaSeguimiento_5" checked>
-                          <label for="optVisitaSeguimiento_5_3">Neutro</label>
-                        </div>
-                        <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-          
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Habilidades de socialización: (integración con el grupo, habilidades para resolver conflictos, autonomía, autocuidado, ocupación del tiempo libre.) </label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_6_1" name="optVisitaSeguimiento_6">
-                        <label for="optVisitaSeguimiento_6_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_6_2" name="optVisitaSeguimiento_6">
-                        <label for="optVisitaSeguimiento_6_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_6_3" name="optVisitaSeguimiento_6" checked>
-                        <label for="optVisitaSeguimiento_6_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Desarrollo psicosocial (hábitos, lenguaje, sueño, control de esfínteres, juegos y otros)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_7_1" name="optVisitaSeguimiento_7">
-                        <label for="optVisitaSeguimiento_7_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_7_2" name="optVisitaSeguimiento_7">
-                        <label for="optVisitaSeguimiento_7_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_7_3" name="optVisitaSeguimiento_7" checked>
-                        <label for="optVisitaSeguimiento_7_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Relaciones Familiares (adaptación al Hogar, vínculos afectivos creados, satisfacción o insatisfacción con la familia, prácticas de crianza, estilo de autoridad)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_8_1" name="optVisitaSeguimiento_8">
-                        <label for="optVisitaSeguimiento_8_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_8_2" name="optVisitaSeguimiento_8">
-                        <label for="optVisitaSeguimiento_8_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_8_3" name="optVisitaSeguimiento_8" checked>
-                        <label for="optVisitaSeguimiento_8_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Comprensión de la medida de Restablecimiento de Derechos (conocimiento sobre la medida, los servidores públicos a cargo y la forma de acudir a ellos en caso de necesidad)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_9_1" name="optVisitaSeguimiento_9">
-                        <label for="optVisitaSeguimiento_9_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_9_2" name="optVisitaSeguimiento_9">
-                        <label for="optVisitaSeguimiento_9_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_9_3" name="optVisitaSeguimiento_9" checked>
-                        <label for="optVisitaSeguimiento_9_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Habitación de los niños, niñas y adolescentes (suficiencia del espacio asignado, organización, ventilación, iluminación, personas que comparten la habitación, muebles para elementos personales de que disponen)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_10_1" name="optVisitaSeguimiento_10">
-                        <label for="optVisitaSeguimiento_10_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_10_2" name="optVisitaSeguimiento_10">
-                        <label for="optVisitaSeguimiento_10_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_10_3" name="optVisitaSeguimiento_10" checked>
-                        <label for="optVisitaSeguimiento_10_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Dotación (suficiencia, estado y calidad de la dotación básica, personal y escolar)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_11_1" name="optVisitaSeguimiento_11">
-                        <label for="optVisitaSeguimiento_11_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_11_2" name="optVisitaSeguimiento_11">
-                        <label for="optVisitaSeguimiento_11_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_11_3" name="optVisitaSeguimiento_11" checked>
-                        <label for="optVisitaSeguimiento_11_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Actividades recreativas, artísticas, culturales (posibilidades de participación, actividades de socialización, actividades realizadas en familia, actividades sociales y/o comunitarias)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_12_1" name="optVisitaSeguimiento_12">
-                        <label for="optVisitaSeguimiento_12_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_12_2" name="optVisitaSeguimiento_12">
-                        <label for="optVisitaSeguimiento_12_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_12_3" name="optVisitaSeguimiento_12" checked>
-                        <label for="optVisitaSeguimiento_12_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Comunicación y expresión (libertad para expresar opiniones y sentimientos, respeto a los límites, toma de decisiones, respeto de los adultos a los límites de los niños, niñas y adolescentes)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_13_1" name="optVisitaSeguimiento_13">
-                        <label for="optVisitaSeguimiento_13_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_13_2" name="optVisitaSeguimiento_13">
-                        <label for="optVisitaSeguimiento_13_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_13_3" name="optVisitaSeguimiento_13" checked>
-                        <label for="optVisitaSeguimiento_13_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Carpetas de niños, niñas y adolescentes (Libro de registro, acta de colocación en el Hogar, documento de Identidad, carné de salud) </label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_14_1" name="optVisitaSeguimiento_14">
-                        <label for="optVisitaSeguimiento_14_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_14_2" name="optVisitaSeguimiento_14">
-                        <label for="optVisitaSeguimiento_14_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_14_3" name="optVisitaSeguimiento_14" checked>
-                        <label for="optVisitaSeguimiento_14_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Carpeta del responsable del Hogar (hoja de vida con foto, acta de aprobación del Hogar, folio de registro del Hogar Sustituto, copia documento de identificación, carné afiliación sistema de seguridad social en salud, constancia último año de estudio y capacitaciones)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_15_1" name="optVisitaSeguimiento_15">
-                        <label for="optVisitaSeguimiento_15_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_15_2" name="optVisitaSeguimiento_15">
-                        <label for="optVisitaSeguimiento_15_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_15_3" name="optVisitaSeguimiento_15" checked>
-                        <label for="optVisitaSeguimiento_15_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-12">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">(desempeño del responsable y/o su grupo familiar frente a la atención de los niños, niñas o adolescentes condiciones físicas, afectivas o emocionales de estos, funcionamiento del Hogar en los componentes técnico o administrativo, necesidades de dotación, remisión a otros servicios y demás).</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_16_1" name="optVisitaSeguimiento_16">
-                        <label for="optVisitaSeguimiento_16_1">Positivo</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_16_2" name="optVisitaSeguimiento_16">
-                        <label for="optVisitaSeguimiento_16_2">Negativo</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_16_3" name="optVisitaSeguimiento_16" checked>
-                        <label for="optVisitaSeguimiento_16_3">Neutro</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-12">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body" id="cntVisitaSeguimiento_Compromisos">
-                    <button type="button" id="btnVisitaSeguimiento_AgregarCompromiso" class="btn btn-warning pull-right"><i class="icon fa-plus-circle"></i> Agregar Compromiso</button>
-                    <div id="cntVisitaSeguimiento_Compromisos_PrimeraFila" class="col-sm-12 row cntVisitaSeguimiento_Compromiso">
-                      <div class="margin-5">
-                        <div class="col-xs-7">
-                          <textarea class="form-control" placeholder="Compromiso" rows="3"></textarea>
-                        </div>
-                        <div class="col-xs-3 vertical-align-middle">
-                          <input type="date" placeholder="Fecha" class="form-control">
-                        </div>
-                        <div class="col-xs-2">
-                          <button class="btn btn-danger btnVisitaSeguimiento_BorrarCompromiso_fake hide"><i class="icon fa-trash"></i> </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-12">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Actividades desarrolladas en la visita</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_17_1" name="optVisitaSeguimiento_17">
-                        <label for="optVisitaSeguimiento_17_1">Diálogo individual con niñas, niñas y  adolescentes en PARD.</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_17_2" name="optVisitaSeguimiento_17">
-                        <label for="optVisitaSeguimiento_17_2">Diálogo grupal con niñas, niñas y  adolescentes en PARD</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_17_3" name="optVisitaSeguimiento_17">
-                        <label for="optVisitaSeguimiento_17_3">Diálogo con el responsable del hogar</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-12">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Resultados de la Visita: (Según lo contemplado en Proceso de Supervisión, Seguimiento y Asesoría)</label><br>
-                    <div class="form-group cntRadio_Comentarios">
-                      <div class="radio-custom radio-primary">
-                        <input type="radio" id="optVisitaSeguimiento_18_1" name="optVisitaSeguimiento_18">
-                        <label for="optVisitaSeguimiento_18_1">Condiciones satisfactorias</label>
-                      </div>
-                      <div class="radio-custom radio-danger">
-                        <input type="radio" id="optVisitaSeguimiento_18_2" name="optVisitaSeguimiento_18">
-                        <label for="optVisitaSeguimiento_18_2">Incumplimiento parcial que no reviste  gravedad, justificado</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_18_3" name="optVisitaSeguimiento_18">
-                        <label for="optVisitaSeguimiento_18_3">Incumplimiento que requiere corrección Inmediata, no justificado</label>
-                      </div>
-                      <div class="radio-custom radio-info">
-                        <input type="radio" id="optVisitaSeguimiento_18_4" name="optVisitaSeguimiento_18">
-                        <label for="optVisitaSeguimiento_18_4">Incumplimiento que reviste gravedad</label>
-                      </div>
-                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-12">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-body">
-                    <label class="control-label">Persona que recibe la Visita:</label><br>
-                    <div class="example-wrap col-sm-7">
-                      <h4 class="example-title">Nombre</h4>
-                      <input type="text" id="txtVisitaSeguimiento_Recibe_Nombre" class="form-control guardar" placeholder="Nombre">
-                    </div>
-                    <div class="example-wrap col-sm-5">
-                      <h4 class="example-title">Documento de Identidad</h4>
-                      <input type="number" id="txtVisitaSeguimiento_Recibe_Documento" class="form-control guardar" placeholder="Documento de Identidad">
-                    </div>
-                    <div class="example-wrap col-sm-5">
-                      <h4 class="example-title">Correo</h4>
-                      <input type="email" id="txtVisitaSeguimiento_Recibe_Correo" class="form-control guardar" placeholder="Correo">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-                  <div class="hide">
-                    <textarea id="txtVisitaSeguimiento_Encuesta" class="form-control guardar"></textarea>
-                    <textarea id="txtVisitaSeguimiento_Compromisos" class="form-control guardar"></textarea>
-                    <input type="text" id="txtVisitaSeguimiento_FechaInicio" class="form-control guardar">
-                    <input type="text" id="txtVisitaSeguimiento_FechaFin" class="form-control guardar">
-                    <input type="text" id="txtVisitaSeguimiento_Codigo" class="form-control guardar">
-                    <input type="text" id="txtVisitaSeguimiento_Responsable" class="form-control guardar">
-                  </div>
-                
-        </form>
-        <!-- Wizard Content -->
-      </div>
-    </div>
-    <!-- End Panel Wizard Form Container -->
-  </div>
-</div>
-<!-- End Page-->
-<div class="col-md-12" style="position: fixed; bottom:5px; right:5px;">
-    <button id="btnVisitaSeguimiento_Foto" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
-      <i class="icon fa-camera"></i> 
-    </button>            
-    <button id="btnVisitaSeguimiento_Galeria" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
-      <i class="icon fa-image"></i> 
-    </button>
-</div>
-
-
-<script type="text/javascript">
-    jQuery(document).ready(function() { 
-        $.getScript("../js/visitaSeguimiento.js", function(ev)
-        {
-          controlarPermisos();
-          funVisitaSeguimiento();
-        });
-      });
+<div class="page">
+  <div class="page-header">
+    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel"><i class="icon fa-arrow-circle-left"></i> Atras</button>
+    <h1 class="page-title"> </h1>
+  </div>
+  <div class="page-content container-fluid" id="cntVisitaSeguimiento_Wizard">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Panel Wizard Form Container -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Visita de seguimiento a Niños, Niñas y Adolescentes ubicados en Hogares Sustitutos</h3>
+          </div>
+          <div class="panel-body">
+            <!-- Steps -->
+            <div class="pearls row">
+              <div id="cntVisitaSeguimiento_Pearls_Inicio" class="pearl current col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">1</i></div>
+                <span class="pearl-title">Objetivo</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">2</i></div>
+                <span class="pearl-title">Calidad de Vida</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">3</i></div>
+                <span class="pearl-title">Educación y Desarrollo</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">4</i></div>
+                <span class="pearl-title">Protección</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">5</i></div>
+                <span class="pearl-title">Participación</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">6</i></div>
+                <span class="pearl-title">Documentación</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">7</i></div>
+                <span class="pearl-title">Observaciones</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">8</i></div>
+                <span class="pearl-title">Compromisos</span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">9</i></div>
+                <span class="pearl-title">Actividades</span>
+              </div>      
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">10</i></div>
+                <span class="pearl-title">Resultados</span>
+              </div>      
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">11</i></div>
+                <span class="pearl-title">Responsable</span>
+              </div>      
+            </div>
+          </div>
+          
+          <div id="cntVisitaSeguimiento_Controles"></div><br><br>
+        </div>
+        <!-- End Steps -->
+        <!-- Wizard Content -->
+        <form id="frmVisitaSeguimiento" class="wizard-content">
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Objeto de la Visita</label><br>
+                      <div class="form-group cntRadio_Comentarios">
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_1_1" name="optVisitaSeguimiento_1">
+                          <label for="optVisitaSeguimiento_1_1">Seguimiento periódico</label>
+                        </div>
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_1_2" name="optVisitaSeguimiento_1">
+                          <label for="optVisitaSeguimiento_1_2">Plan Mejoramiento</label>
+                        </div>
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_1_3" name="optVisitaSeguimiento_1">
+                          <label for="optVisitaSeguimiento_1_3">Seguimiento extraordinario</label>
+                        </div>
+                        <textarea class="form-control"  placeholder="Comentarios" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-sm-6">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Condiciones personales y de salud (niños, niñas o adolescentes presentes al momento de la visita, presentación personal, higiene, estado de salud; vinculación a salud física, oral, de rehabilitación o terapéutica; medicamentos)</label><br>
+                      <div class="form-group cntRadio_Comentarios">
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_2_1" name="optVisitaSeguimiento_2">
+                          <label for="optVisitaSeguimiento_2_1">Positivo</label>
+                        </div>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optVisitaSeguimiento_2_2" name="optVisitaSeguimiento_2">
+                          <label for="optVisitaSeguimiento_2_2">Negativo</label>
+                        </div>
+                        <div class="radio-custom radio-info">
+                          <input type="radio" id="optVisitaSeguimiento_2_3" name="optVisitaSeguimiento_2" checked>
+                          <label for="optVisitaSeguimiento_2_3">Neutro</label>
+                        </div>
+                        <textarea class="form-control"  placeholder="Comentarios" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-sm-6">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Alimentación y nutrición (estado nutricional, hábitos alimenticios, recomendaciones nutricionales, minuta patrón del hogar, calidad y cantidad de alimentos servidos, condiciones de alimentos almacenados) </label><br>
+                      <div class="form-group cntRadio_Comentarios">
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_3_1" name="optVisitaSeguimiento_3">
+                          <label for="optVisitaSeguimiento_3_1">Positivo</label>
+                        </div>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optVisitaSeguimiento_3_2" name="optVisitaSeguimiento_3">
+                          <label for="optVisitaSeguimiento_3_2">Negativo</label>
+                        </div>
+                        <div class="radio-custom radio-info">
+                          <input type="radio" id="optVisitaSeguimiento_3_3" name="optVisitaSeguimiento_3" checked>
+                          <label for="optVisitaSeguimiento_3_3">Neutro</label>
+                        </div>
+                        <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-sm-6">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Alimentación y nutrición (estado nutricional, hábitos alimenticios, recomendaciones nutricionales, minuta patrón del hogar, calidad y cantidad de alimentos servidos, condiciones de alimentos almacenados) </label><br>
+                      <div class="form-group cntRadio_Comentarios">
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_4_1" name="optVisitaSeguimiento_4">
+                          <label for="optVisitaSeguimiento_4_1">Positivo</label>
+                        </div>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optVisitaSeguimiento_4_2" name="optVisitaSeguimiento_4">
+                          <label for="optVisitaSeguimiento_4_2">Negativo</label>
+                        </div>
+                        <div class="radio-custom radio-info">
+                          <input type="radio" id="optVisitaSeguimiento_4_3" name="optVisitaSeguimiento_4" checked>
+                          <label for="optVisitaSeguimiento_4_3">Neutro</label>
+                        </div>
+                        <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-sm-6">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Condiciones de la vivienda (seguridad, agua potable y saneamiento ambiental, riesgos, higiene, organización, iluminación, ventilación, basuras, plagas, otros)</label><br>
+                      <div class="form-group cntRadio_Comentarios">
+                        <div class="radio-custom radio-primary">
+                          <input type="radio" id="optVisitaSeguimiento_5_1" name="optVisitaSeguimiento_5">
+                          <label for="optVisitaSeguimiento_5_1">Positivo</label>
+                        </div>
+                        <div class="radio-custom radio-danger">
+                          <input type="radio" id="optVisitaSeguimiento_5_2" name="optVisitaSeguimiento_5">
+                          <label for="optVisitaSeguimiento_5_2">Negativo</label>
+                        </div>
+                        <div class="radio-custom radio-info">
+                          <input type="radio" id="optVisitaSeguimiento_5_3" name="optVisitaSeguimiento_5" checked>
+                          <label for="optVisitaSeguimiento_5_3">Neutro</label>
+                        </div>
+                        <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Habilidades de socialización: (integración con el grupo, habilidades para resolver conflictos, autonomía, autocuidado, ocupación del tiempo libre.) </label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_6_1" name="optVisitaSeguimiento_6">
+                        <label for="optVisitaSeguimiento_6_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_6_2" name="optVisitaSeguimiento_6">
+                        <label for="optVisitaSeguimiento_6_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_6_3" name="optVisitaSeguimiento_6" checked>
+                        <label for="optVisitaSeguimiento_6_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Desarrollo psicosocial (hábitos, lenguaje, sueño, control de esfínteres, juegos y otros)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_7_1" name="optVisitaSeguimiento_7">
+                        <label for="optVisitaSeguimiento_7_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_7_2" name="optVisitaSeguimiento_7">
+                        <label for="optVisitaSeguimiento_7_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_7_3" name="optVisitaSeguimiento_7" checked>
+                        <label for="optVisitaSeguimiento_7_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Relaciones Familiares (adaptación al Hogar, vínculos afectivos creados, satisfacción o insatisfacción con la familia, prácticas de crianza, estilo de autoridad)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_8_1" name="optVisitaSeguimiento_8">
+                        <label for="optVisitaSeguimiento_8_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_8_2" name="optVisitaSeguimiento_8">
+                        <label for="optVisitaSeguimiento_8_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_8_3" name="optVisitaSeguimiento_8" checked>
+                        <label for="optVisitaSeguimiento_8_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Comprensión de la medida de Restablecimiento de Derechos (conocimiento sobre la medida, los servidores públicos a cargo y la forma de acudir a ellos en caso de necesidad)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_9_1" name="optVisitaSeguimiento_9">
+                        <label for="optVisitaSeguimiento_9_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_9_2" name="optVisitaSeguimiento_9">
+                        <label for="optVisitaSeguimiento_9_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_9_3" name="optVisitaSeguimiento_9" checked>
+                        <label for="optVisitaSeguimiento_9_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Habitación de los niños, niñas y adolescentes (suficiencia del espacio asignado, organización, ventilación, iluminación, personas que comparten la habitación, muebles para elementos personales de que disponen)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_10_1" name="optVisitaSeguimiento_10">
+                        <label for="optVisitaSeguimiento_10_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_10_2" name="optVisitaSeguimiento_10">
+                        <label for="optVisitaSeguimiento_10_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_10_3" name="optVisitaSeguimiento_10" checked>
+                        <label for="optVisitaSeguimiento_10_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Dotación (suficiencia, estado y calidad de la dotación básica, personal y escolar)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_11_1" name="optVisitaSeguimiento_11">
+                        <label for="optVisitaSeguimiento_11_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_11_2" name="optVisitaSeguimiento_11">
+                        <label for="optVisitaSeguimiento_11_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_11_3" name="optVisitaSeguimiento_11" checked>
+                        <label for="optVisitaSeguimiento_11_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Actividades recreativas, artísticas, culturales (posibilidades de participación, actividades de socialización, actividades realizadas en familia, actividades sociales y/o comunitarias)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_12_1" name="optVisitaSeguimiento_12">
+                        <label for="optVisitaSeguimiento_12_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_12_2" name="optVisitaSeguimiento_12">
+                        <label for="optVisitaSeguimiento_12_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_12_3" name="optVisitaSeguimiento_12" checked>
+                        <label for="optVisitaSeguimiento_12_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Comunicación y expresión (libertad para expresar opiniones y sentimientos, respeto a los límites, toma de decisiones, respeto de los adultos a los límites de los niños, niñas y adolescentes)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_13_1" name="optVisitaSeguimiento_13">
+                        <label for="optVisitaSeguimiento_13_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_13_2" name="optVisitaSeguimiento_13">
+                        <label for="optVisitaSeguimiento_13_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_13_3" name="optVisitaSeguimiento_13" checked>
+                        <label for="optVisitaSeguimiento_13_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Carpetas de niños, niñas y adolescentes (Libro de registro, acta de colocación en el Hogar, documento de Identidad, carné de salud) </label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_14_1" name="optVisitaSeguimiento_14">
+                        <label for="optVisitaSeguimiento_14_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_14_2" name="optVisitaSeguimiento_14">
+                        <label for="optVisitaSeguimiento_14_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_14_3" name="optVisitaSeguimiento_14" checked>
+                        <label for="optVisitaSeguimiento_14_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Carpeta del responsable del Hogar (hoja de vida con foto, acta de aprobación del Hogar, folio de registro del Hogar Sustituto, copia documento de identificación, carné afiliación sistema de seguridad social en salud, constancia último año de estudio y capacitaciones)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_15_1" name="optVisitaSeguimiento_15">
+                        <label for="optVisitaSeguimiento_15_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_15_2" name="optVisitaSeguimiento_15">
+                        <label for="optVisitaSeguimiento_15_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_15_3" name="optVisitaSeguimiento_15" checked>
+                        <label for="optVisitaSeguimiento_15_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-12">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">(desempeño del responsable y/o su grupo familiar frente a la atención de los niños, niñas o adolescentes condiciones físicas, afectivas o emocionales de estos, funcionamiento del Hogar en los componentes técnico o administrativo, necesidades de dotación, remisión a otros servicios y demás).</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_16_1" name="optVisitaSeguimiento_16">
+                        <label for="optVisitaSeguimiento_16_1">Positivo</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_16_2" name="optVisitaSeguimiento_16">
+                        <label for="optVisitaSeguimiento_16_2">Negativo</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_16_3" name="optVisitaSeguimiento_16" checked>
+                        <label for="optVisitaSeguimiento_16_3">Neutro</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-12">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body" id="cntVisitaSeguimiento_Compromisos">
+                    <button type="button" id="btnVisitaSeguimiento_AgregarCompromiso" class="btn btn-warning pull-right"><i class="icon fa-plus-circle"></i> Agregar Compromiso</button>
+                    <div id="cntVisitaSeguimiento_Compromisos_PrimeraFila" class="col-sm-12 row cntVisitaSeguimiento_Compromiso">
+                      <div class="margin-5">
+                        <div class="col-xs-7">
+                          <textarea class="form-control" placeholder="Compromiso" rows="3"></textarea>
+                        </div>
+                        <div class="col-xs-3 vertical-align-middle">
+                          <input type="date" placeholder="Fecha" class="form-control">
+                        </div>
+                        <div class="col-xs-2">
+                          <button class="btn btn-danger btnVisitaSeguimiento_BorrarCompromiso_fake hide"><i class="icon fa-trash"></i> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-12">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Actividades desarrolladas en la visita</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_17_1" name="optVisitaSeguimiento_17">
+                        <label for="optVisitaSeguimiento_17_1">Diálogo individual con niñas, niñas y  adolescentes en PARD.</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_17_2" name="optVisitaSeguimiento_17">
+                        <label for="optVisitaSeguimiento_17_2">Diálogo grupal con niñas, niñas y  adolescentes en PARD</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_17_3" name="optVisitaSeguimiento_17">
+                        <label for="optVisitaSeguimiento_17_3">Diálogo con el responsable del hogar</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-12">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Resultados de la Visita: (Según lo contemplado en Proceso de Supervisión, Seguimiento y Asesoría)</label><br>
+                    <div class="form-group cntRadio_Comentarios">
+                      <div class="radio-custom radio-primary">
+                        <input type="radio" id="optVisitaSeguimiento_18_1" name="optVisitaSeguimiento_18">
+                        <label for="optVisitaSeguimiento_18_1">Condiciones satisfactorias</label>
+                      </div>
+                      <div class="radio-custom radio-danger">
+                        <input type="radio" id="optVisitaSeguimiento_18_2" name="optVisitaSeguimiento_18">
+                        <label for="optVisitaSeguimiento_18_2">Incumplimiento parcial que no reviste  gravedad, justificado</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_18_3" name="optVisitaSeguimiento_18">
+                        <label for="optVisitaSeguimiento_18_3">Incumplimiento que requiere corrección Inmediata, no justificado</label>
+                      </div>
+                      <div class="radio-custom radio-info">
+                        <input type="radio" id="optVisitaSeguimiento_18_4" name="optVisitaSeguimiento_18">
+                        <label for="optVisitaSeguimiento_18_4">Incumplimiento que reviste gravedad</label>
+                      </div>
+                      <textarea class="form-control" placeholder="Comentarios" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-12">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-body">
+                    <label class="control-label">Persona que recibe la Visita:</label><br>
+                    <div class="example-wrap col-sm-7">
+                      <h4 class="example-title">Nombre</h4>
+                      <input type="text" id="txtVisitaSeguimiento_Recibe_Nombre" class="form-control guardar" placeholder="Nombre">
+                    </div>
+                    <div class="example-wrap col-sm-5">
+                      <h4 class="example-title">Documento de Identidad</h4>
+                      <input type="number" id="txtVisitaSeguimiento_Recibe_Documento" class="form-control guardar" placeholder="Documento de Identidad">
+                    </div>
+                    <div class="example-wrap col-sm-5">
+                      <h4 class="example-title">Correo</h4>
+                      <input type="email" id="txtVisitaSeguimiento_Recibe_Correo" class="form-control guardar" placeholder="Correo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <div class="hide">
+                    <textarea id="txtVisitaSeguimiento_Encuesta" class="form-control guardar"></textarea>
+                    <textarea id="txtVisitaSeguimiento_Compromisos" class="form-control guardar"></textarea>
+                    <input type="text" id="txtVisitaSeguimiento_FechaInicio" class="form-control guardar">
+                    <input type="text" id="txtVisitaSeguimiento_FechaFin" class="form-control guardar">
+                    <input type="text" id="txtVisitaSeguimiento_Codigo" class="form-control guardar">
+                    <input type="text" id="txtVisitaSeguimiento_Responsable" class="form-control guardar">
+                  </div>
+                
+        </form>
+        <!-- Wizard Content -->
+      </div>
+    </div>
+    <!-- End Panel Wizard Form Container -->
+  </div>
+</div>
+<!-- End Page-->
+<div class="col-md-12" style="position: fixed; bottom:5px; right:5px;">
+    <button id="btnVisitaSeguimiento_Foto" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+      <i class="icon fa-camera"></i> 
+    </button>            
+    <button id="btnVisitaSeguimiento_Galeria" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+      <i class="icon fa-image"></i> 
+    </button>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/visitaSeguimiento.js", function(ev)
+        {
+          controlarPermisos();
+          funVisitaSeguimiento();
+        });
+      });
 </script>

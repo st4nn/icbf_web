@@ -1,520 +1,520 @@
-<!-- Page -->
-<div class="page">
-  <br><button id="btnMadrePrograma_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
-  <div class="page-content container-fluid">
-    <form id="frmMadrePrograma">
-      <input type="hidden" class="form-control guardar" id="txtMadrePrograma_id">
-      <input type="hidden" class="form-control guardar" id="txtMadrePrograma_Prefijo">
-      <h3 id="lblMadrePrograma_NombreMadre"></h3>
-      
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Datos del Programa</h3>
-              <div class="panel-actions">
-                <button id="btnMadrePrograma_Editar" class="btn text-left btn-warning btn-block"><i class="icon wb-pencil"></i> Datos Básicos</button>
-              </div>
-            </div>
-            <div class="panel-body">
-
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_Estado" class="control-label">Estado</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_Estado">
-                      <option value="Activo">Activo</option>
-                      <option value="Inactivo">Inactivo</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_FechaIngreso" class="control-label">Fecha Ingreso ICBF</label>
-                    <input type="text" class="form-control datepicker guardar" id="txtMadrePrograma_FechaIngreso" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_SIM" class="control-label">SIM</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_SIM" required>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_CentroZonal" class="control-label">Centro Zonal</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_CentroZonal">
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_Nombre1" class="control-label">Edad NNA SP</label>
-                    <div id="cntMadrePrograma_RangoEdad" class="asRange" data-plugin="asRange" data-namespace="rangeUi" data-step="1" data-min="0" data-max="18" data-range="true" data-value="[0,10]"></div>
-                    <input type="hidden" class="form-control guardar" id="txtMadrePrograma_RangoEdad" value="0,10" required>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Cupos</h3>
-            </div>
-            <div class="panel-body">
-              <div class="table-responsive">
-                <table class="table table-hover table-striped">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Cantidad</th>
-                      <th>Asignados</th>
-                      <th>Disponible</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Vulneración</td>
-                      <td><input id="txtMadrePrograma_CuposVulneracion" type="number" class="form-control text-right guardar" value="0"></td>
-                      <td id="lblMadrePrograma_AsignadosVulneracion" class="text-center">0</td>
-                      <td id="lblMadrePrograma_DisponibleVulneracion" class="text-center">0</td>
-                    </tr>
-                    <tr>
-                      <td>Discapacidad</td>
-                      <td><input id="txtMadrePrograma_CuposDiscapacidad" type="number" class="form-control text-right guardar" value="0"></td>
-                      <td id="lblMadrePrograma_AsignadosDiscapacidad" class="text-center">0</td>
-                      <td id="lblMadrePrograma_DisponibleDiscapacidad" class="text-center">0</td>
-                    </tr>
-                    <tr>
-                      <td>Otro Operador</td>
-                      <td><input id="txtMadrePrograma_CuposDiscapacidad" type="number" class="form-control text-right guardar" value="0"></td>
-                      <td colspan="2"><select id="txtMadrePrograma_OtroOperador" class="form-control"></select></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h4><small>última Asignación:</small> <span id="lblMadrePrograma_UltimaAsignacion"></span></h4>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Datos de la Madre</h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_Genero" class="control-label">Genero</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_Genero" required>
-                      <option value="F">Femenino</option>
-                      <option value="M">Masculino</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_Ciudad" class="control-label">Ciudad</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_Ciudad" required>
-                      
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_GrupoEtnico" class="control-label">Pertenece a algún grupo étnico</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_GrupoEtnico" required>
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6 hide form-group">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_GrupoEtnicoCual" class="control-label">Cual</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_GrupoEtnicoCual">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_FechaApertura" class="control-label">Fecha de Apertura del Hogar Sustito</label>
-                    <input type="text" class="form-control datepicker guardar" id="txtMadrePrograma_FechaApertura">
-                  </div>
-                </div>
-
-                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_NumeroResolucionApertura" class="control-label">Numero de Resolución de Apertura</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NumeroResolucionApertura">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_FechaResolucion" class="control-label">Fecha de Resolución de Apertura HST</label>
-                    <input type="text" class="form-control datepicker guardar" id="txtMadrePrograma_FechaResolucion">
-                  </div>
-                </div>
-
-                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_TiempoResolucionApertura" class="control-label">Tiempo de Resolución de Apertura HST</label>
-                    <input type="text" class="form-control" id="txtMadrePrograma_TiempoResolucionApertura" readonly="true" style="border:none; background: white;">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_NivelAcademico" class="control-label">Nivel Académico</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_NivelAcademico">
-                      <option value='BÁSICA_PRIMARIA'>BÁSICA_PRIMARIA</option>
-                      <option value='BÁSICA_SECUNDARIA'>BÁSICA_SECUNDARIA</option>
-                      <option value='MEDIA'>MEDIA</option>
-                      <option value='BACHILLER'>BACHILLER</option>
-                      <option value='NIVEL_TÉCNICO'>NIVEL_TÉCNICO</option>
-                      <option value='UNIVERSITARIO_PROFESIONAL'>UNIVERSITARIO_PROFESIONAL</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_UltimoSemestreAprobado" class="control-label">Último Semestre/Año Aprobado</label>
-                    <input type="number" class="form-control guardar" id="txtMadrePrograma_UltimoSemestreAprobado">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_AfiliadaFondoPension" class="control-label">Afiliada a Fondo de Pensión</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_AfiliadaFondoPension">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                      <option value='PENSIONADA'>Pensionada</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_NombreFondoPension" class="control-label">Nombre del Fondo de Pensión</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NombreFondoPension">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_ActivoFondoPension" class="control-label">Activo en Fondo de Pensión</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_ActivoFondoPension">
-                      <option value="SI">Si</option>
-                      <option value="NO">No</option>
-                      <option value='PENSIONADA'>Pensionada</option>
-                      <option value='Sin Información'>Sin Información</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_BeneficiarioPension" class="control-label">Beneficiario de Pensión</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_BeneficiarioPension">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Datos de la Madre</h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_AfiliadoSalud" class="control-label">Afiliado al Sistema General de Seguridad Social</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_AfiliadoSalud">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_TipoAfiliacionSalud" class="control-label">Cotizante o Beneficiaria</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_TipoAfiliacionSalud" required>
-                      <option Beneficiaria="No">No</option>
-                      <option value="Beneficiaria">Beneficiaria</option>
-                      <option value="Cotizante">Cotizante</option>
-                      <option value="Subsidiado">Régimen Subsidiado</option>
-
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_NombreEPS" class="control-label">Nombre Entidad de Salud</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NombreEPS">
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_NombreEPSDeseada" class="control-label">Nombre Entidad de Salud a la cual desea afiliarse</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NombreEPSDeseada">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_RegimenEspecial" class="control-label">Régimen Especial</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_RegimenEspecial">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_Discapacidad" class="control-label">Madre con Discapacidad</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_Discapacidad">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_EnfermedadCronica" class="control-label">Madre con Enfermedad Crónica</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_EnfermedadCronica">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_TipoDiagnostico" class="control-label">Tipo Diagnóstico</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_TipoDiagnostico">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_AfiliacionCajaCompensacionFamiliar" class="control-label">Afiliación a Caja de Compensación Familiar</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_AfiliacionCajaCompensacionFamiliar">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_TipoVivienda" class="control-label">Tipo de Vivienda</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_TipoVivienda">
-                      <option value='SIN INFORMACIÓN'>Sin Información</option>
-                      <option value='PROPIA'>Propia</option>
-                      <option value='ARRIENDO'>Arriendo</option>
-                      <option value='FAMILIAR'>Familiar</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_CarnetManipulacionAlimentos" class="control-label">Tiene Carnet de Manipulación de Alimentos</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_CarnetManipulacionAlimentos">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_CursoPrimerosAuxilios" class="control-label">Tiene Curso de Primeros Auxilios</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_CursoPrimerosAuxilios">
-                      <option value="NO">No</option>
-                      <option value="SI">Si</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_ActivoFondoPension" class="control-label">Afiliada como Madre Sustituta al SGSSS?</label>
-                    <select class="form-control guardar" id="txtMadrePrograma_ActivoFondoPension">
-                      <option value="SI">Si</option>
-                      <option value="NO">No</option>
-                      <option value='Sin Información'>Sin Información</option>
-                    </select>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Datos de la Cuenta</h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_Banco" class="control-label">Banco</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_Banco">
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txtMadrePrograma_NoCuenta" class="control-label">Número de Cuenta</label>
-                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NoCuenta">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Niños Asignados</h3>
-              <span id="lblMadrePrograma_NinosAsignados" class="pull-right label label-round label-success"></span>
-            </div>
-            <div class="panel-body">
-              <ul id="cntMadrePrograma_NinosAsignados" class="list-group list-group-dividered list-group-full">
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-12">
-        <div class="col-sm-6 col-md-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Observaciones</h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="txtMadrePrograma_FechaNovedad" class="control-label">Fecha de la Novedad</label>
-                  <input type="text" class="form-control datepicker" id="txtMadrePrograma_FechaNovedad">
-                </div>
-
-                <div class="col-md-6 form-group">
-                  <label for="txtMadrePrograma_TipoNovedad" class="control-label">Tipo de Novedad</label>
-                  <select type="text" class="form-control" id="txtMadrePrograma_TipoNovedad">
-                    <option value="Ingreso">Ingreso</option>
-                    <option value="Observación">Observación</option>
-                    <option value="Suspensión Temporal">Pérdida Inmediata</option>
-                    <option value="Suspensión Temporal">Suspensión Temporal</option>
-                  </select>
-                </div>
-                
-              </div>
-              <div class="col-md-12 form-group">
-                <div class="form-group">
-                  <label for="txtMadrePrograma_Observaciones" class="control-label">Observacion</label>
-                  <textarea  class="form-control" rows="12" id="txtMadrePrograma_Observaciones"></textarea>
-                </div>
-              </div>
-
-           
-            </div>
-            <div class="panel-footer">
-              <button id="btnMadrePrograma_AgregarNovedad" type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6">
-          <div class="panel panel-primary panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Historial de Observaciones</h3>
-            </div>
-            <div class="panel-body">
-              <ul id="cntMadrePrograma_Novedades" class="list-group">
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-       <div class="col-sm-12">
-        <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
-      </div>
-    </form>
-  </div>
-</div>
-<!-- End Page -->
-<script type="text/javascript">
-    jQuery(document).ready(function() { 
-          funMadre_Programa();
-      });
+<!-- Page -->
+<div class="page">
+  <br><button id="btnMadrePrograma_VolverALaTabla" type="button" class="btn btn-round btn-primary btn-pill-right">Volver a la Tabla</button>
+  <div class="page-content container-fluid">
+    <form id="frmMadrePrograma">
+      <input type="hidden" class="form-control guardar" id="txtMadrePrograma_id">
+      <input type="hidden" class="form-control guardar" id="txtMadrePrograma_Prefijo">
+      <h3 id="lblMadrePrograma_NombreMadre"></h3>
+      
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Datos del Programa</h3>
+              <div class="panel-actions">
+                <button id="btnMadrePrograma_Editar" class="btn text-left btn-warning btn-block"><i class="icon wb-pencil"></i> Datos Básicos</button>
+              </div>
+            </div>
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Estado" class="control-label">Estado</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_Estado">
+                      <option value="Activo">Activo</option>
+                      <option value="Inactivo">Inactivo</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_FechaIngreso" class="control-label">Fecha Ingreso ICBF</label>
+                    <input type="text" class="form-control datepicker guardar" id="txtMadrePrograma_FechaIngreso" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_SIM" class="control-label">SIM</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_SIM" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_CentroZonal" class="control-label">Centro Zonal</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_CentroZonal">
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Nombre1" class="control-label">Edad NNA SP</label>
+                    <div id="cntMadrePrograma_RangoEdad" class="asRange" data-plugin="asRange" data-namespace="rangeUi" data-step="1" data-min="0" data-max="18" data-range="true" data-value="[0,10]"></div>
+                    <input type="hidden" class="form-control guardar" id="txtMadrePrograma_RangoEdad" value="0,10" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Cupos</h3>
+            </div>
+            <div class="panel-body">
+              <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Cantidad</th>
+                      <th>Asignados</th>
+                      <th>Disponible</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Vulneración</td>
+                      <td><input id="txtMadrePrograma_CuposVulneracion" type="number" class="form-control text-right guardar" value="0"></td>
+                      <td id="lblMadrePrograma_AsignadosVulneracion" class="text-center">0</td>
+                      <td id="lblMadrePrograma_DisponibleVulneracion" class="text-center">0</td>
+                    </tr>
+                    <tr>
+                      <td>Discapacidad</td>
+                      <td><input id="txtMadrePrograma_CuposDiscapacidad" type="number" class="form-control text-right guardar" value="0"></td>
+                      <td id="lblMadrePrograma_AsignadosDiscapacidad" class="text-center">0</td>
+                      <td id="lblMadrePrograma_DisponibleDiscapacidad" class="text-center">0</td>
+                    </tr>
+                    <tr>
+                      <td>Otro Operador</td>
+                      <td><input id="txtMadrePrograma_CuposDiscapacidad" type="number" class="form-control text-right guardar" value="0"></td>
+                      <td colspan="2"><select id="txtMadrePrograma_OtroOperador" class="form-control"></select></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4><small>última Asignación:</small> <span id="lblMadrePrograma_UltimaAsignacion"></span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Datos de la Madre</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Genero" class="control-label">Genero</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_Genero" required>
+                      <option value="F">Femenino</option>
+                      <option value="M">Masculino</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Ciudad" class="control-label">Ciudad</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_Ciudad" required>
+                      
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_GrupoEtnico" class="control-label">Pertenece a algún grupo étnico</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_GrupoEtnico" required>
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6 hide form-group">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_GrupoEtnicoCual" class="control-label">Cual</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_GrupoEtnicoCual">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_FechaApertura" class="control-label">Fecha de Apertura del Hogar Sustito</label>
+                    <input type="text" class="form-control datepicker guardar" id="txtMadrePrograma_FechaApertura">
+                  </div>
+                </div>
+
+                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NumeroResolucionApertura" class="control-label">Numero de Resolución de Apertura</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NumeroResolucionApertura">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_FechaResolucion" class="control-label">Fecha de Resolución de Apertura HST</label>
+                    <input type="text" class="form-control datepicker guardar" id="txtMadrePrograma_FechaResolucion">
+                  </div>
+                </div>
+
+                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_TiempoResolucionApertura" class="control-label">Tiempo de Resolución de Apertura HST</label>
+                    <input type="text" class="form-control" id="txtMadrePrograma_TiempoResolucionApertura" readonly="true" style="border:none; background: white;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NivelAcademico" class="control-label">Nivel Académico</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_NivelAcademico">
+                      <option value='BÁSICA_PRIMARIA'>BÁSICA_PRIMARIA</option>
+                      <option value='BÁSICA_SECUNDARIA'>BÁSICA_SECUNDARIA</option>
+                      <option value='MEDIA'>MEDIA</option>
+                      <option value='BACHILLER'>BACHILLER</option>
+                      <option value='NIVEL_TÉCNICO'>NIVEL_TÉCNICO</option>
+                      <option value='UNIVERSITARIO_PROFESIONAL'>UNIVERSITARIO_PROFESIONAL</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_UltimoSemestreAprobado" class="control-label">Último Semestre/Año Aprobado</label>
+                    <input type="number" class="form-control guardar" id="txtMadrePrograma_UltimoSemestreAprobado">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_AfiliadaFondoPension" class="control-label">Afiliada a Fondo de Pensión</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_AfiliadaFondoPension">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                      <option value='PENSIONADA'>Pensionada</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NombreFondoPension" class="control-label">Nombre del Fondo de Pensión</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NombreFondoPension">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_ActivoFondoPension" class="control-label">Activo en Fondo de Pensión</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_ActivoFondoPension">
+                      <option value="SI">Si</option>
+                      <option value="NO">No</option>
+                      <option value='PENSIONADA'>Pensionada</option>
+                      <option value='Sin Información'>Sin Información</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_BeneficiarioPension" class="control-label">Beneficiario de Pensión</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_BeneficiarioPension">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Datos de la Madre</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_AfiliadoSalud" class="control-label">Afiliado al Sistema General de Seguridad Social</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_AfiliadoSalud">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_TipoAfiliacionSalud" class="control-label">Cotizante o Beneficiaria</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_TipoAfiliacionSalud" required>
+                      <option Beneficiaria="No">No</option>
+                      <option value="Beneficiaria">Beneficiaria</option>
+                      <option value="Cotizante">Cotizante</option>
+                      <option value="Subsidiado">Régimen Subsidiado</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NombreEPS" class="control-label">Nombre Entidad de Salud</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NombreEPS">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NombreEPSDeseada" class="control-label">Nombre Entidad de Salud a la cual desea afiliarse</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NombreEPSDeseada">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_RegimenEspecial" class="control-label">Régimen Especial</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_RegimenEspecial">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Discapacidad" class="control-label">Madre con Discapacidad</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_Discapacidad">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_EnfermedadCronica" class="control-label">Madre con Enfermedad Crónica</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_EnfermedadCronica">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="cntMadrePrograma_GrupoEtnico" class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_TipoDiagnostico" class="control-label">Tipo Diagnóstico</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_TipoDiagnostico">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_AfiliacionCajaCompensacionFamiliar" class="control-label">Afiliación a Caja de Compensación Familiar</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_AfiliacionCajaCompensacionFamiliar">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_TipoVivienda" class="control-label">Tipo de Vivienda</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_TipoVivienda">
+                      <option value='SIN INFORMACIÓN'>Sin Información</option>
+                      <option value='PROPIA'>Propia</option>
+                      <option value='ARRIENDO'>Arriendo</option>
+                      <option value='FAMILIAR'>Familiar</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_CarnetManipulacionAlimentos" class="control-label">Tiene Carnet de Manipulación de Alimentos</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_CarnetManipulacionAlimentos">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_CursoPrimerosAuxilios" class="control-label">Tiene Curso de Primeros Auxilios</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_CursoPrimerosAuxilios">
+                      <option value="NO">No</option>
+                      <option value="SI">Si</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_ActivoFondoPension" class="control-label">Afiliada como Madre Sustituta al SGSSS?</label>
+                    <select class="form-control guardar" id="txtMadrePrograma_ActivoFondoPension">
+                      <option value="SI">Si</option>
+                      <option value="NO">No</option>
+                      <option value='Sin Información'>Sin Información</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Datos de la Cuenta</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_Banco" class="control-label">Banco</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_Banco">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="txtMadrePrograma_NoCuenta" class="control-label">Número de Cuenta</label>
+                    <input type="text" class="form-control guardar" id="txtMadrePrograma_NoCuenta">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Niños Asignados</h3>
+              <span id="lblMadrePrograma_NinosAsignados" class="pull-right label label-round label-success"></span>
+            </div>
+            <div class="panel-body">
+              <ul id="cntMadrePrograma_NinosAsignados" class="list-group list-group-dividered list-group-full">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Observaciones</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="txtMadrePrograma_FechaNovedad" class="control-label">Fecha de la Novedad</label>
+                  <input type="text" class="form-control datepicker" id="txtMadrePrograma_FechaNovedad">
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="txtMadrePrograma_TipoNovedad" class="control-label">Tipo de Novedad</label>
+                  <select type="text" class="form-control" id="txtMadrePrograma_TipoNovedad">
+                    <option value="Ingreso">Ingreso</option>
+                    <option value="Observación">Observación</option>
+                    <option value="Suspensión Temporal">Pérdida Inmediata</option>
+                    <option value="Suspensión Temporal">Suspensión Temporal</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div class="col-md-12 form-group">
+                <div class="form-group">
+                  <label for="txtMadrePrograma_Observaciones" class="control-label">Observacion</label>
+                  <textarea  class="form-control" rows="12" id="txtMadrePrograma_Observaciones"></textarea>
+                </div>
+              </div>
+
+           
+            </div>
+            <div class="panel-footer">
+              <button id="btnMadrePrograma_AgregarNovedad" type="button" class="btn btn-primary"><i class="icon wb-plus-circle"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-primary panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">Historial de Observaciones</h3>
+            </div>
+            <div class="panel-body">
+              <ul id="cntMadrePrograma_Novedades" class="list-group">
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+       <div class="col-sm-12">
+        <button type="submit" class="btn btn-success btn-lg"><i class="icon fa-floppy-o"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Page -->
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+          funMadre_Programa();
+      });
 </script>

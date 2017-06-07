@@ -2,19 +2,15 @@
   include("../conectar.php"); 
   include("datosUsuario.php"); 
    $link = Conectar();
-
    $Parametro = addslashes($_POST['Nombre']);
    $idUsuario = addslashes($_POST['Usuario']);
    $Usuario = datosUsuario($idUsuario);
-
    $Parametro ="%" . str_replace(" ", "%", $Parametro) . '%';
-
    $Perfil = "";
    if ($Usuario['idPerfil'] > 3)
    {
       $Perfil = " AND datosUsuarios.idSede = '" . $Usuario['idSede'] . "'";
    }
-
    $sql = "SELECT
             Login.idLogin as id,
             datosUsuarios.Nombre,
@@ -31,9 +27,7 @@
                datosUsuarios.Nombre LIKE '$Parametro'
                OR datosUsuarios.Cargo LIKE '$Parametro'
             ) $Perfil LIMIT 0, 30;";
-
    $result = $link->query($sql);
-
    $idx = 0;
    if ( $result->num_rows > 0)
    {

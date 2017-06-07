@@ -1,382 +1,382 @@
-<div class="page">
-  <div class="page-header">
-    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel"><i class="icon fa-arrow-circle-left"></i> Atras</button>
-    <h1 class="page-title"> </h1>
-  </div>
-  <div class="page-content container-fluid" id="cntPlatinSeguimiento_Wizard">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- Panel Wizard Form Container -->
-        <div class="panel">
-          <div class="panel-heading">
-            <h3 class="panel-title">Acta de Visita Domiciliaria</h3>
-          </div>
-          <div class="panel-body">
-            <!-- Steps -->
-            <div class="pearls row">
-              <div id="cntPlatinSeguimiento_Pearls_Inicio" class="pearl current col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">1</i></div>
-                <span class="pearl-title"></span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">2</i></div>
-                <span class="pearl-title"></span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">3</i></div>
-                <span class="pearl-title"></span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">4</i></div>
-                <span class="pearl-title"></span>
-              </div>
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">5</i></div>
-                <span class="pearl-title"></span>
-              </div>    
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">6</i></div>
-                <span class="pearl-title"></span>
-              </div>    
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">7</i></div>
-                <span class="pearl-title"></span>
-              </div>    
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">8</i></div>
-                <span class="pearl-title"></span>
-              </div>    
-              <div class="pearl col-xs-2">
-                <div class="pearl-icon"><i class="icon" aria-hidden="true">9</i></div>
-                <span class="pearl-title"></span>
-              </div>    
-            </div>
-          </div>
-          
-          <div id="cntPlatinSeguimiento_Controles"></div><br><br>
-        </div>
-        <!-- End Steps -->
-        <!-- Wizard Content -->
-        <form id="frmPlatinSeguimiento" class="wizard-content">
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Información General</label><br>
-                      <div class="example-wrap col-sm-7">
-                        <h4 class="example-title">NNA</h4>
-                        <select id="txtPlatinSeguimiento_NNA" class="form-control guardar" placeholder="NNA">
-                          <option value="N1">NNA 1</option>
-                          <option value="N2">NNA 2</option>
-                        </select>
-                      </div>
-                      <div class="example-wrap col-sm-5">
-                        <h4 class="example-title">Fecha</h4>
-                        <input type="date" id="txtPlatinSeguimiento_Fecha" class="form-control guardar" placeholder="Fecha">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Proceso de atención<br><strong>Fase III:</strong>Preparación para el egreso</label><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Motivo de Ingreso</h4>
-                        <select id="txtPlatinSeguimiento_MotivoIngreso" class="form-control guardar" placeholder="Motivo de Ingreso">
-                          <option value="M1">Motivo 1</option>
-                          <option value="M2">Motivo 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al momento del egreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso" class="form-control guardar" placeholder="Situación al momento del egreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Programa Vida Saludable</label><br>
-                      <small><p>-Cuenta con las condiciones necesarias para gozar de buena salud y adopta estilos de vida saludables<br>-Goza de un buen estado nutricional y adopta hábitos alimenticios saludables<br>-Vive y expresa responsablemente su sexualidad </p></small><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al Ingreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionIngreso_VidaSaludable" class="form-control guardar" placeholder="Situación al Ingreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_VidaSaludable" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al momento del egreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_VidaSaludable" class="form-control guardar" placeholder="Situación al momento del egreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_VidaSaludable" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Programa Desarrollo de potenciales</label><br>
-                      <small><p> --Cuenta con una familia y /o cuidadores principales que le acogen (vínculos afectivos y de protección ) favorecen su desarrollo integral y le reconocen  como agente activo del mismo<br>-Desarrolla y potencia sus capacidades, habilidades y destrezas con procesos</p></small><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al Ingreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionIngreso_DesarrolloPotenciales" class="form-control guardar" placeholder="Situación al Ingreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_DesarrolloPotenciales" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al momento del egreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_DesarrolloPotenciales" class="form-control guardar" placeholder="Situación al momento del egreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_DesarrolloPotenciales" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Programa Construcción de Ciudadanía </label><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al Ingreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionIngreso_ConstruccionCiudadania" class="form-control guardar" placeholder="Situación al Ingreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_ConstruccionCiudadania" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al momento del egreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_ConstruccionCiudadania" class="form-control guardar" placeholder="Situación al momento del egreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_ConstruccionCiudadania" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Fortalecimiento Personal y Fortalecimiento Familiar</label><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al Ingreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionIngreso_Fortalecimiento" class="form-control guardar" placeholder="Situación al Ingreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_Fortalecimiento" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Situación al momento del egreso</h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_Fortalecimiento" class="form-control guardar" placeholder="Situación al momento del egreso">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_Fortalecimiento" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Evaluación de compromiso del niño, niña o adolescente y su familia o Red vincular de apoyo:</label><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Niño, niña o adolescente</h4>
-                        <select id="txtPlatinSeguimiento_SituacionIngreso_EvaluacionCompromiso" class="form-control guardar" placeholder="Niño, niña o adolescente">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_EvaluacionCompromiso" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Familia o Red vincular de apoyo </h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_EvaluacionCompromiso" class="form-control guardar" placeholder="Familia o Red vincular de apoyo ">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_EvaluacionCompromiso" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Nuevos compromisos:</label><br>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Niño, niña o adolescente</h4>
-                        <select id="txtPlatinSeguimiento_SituacionIngreso_NuevosCompromisos" class="form-control guardar" placeholder="Niño, niña o adolescente">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_NuevosCompromisos" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                      <div class="example-wrap col-sm-6">
-                        <h4 class="example-title">Familia o Red vincular de apoyo </h4>
-                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_NuevosCompromisos" class="form-control guardar" placeholder="Familia o Red vincular de apoyo ">
-                          <option value="S1">Situación 1</option>
-                          <option value="S2">Situación 2</option>
-                        </select>
-                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_NuevosCompromisos" class="form-control guardar" rows="4"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="form-group">
-              <div class="col-md-12">
-                <div class="margin-5">
-                  <div class="panel">
-                    <div class="panel-body">
-                      <label class="control-label">Observaciones</label><br>
-                      <div class="example-wrap col-sm-12">
-                        <h4 class="example-title">Observaciones del equipo técnico interdisciplinario de la Autoridad Administrativa Competente  / equipo interdisciplinario de la modalidad:</h4>
-                        <textarea id="txtPlatinSeguimiento_Observaciones" class="form-control guardar" placeholder="Observaciones" rows="15"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="wizard-pane" role="tabpanel">
-            <div class="col-sm-12">
-              <div class="margin-5">
-                <div class="panel">
-                  <div class="panel-heading">
-                    <div class="panel-title"><h4>Miembros del Equipo</h4></div>
-                  </div>
-                  <div class="panel-body" id="cntPlatinSeguimiento_MiembrosDelEquipo">
-                    <button id="btnPlatinSeguimiento_AgregarMiembroDelEquipo" class="btn btn-warning pull-right"><i class="icon fa-plus-circle"></i> Agregar Miembro</button>
-                    <div id="cntPlatinSeguimiento_MiembrosDelEquipo_PrimeraFila" class="col-sm-12 row cntPlatinSeguimiento_MiembrosDelEquipo">
-                      <div class="margin-5">
-                        <div class="col-sm-4">
-                          <input class="form-control" placeholder="Nombre">
-                        </div>
-                        <div class="col-sm-4 vertical-align-middle">
-                          <input type="text" placeholder="cargo" class="form-control">
-                        </div>
-                        <div class="col-sm-2">
-                          <button type="button" class="btn btn-info btnPlatinSeguimiento_FirmaMiembro"><i class="icon fa-edit"></i> </button>
-                        </div>
-                        <div class="col-sm-2">
-                          <button class="btn btn-danger btnPlatinSeguimiento_BorrarMiembroDelEquipo_fake hide"><i class="icon fa-trash"></i> </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-                  <div class="hide">
-                    <textarea id="txtPlatinSeguimiento_MiembrosDelEquipo" class="form-control guardar"></textarea>
-                    <input type="text" id="txtPlatinSeguimiento_FechaInicio" class="form-control guardar">
-                    <input type="text" id="txtPlatinSeguimiento_FechaFin" class="form-control guardar">
-                    <input type="text" id="txtPlatinSeguimiento_Codigo" class="form-control guardar">
-                    <input type="text" id="txtPlatinSeguimiento_Responsable" class="form-control guardar">
-                  </div>
-                
-        </form>
-        <!-- Wizard Content -->
-      </div>
-    </div>
-    <!-- End Panel Wizard Form Container -->
-  </div>
-</div>
-<!-- End Page-->
-<div class="col-md-12" style="position: fixed; bottom:5px; right:5px;">
-    <button id="btnPlatinSeguimiento_Foto" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
-      <i class="icon fa-camera"></i> 
-    </button>            
-    <button id="btnPlatinSeguimiento_Galeria" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
-      <i class="icon fa-image"></i> 
-    </button>
-</div>
-
-
-<script type="text/javascript">
-    jQuery(document).ready(function() { 
-        $.getScript("../js/platinSeguimiento.js", function(ev)
-        {
-          controlarPermisos();
-          funPlatinSeguimiento();
-        });
-      });
+<div class="page">
+  <div class="page-header">
+    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel"><i class="icon fa-arrow-circle-left"></i> Atras</button>
+    <h1 class="page-title"> </h1>
+  </div>
+  <div class="page-content container-fluid" id="cntPlatinSeguimiento_Wizard">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Panel Wizard Form Container -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Acta de Visita Domiciliaria</h3>
+          </div>
+          <div class="panel-body">
+            <!-- Steps -->
+            <div class="pearls row">
+              <div id="cntPlatinSeguimiento_Pearls_Inicio" class="pearl current col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">1</i></div>
+                <span class="pearl-title"></span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">2</i></div>
+                <span class="pearl-title"></span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">3</i></div>
+                <span class="pearl-title"></span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">4</i></div>
+                <span class="pearl-title"></span>
+              </div>
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">5</i></div>
+                <span class="pearl-title"></span>
+              </div>    
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">6</i></div>
+                <span class="pearl-title"></span>
+              </div>    
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">7</i></div>
+                <span class="pearl-title"></span>
+              </div>    
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">8</i></div>
+                <span class="pearl-title"></span>
+              </div>    
+              <div class="pearl col-xs-2">
+                <div class="pearl-icon"><i class="icon" aria-hidden="true">9</i></div>
+                <span class="pearl-title"></span>
+              </div>    
+            </div>
+          </div>
+          
+          <div id="cntPlatinSeguimiento_Controles"></div><br><br>
+        </div>
+        <!-- End Steps -->
+        <!-- Wizard Content -->
+        <form id="frmPlatinSeguimiento" class="wizard-content">
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Información General</label><br>
+                      <div class="example-wrap col-sm-7">
+                        <h4 class="example-title">NNA</h4>
+                        <select id="txtPlatinSeguimiento_NNA" class="form-control guardar" placeholder="NNA">
+                          <option value="N1">NNA 1</option>
+                          <option value="N2">NNA 2</option>
+                        </select>
+                      </div>
+                      <div class="example-wrap col-sm-5">
+                        <h4 class="example-title">Fecha</h4>
+                        <input type="date" id="txtPlatinSeguimiento_Fecha" class="form-control guardar" placeholder="Fecha">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Proceso de atención<br><strong>Fase III:</strong>Preparación para el egreso</label><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Motivo de Ingreso</h4>
+                        <select id="txtPlatinSeguimiento_MotivoIngreso" class="form-control guardar" placeholder="Motivo de Ingreso">
+                          <option value="M1">Motivo 1</option>
+                          <option value="M2">Motivo 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al momento del egreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso" class="form-control guardar" placeholder="Situación al momento del egreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Programa Vida Saludable</label><br>
+                      <small><p>-Cuenta con las condiciones necesarias para gozar de buena salud y adopta estilos de vida saludables<br>-Goza de un buen estado nutricional y adopta hábitos alimenticios saludables<br>-Vive y expresa responsablemente su sexualidad </p></small><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al Ingreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionIngreso_VidaSaludable" class="form-control guardar" placeholder="Situación al Ingreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_VidaSaludable" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al momento del egreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_VidaSaludable" class="form-control guardar" placeholder="Situación al momento del egreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_VidaSaludable" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Programa Desarrollo de potenciales</label><br>
+                      <small><p> --Cuenta con una familia y /o cuidadores principales que le acogen (vínculos afectivos y de protección ) favorecen su desarrollo integral y le reconocen  como agente activo del mismo<br>-Desarrolla y potencia sus capacidades, habilidades y destrezas con procesos</p></small><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al Ingreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionIngreso_DesarrolloPotenciales" class="form-control guardar" placeholder="Situación al Ingreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_DesarrolloPotenciales" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al momento del egreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_DesarrolloPotenciales" class="form-control guardar" placeholder="Situación al momento del egreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_DesarrolloPotenciales" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Programa Construcción de Ciudadanía </label><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al Ingreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionIngreso_ConstruccionCiudadania" class="form-control guardar" placeholder="Situación al Ingreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_ConstruccionCiudadania" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al momento del egreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_ConstruccionCiudadania" class="form-control guardar" placeholder="Situación al momento del egreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_ConstruccionCiudadania" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Proceso de atención<br><strong>Realizaciones</strong> Fortalecimiento Personal y Fortalecimiento Familiar</label><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al Ingreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionIngreso_Fortalecimiento" class="form-control guardar" placeholder="Situación al Ingreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_Fortalecimiento" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Situación al momento del egreso</h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_Fortalecimiento" class="form-control guardar" placeholder="Situación al momento del egreso">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_Fortalecimiento" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Evaluación de compromiso del niño, niña o adolescente y su familia o Red vincular de apoyo:</label><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Niño, niña o adolescente</h4>
+                        <select id="txtPlatinSeguimiento_SituacionIngreso_EvaluacionCompromiso" class="form-control guardar" placeholder="Niño, niña o adolescente">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_EvaluacionCompromiso" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Familia o Red vincular de apoyo </h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_EvaluacionCompromiso" class="form-control guardar" placeholder="Familia o Red vincular de apoyo ">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_EvaluacionCompromiso" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Nuevos compromisos:</label><br>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Niño, niña o adolescente</h4>
+                        <select id="txtPlatinSeguimiento_SituacionIngreso_NuevosCompromisos" class="form-control guardar" placeholder="Niño, niña o adolescente">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_MotivoIngresoObs_NuevosCompromisos" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                      <div class="example-wrap col-sm-6">
+                        <h4 class="example-title">Familia o Red vincular de apoyo </h4>
+                        <select id="txtPlatinSeguimiento_SituacionAlEgreso_NuevosCompromisos" class="form-control guardar" placeholder="Familia o Red vincular de apoyo ">
+                          <option value="S1">Situación 1</option>
+                          <option value="S2">Situación 2</option>
+                        </select>
+                        <textarea id="txtPlatinSeguimiento_SituacionAlEgresoObs_NuevosCompromisos" class="form-control guardar" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="margin-5">
+                  <div class="panel">
+                    <div class="panel-body">
+                      <label class="control-label">Observaciones</label><br>
+                      <div class="example-wrap col-sm-12">
+                        <h4 class="example-title">Observaciones del equipo técnico interdisciplinario de la Autoridad Administrativa Competente  / equipo interdisciplinario de la modalidad:</h4>
+                        <textarea id="txtPlatinSeguimiento_Observaciones" class="form-control guardar" placeholder="Observaciones" rows="15"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-pane" role="tabpanel">
+            <div class="col-sm-12">
+              <div class="margin-5">
+                <div class="panel">
+                  <div class="panel-heading">
+                    <div class="panel-title"><h4>Miembros del Equipo</h4></div>
+                  </div>
+                  <div class="panel-body" id="cntPlatinSeguimiento_MiembrosDelEquipo">
+                    <button id="btnPlatinSeguimiento_AgregarMiembroDelEquipo" class="btn btn-warning pull-right"><i class="icon fa-plus-circle"></i> Agregar Miembro</button>
+                    <div id="cntPlatinSeguimiento_MiembrosDelEquipo_PrimeraFila" class="col-sm-12 row cntPlatinSeguimiento_MiembrosDelEquipo">
+                      <div class="margin-5">
+                        <div class="col-sm-4">
+                          <input class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="col-sm-4 vertical-align-middle">
+                          <input type="text" placeholder="cargo" class="form-control">
+                        </div>
+                        <div class="col-sm-2">
+                          <button type="button" class="btn btn-info btnPlatinSeguimiento_FirmaMiembro"><i class="icon fa-edit"></i> </button>
+                        </div>
+                        <div class="col-sm-2">
+                          <button class="btn btn-danger btnPlatinSeguimiento_BorrarMiembroDelEquipo_fake hide"><i class="icon fa-trash"></i> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+                  <div class="hide">
+                    <textarea id="txtPlatinSeguimiento_MiembrosDelEquipo" class="form-control guardar"></textarea>
+                    <input type="text" id="txtPlatinSeguimiento_FechaInicio" class="form-control guardar">
+                    <input type="text" id="txtPlatinSeguimiento_FechaFin" class="form-control guardar">
+                    <input type="text" id="txtPlatinSeguimiento_Codigo" class="form-control guardar">
+                    <input type="text" id="txtPlatinSeguimiento_Responsable" class="form-control guardar">
+                  </div>
+                
+        </form>
+        <!-- Wizard Content -->
+      </div>
+    </div>
+    <!-- End Panel Wizard Form Container -->
+  </div>
+</div>
+<!-- End Page-->
+<div class="col-md-12" style="position: fixed; bottom:5px; right:5px;">
+    <button id="btnPlatinSeguimiento_Foto" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+      <i class="icon fa-camera"></i> 
+    </button>            
+    <button id="btnPlatinSeguimiento_Galeria" type="button" class="btn btn-info btn-floating btn-lg" data-placement="top" data-toggle="tooltip" data-original-title="Settings">
+      <i class="icon fa-image"></i> 
+    </button>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() { 
+        $.getScript("../js/platinSeguimiento.js", function(ev)
+        {
+          controlarPermisos();
+          funPlatinSeguimiento();
+        });
+      });
 </script>

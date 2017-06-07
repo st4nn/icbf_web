@@ -3,7 +3,8 @@
   <div class="page-content container-fluid">
     <h1 class="page-title" id="lblHomeVisita_NombreNNA">Calendario </h1>
     <input type="hidden" id="txtHomeVisita_idNNA">
-    <br><br>
+    <br>
+    <br>
     <div class="col-sm-7">
       <div class="text-center row col-sm-12">
         <div id="lnkFormatos_ValidacionInicialTrabajoSocial" class="col-xs-6 col-sm-3" style="height:100%;">
@@ -47,8 +48,7 @@
           </div>
         </div>
       </div>
-
-      <div class="text-center row col-sm-12">   
+      <div class="text-center row col-sm-12">
         <div id="lnkFormatos_PlanResultados" class="col-xs-6 col-sm-3" style="height:100%;">
           <div class="panel">
             <div class="panel-body lnkMenuBar_Item" vinculo="formatos/platinResultados.html">
@@ -90,7 +90,6 @@
           </div>
         </div>
       </div>
-      
       <div class="text-center row col-sm-12">
         <div id="lnkFormatos_NutricionInicial" class="col-xs-6 col-sm-3" style="height:100%;">
           <div class="panel">
@@ -112,9 +111,40 @@
             </div>
           </div>
         </div>
+        <div id="lnkFormatos_VisitaFallida" class="col-xs-6 col-sm-3" style="height:100%;">
+          <div class="panel">
+            <div class="panel-body lnkMenuBar_Item" vinculo="formatos/VisitaFallida.html">
+              <button type="button" class="btn btn-icon btn-danger btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="warning">
+                <i class="icon wb-thumb-down" aria-hidden="true"></i>
+              </button>
+              <br><span>Visita Fallida</span>
+            </div>
+          </div>
+        </div>
+        <div id="lnkFormatos_Hallazgos" class="col-xs-6 col-sm-3" style="height:100%;">
+          <div class="panel">
+            <div class="panel-body lnkMenuBar_Item" vinculo="formatos/Hallazgos.html">
+              <button type="button" class="btn btn-icon btn-danger btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="warning">
+                <i class="icon fa-flag" aria-hidden="true"></i>
+              </button>
+              <br><span>Hallazgos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center row col-md-12">
+        <div id="lnkFormatos_Sugerencias" class="col-xs-6 col-sm-3" style="height:100%;">
+          <div class="panel">
+            <div class="panel-body lnkMenuBar_Item" vinculo="formatos/Sugerencias.html">
+              <button type="button" class="btn btn-icon btn-warning btn-outline btn-round font-size-50" data-plugin="toolbar" data-toolbar="#user-options" data-toolbar-style="warning">
+                <i class="icon fa-spoon" aria-hidden="true"></i>
+              </button>
+              <br><span>Sugerencias</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
     <div class="col-sm-5">
       <div class="panel panel-primary panel-bordered">
         <div class="panel-heading">
@@ -123,7 +153,9 @@
         <div class="panel-body">
           <div class="row no-space">
             <table>
-              <td><h4><a href="../server/Archivos/pINICIAL.pdf" target="_blank" class="">Platin Inicial </a> </h4><small>Hecho por:</small> <strong>Jhonathan Espinosa</strong><br><small class="pull-right">Hace 5 Minutos</small></td>
+              <td>
+                <h4><a href="../server/Archivos/pINICIAL.pdf" target="_blank" class="">Platin Inicial </a> </h4><small>Hecho por:</small> <strong>Jhonathan Espinosa</strong>
+                <br><small class="pull-right">Hace 5 Minutos</small></td>
             </table>
           </div>
         </div>
@@ -134,9 +166,14 @@
 <!-- End Page -->
 <script type="text/javascript">
 jQuery(document).ready(function() {
+
   $.getScript("../js/home-visita.js", function(ev) {
+
     controlarPermisos();
+
     funHome_Visita();
+
   });
+
 });
 </script>

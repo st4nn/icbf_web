@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html class="no-js css-menubar" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
-
   <title>Login | Simasus</title>
-
   <link rel="shortcut icon" href="assets/images/favicon.ico">
-
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap-extend.min.css">
   <link rel="stylesheet" href="assets/css/site.css">
-
-
-
   <!-- Page -->
   <link rel="stylesheet" href="assets/examples/css/pages/login-v3.css">
-
   <!-- Fonts -->
-  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
-
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
   <!--[if lt IE 9]>-->
-    <script src="assets/vendor/html5shiv/html5shiv.min.js"></script>
-
+  <script src="assets/vendor/html5shiv/html5shiv.min.js"></script>
   <!--[if lt IE 10]>
-    <script src="assets/vendor/media-match/media.match.min.js"></script>
-    <script src="assets/vendor/respond/respond.min.js"></script>
-    <![endif]-->
 
+    <script src="assets/vendor/media-match/media.match.min.js"></script>
+
+    <script src="assets/vendor/respond/respond.min.js"></script>
+
+    <![endif]-->
   <!-- Scripts -->
   <script src="assets/vendor/modernizr/modernizr.js"></script>
   <script src="assets/vendor/breakpoints/breakpoints.js"></script>
   <script>
-    Breakpoints();
+  Breakpoints();
   </script>
 </head>
+
 <body class="page-login-v3 layout-full">
   <img src="assets/images/logoFundacion_xs.png" style="z-index: 1000; position: fixed; right: 5px; bottom: 5px;">
   <!--[if lt IE 8]>
+
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+
     <![endif]-->
-
-
   <!-- Page -->
-  <div class="page animsition vertical-align text-center" data-animsition-in="fade-in"
-  data-animsition-out="fade-out">
+  <div class="page animsition vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <div class="page-content vertical-align-middle">
-          <div id="cntTitulo" class="brand bg-white padding-5 margin-bottom-3">
-            <h1 class="brand-text font-size-22 white">
+      <div id="cntTitulo" class="brand bg-white padding-5 margin-bottom-3">
+        <h1 class="brand-text font-size-22 white">
+
               <img class="brand-img" src="assets/images/logo.png" alt="...">
-              Simasus
+
+              Sihosus
+
             </h1>
-          </div>
+      </div>
       <div class="panel" id="cntLogin">
         <div class="panel-body">
           <form id="frmLogin">
@@ -71,46 +68,120 @@
               <a class="pull-left font-size-12" href="html/pages/forgot-password.html">Recuperar la clave</a>
             </div>
             <div class="alert bg-red-600 blue-grey-100 hide"></div>
+            <button class="btn btn-warning" data-target="#exampleFormModal" data-toggle="modal" type="button">Buzón de Sugerencias</button>
             <button class="btn btn-success pull-right" id="btnLogin_Entrar">ENTRAR</button>
           </form>
+          <div class="modal modal-warning fade" id="exampleFormModal" aria-hidden="false" aria-labelledby="exampleFormModalLabel" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+              <form class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-header modal-title" id="exampleFormModalLabel">Buzón de Peticiones, Quejas, Reclamos, Sugerencias (PQRS)</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-lg-4 form-group">
+                      <label class="control-label" for="pqrfecha">Fecha</label>
+                      <input type="date" class="form-control" name="firstName" placeholder="Fecha">
+                    </div>
+                    <div class="col-lg-4 form-group">
+                      <label class="control-label" for="pqrLugar">Lugar</label>
+                      <input type="text" class="form-control" name="lastName" placeholder="Lugar">
+                    </div>
+                    <div class="col-lg-4 form-group">
+                      <label for="" class="control-label">Soy un/a</label>
+                      <select class="form-control" name="" id="">
+                        <option value="">Seleccione</option>
+                        <option value="Funcionario">Funcionario</option>
+                        <option value="Beneficiario">Beneficiario</option>
+                        <option value="Madre_Sustituta">Madre Sustituta</option>
+                        <option value="Anonimo">Anónimo</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-4 form-group">
+                      <label class="control-label" for="pqrLugar">Nombre</label>
+                      <input type="text" class="form-control" name="PQRNombre" placeholder="Nombre">
+                    </div>
+                    <div class="col-lg-4 form-group">
+                      <label class="control-label" for="pqrLugar">Dirección</label>
+                      <input type="text" class="form-control" name="PQRDireccion" placeholder="Dirección">
+                    </div>
+                    <div class="col-lg-4 form-group">
+                      <label class="control-label" for="pqrLugar">Teléfono</label>
+                      <input type="text" class="form-control" name="PQRTelefono" placeholder="Teléfono">
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="control-label">Tipo de Petición</label>
+                        <div>
+                          <div class="radio-custom radio-primary radio-inline">
+                            <input type="radio" id="PQRSPeticion" name="PQRSTipo" />
+                            <label for="Peticion">Petición</label>
+                          </div>
+                          <div class="radio-custom radio-warning radio-inline">
+                            <input type="radio" id="PQRSQueja" name="PQRSTipo" />
+                            <label for="Queja">Queja</label>
+                          </div>
+                          <div class="radio-custom radio-danger radio-inline">
+                            <input type="radio" id="PQRSReclamo" name="PQRSTipo" />
+                            <label for="Reclamo">Reclamo</label>
+                          </div>
+                          <div class="radio-custom radio-sucess radio-inline">
+                            <input type="radio" id="PQRSSugerencia" name="PQRSTipo" />
+                            <label for="Sugerencia">Sugerencia</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 form-group">
+                      <textarea class="form-control" rows="5" placeholder="Mensaje">Mensaje</textarea>
+                    </div>
+                    <div class="col-sm-12 pull-right">
+                      <button class="btn btn-success btn-outline" data-dismiss="modal" type="button">Enviar PQR</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <!-- End Page -->
-
-
   <!-- Core  -->
   <script src="assets/vendor/jquery/jquery.js"></script>
   <script src="assets/vendor/bootstrap/bootstrap.js"></script>
   <script src="assets/vendor/animsition/jquery.animsition.js"></script>
-  
   <!-- Plugins For This Page -->
   <script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-
   <!-- Scripts -->
   <script src="assets/js/core.js"></script>
   <script src="assets/js/site.js"></script>
-
   <!-- Scripts For This Page -->
   <script src="assets/js/components/jquery-placeholder.js"></script>
   <script src="assets/js/components/material.js"></script>
-
   <script src="js/instalarWebSQL/md5.js"></script>
   <script src="js/login.js"></script>
-
   <script>
-    (function(document, window, $) {
-      'use strict';
+  (function(document, window, $) {
 
-      var Site = window.Site;
-      $(document).ready(function() {
-        Site.run();
-      });
-    })(document, window, jQuery);
+    'use strict';
+
+
+
+    var Site = window.Site;
+
+    $(document).ready(function() {
+
+      Site.run();
+
+    });
+
+  })(document, window, jQuery);
   </script>
-
-
 </body>
 
 </html>

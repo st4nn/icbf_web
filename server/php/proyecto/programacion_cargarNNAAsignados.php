@@ -2,8 +2,8 @@
   include("../conectar.php"); 
   include("datosUsuario.php"); 
    $link = Conectar();
-
-   $idUsuario = addslashes($_POST['Usuario']);
+	
+   $idUsuario = addslashes($_POST['Usuario']);	$idUsuario = 1;
    $Usuario = datosUsuario($idUsuario);
 
    if ($Usuario['idPerfil'] > 3)
@@ -41,6 +41,8 @@
             AND equipos.Estado = 1
          ORDER BY
             nna.idMadre;";
+            
+            
 
    $result = $link->query($sql);
 

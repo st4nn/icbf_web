@@ -1,385 +1,385 @@
-<div class="page">
-  <div class="page-header">
-    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel"><i class="icon fa-arrow-circle-left"></i> Atras</button>
-    <h1 class="page-title"> </h1>
-  </div>
-  <div class="page-content container-fluid" id="cntMatrizPeligros_Wizard">
-    <div class="row">
-      <form id="frmFormatos_VlTrSocial" class="col-md-12">
-        <!-- Panel Wizard Form Container -->
-        <div class="panel">
-          <div class="panel-heading">
-            <h3 class="panel-title">Valoracion Inicial Trabajo Social</h3>
-          </div>
-          <div class="panel-body">
-            <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
-              <h4 class="example-title">MOTIVO DE INGRESO DEL NIÑO, NIÑA O ADOLESCENTE AL  HOGAR SUSTITUTO</h4>
-              <div class="row">
-                <div class="form-group">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="txtFormatos_VlTrSocial_Motivo">Descripción</label>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="icon fa-pencil" aria-hidden="true"></i>
-                      </span>
-                      <textarea id="txtFormatos_VlTrSocial_Motivo" rows="10" class="form-control guardar"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
-              <h4 class="example-title">El NNA cuenta con familia biológica vinculada al Proceso Administrativo de Restablecimiento de Derechos</h4>
-              <div class="row">
-                <div class="form-group">
-                  <div class="rdbFormato">
-                    <div class="radio-custom radio-success radio-inline">
-                      <input type="radio" id="txtFormatos_VlTrSocial_FamiliaBiologica_Si" value="Si" name="rdbFormatos_VlTrSocial_FamiliaBiologica">
-                      <label for="txtFormatos_VlTrSocial_FamiliaBiologica_Si">SI</label>
-                    </div>
-                    <div class="radio-custom radio-danger radio-inline">
-                      <input type="radio" id="txtFormatos_VlTrSocial_FamiliaBiologica_No" value="No" name="rdbFormatos_VlTrSocial_FamiliaBiologica">
-                      <label for="txtFormatos_VlTrSocial_FamiliaBiologica_No">NO</label>
-                    </div>
-                    <input id="txtFormatos_VlTrSocial_FamiliaBiologica" class="rdbFormato_Value guardar" type="hidden" value="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
-            <h4 class="example-title">Área de derecho: Existencia</h4>
-            <div class="row">
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_PsicologiaCZ">Psicología CZ</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_PsicologiaCZ">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_NutricionCZ">Nutrición CZ</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_NutricionCZ">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_NutricionInstitucion">Nutrición Institucion</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_NutricionInstitucion">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_ProgramaCYDPYP">Programa CYD/PYP</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_ProgramaCYDPYP">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_Odontologia">ODONTOLOGÍA</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Odontologia">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_Optometria">OPTOMETRÍA</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Optometria">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_Vacunacion">VACUNACIÓN 0 A 10 AÑOS</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Vacunacion">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_MedicinaPediatrica">MEDICINA PEDIATRIA</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_MedicinaPediatrica">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4">
-                  <label class="control-label" for="txtFormatos_VlTrSocial_AfiliacionSGSSS">AFILIACIÓN SGSSS</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="icon fa-pencil" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_AfiliacionSGSSS">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
-          <h4 class="example-title">Bienestar Físico <br> Antecedentes familiares del NN/A (Familia Biológica) <br> Estado de Salud de la familia con la que convive el NN/A </h4>
-          <div class="row">
-            <div class="form-group">
-              <div class="col-md-4">
-                <label class="control-label" for="txtFormatos_VlTrSocial_Enfermedad">ENFERMEDAD</label>
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="icon fa-pencil" aria-hidden="true"></i>
-                  </span>
-                  <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Enfermedad">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-4">
-                <label class="control-label" for="txtFormatos_VlTrSocial_Adicciones">ADICCIONES</label>
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="icon fa-pencil" aria-hidden="true"></i>
-                  </span>
-                  <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Adicciones">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-4">
-                <label class="control-label" for="txtFormatos_VlTrSocial_Accidentes">ACCIDENTES</label>
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="icon fa-pencil" aria-hidden="true"></i>
-                  </span>
-                  <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Accidentes">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-12">
-                <label class="control-label" for="txtFormatos_VlTrSocial_Observaciones">Observaciones</label>
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="icon fa-pencil" aria-hidden="true"></i>
-                  </span>
-                  <textarea class="form-control" id="txtFormatos_VlTrSocial_Observaciones" cols="30" class="form-control guardar"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
-          <h4 class="example-title">Bienestar Físico <br> Antecedentes familiares del NN/A (Familia Biológica) <br> Estado de Salud de la familia con la que convive el NN/A </h4>
-          <div class="row">
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Acta de ubicación</label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_ActaUbicacion_Si" value="Si" name="rdbFormatos_VlTrSocial_ActaUbicacion">
-                    <label for="txtFormatos_VlTrSocial_ActaUbicacion_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_ActaUbicacion_No" value="No" name="rdbFormatos_VlTrSocial_ActaUbicacion">
-                    <label for="txtFormatos_VlTrSocial_ActaUbicacion_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_ActaUbicacion" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Registro civil o certificado de nacido vivo</label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_RegistroCivil_Si" value="Si" name="rdbFormatos_VlTrSocial_RegistroCivil">
-                    <label for="txtFormatos_VlTrSocial_RegistroCivil_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_RegistroCivil_No" value="No" name="rdbFormatos_VlTrSocial_RegistroCivil">
-                    <label for="txtFormatos_VlTrSocial_RegistroCivil_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_RegistroCivil" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Fotografías</label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_Fotografias_Si" value="Si" name="rdbFormatos_VlTrSocial_Fotografias">
-                    <label for="txtFormatos_VlTrSocial_Fotografias_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_Fotografias_No" value="No" name="rdbFormatos_VlTrSocial_Fotografias">
-                    <label for="txtFormatos_VlTrSocial_Fotografias_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_Fotografias" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Exámenes, formulas, tratamientos </label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_Tratamientos_Si" value="Si" name="rdbFormatos_VlTrSocial_Tratamientos">
-                    <label for="txtFormatos_VlTrSocial_Tratamientos_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_Tratamientos_No" value="No" name="rdbFormatos_VlTrSocial_Tratamientos">
-                    <label for="txtFormatos_VlTrSocial_Tratamientos_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_Tratamientos" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Carne de vacunas</label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CarneVacunas_Si" value="Si" name="rdbFormatos_VlTrSocial_CarneVacunas">
-                    <label for="txtFormatos_VlTrSocial_CarneVacunas_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CarneVacunas_No" value="No" name="rdbFormatos_VlTrSocial_CarneVacunas">
-                    <label for="txtFormatos_VlTrSocial_CarneVacunas_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_CarneVacunas" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Carne de salud</label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CarneSalud_Si" value="Si" name="rdbFormatos_VlTrSocial_CarneSalud">
-                    <label for="txtFormatos_VlTrSocial_CarneSalud_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CarneSalud_No" value="No" name="rdbFormatos_VlTrSocial_CarneSalud">
-                    <label for="txtFormatos_VlTrSocial_CarneSalud_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_CarneSalud" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Certificado de atención odontológica </label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_Si" value="Si" name="rdbFormatos_VlTrSocial_CertificadoAtencionOdontologica">
-                    <label for="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_No" value="No" name="rdbFormatos_VlTrSocial_CertificadoAtencionOdontologica">
-                    <label for="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Valoración de atención nutricional inicial </label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_Si" value="Si" name="rdbFormatos_VlTrSocial_ValoracionNutricionalInicial">
-                    <label for="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_No" value="No" name="rdbFormatos_VlTrSocial_ValoracionNutricionalInicial">
-                    <label for="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_ValoracionNutricionalInicial" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Certificados escolares-informes de calificaciones </label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadosEscolares_Si" value="Si" name="rdbFormatos_VlTrSocial_CertificadosEscolares">
-                    <label for="txtFormatos_VlTrSocial_CertificadosEscolares_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadosEscolares_No" value="No" name="rdbFormatos_VlTrSocial_CertificadosEscolares">
-                    <label for="txtFormatos_VlTrSocial_CertificadosEscolares_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_CertificadosEscolares" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <label class="control-label" for="inputUserNameOne">Copia de actas de dotación recibida </label>
-              <div class="col-md-3 list-unstyled">
-                <div class="rdbFormato">
-                  <div class="radio-custom radio-success">
-                    <input type="radio" id="txtFormatos_VlTrSocial_ActaDotacionRecibida_Si" value="Si" name="rdbFormatos_VlTrSocial_ActaDotacionRecibida">
-                    <label for="txtFormatos_VlTrSocial_ActaDotacionRecibida_Si">SI</label>
-                  </div>
-                  <div class="radio-custom radio-danger">
-                    <input type="radio" id="txtFormatos_VlTrSocial_ActaDotacionRecibida_No" value="No" name="rdbFormatos_VlTrSocial_ActaDotacionRecibida">
-                    <label for="txtFormatos_VlTrSocial_ActaDotacionRecibida_No">NO</label>
-                  </div>
-                  <input id="txtFormatos_VlTrSocial_ActaDotacionRecibida" class="rdbFormato_Value guardar" type="hidden" value="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button type="sumbit" class="btn btn-success btn-lg"> Guardar</button>
-      </form>
-    </div>
-  </div>
-</div>
-<script>
-  $("#frmFormatos_VlTrSocial").on("submit", function(evento)
-  {
-    evento.preventDefault();
-    $("#frmFormatos_VlTrSocial").generarDatosEnvio("txtFormatos_VlTrSocial_", function(datos)
-      {
-        $.post('../server/php/proyecto/guardarVisita.php', {Usuario : Usuario.id, Prefijo : obtenerPrefijo(), idFormato : 1, idNNA : $("#txtHomeVisita_idNNA").val(), datos : datos}, function(data, textStatus, xhr) 
-        {
-          
-        });
-      });
-  });
+<div class="page">
+  <div class="page-header">
+    <button type="button" class="btn btn-round btn-primary btn-pill-right btn_VolverAlPanel"><i class="icon fa-arrow-circle-left"></i> Atras</button>
+    <h1 class="page-title"> </h1>
+  </div>
+  <div class="page-content container-fluid" id="cntMatrizPeligros_Wizard">
+    <div class="row">
+      <form id="frmFormatos_VlTrSocial" class="col-md-12">
+        <!-- Panel Wizard Form Container -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Valoracion Inicial Trabajo Social</h3>
+          </div>
+          <div class="panel-body">
+            <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
+              <h4 class="example-title">MOTIVO DE INGRESO DEL NIÑO, NIÑA O ADOLESCENTE AL  HOGAR SUSTITUTO</h4>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="txtFormatos_VlTrSocial_Motivo">Descripción</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="icon fa-pencil" aria-hidden="true"></i>
+                      </span>
+                      <textarea id="txtFormatos_VlTrSocial_Motivo" rows="10" class="form-control guardar"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
+              <h4 class="example-title">El NNA cuenta con familia biológica vinculada al Proceso Administrativo de Restablecimiento de Derechos</h4>
+              <div class="row">
+                <div class="form-group">
+                  <div class="rdbFormato">
+                    <div class="radio-custom radio-success radio-inline">
+                      <input type="radio" id="txtFormatos_VlTrSocial_FamiliaBiologica_Si" value="Si" name="rdbFormatos_VlTrSocial_FamiliaBiologica">
+                      <label for="txtFormatos_VlTrSocial_FamiliaBiologica_Si">SI</label>
+                    </div>
+                    <div class="radio-custom radio-danger radio-inline">
+                      <input type="radio" id="txtFormatos_VlTrSocial_FamiliaBiologica_No" value="No" name="rdbFormatos_VlTrSocial_FamiliaBiologica">
+                      <label for="txtFormatos_VlTrSocial_FamiliaBiologica_No">NO</label>
+                    </div>
+                    <input id="txtFormatos_VlTrSocial_FamiliaBiologica" class="rdbFormato_Value guardar" type="hidden" value="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
+            <h4 class="example-title">Área de derecho: Existencia</h4>
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_PsicologiaCZ">Psicología CZ</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_PsicologiaCZ">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_NutricionCZ">Nutrición CZ</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_NutricionCZ">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_NutricionInstitucion">Nutrición Institucion</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_NutricionInstitucion">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_ProgramaCYDPYP">Programa CYD/PYP</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_ProgramaCYDPYP">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_Odontologia">ODONTOLOGÍA</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Odontologia">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_Optometria">OPTOMETRÍA</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Optometria">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_Vacunacion">VACUNACIÓN 0 A 10 AÑOS</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Vacunacion">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_MedicinaPediatrica">MEDICINA PEDIATRIA</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_MedicinaPediatrica">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label class="control-label" for="txtFormatos_VlTrSocial_AfiliacionSGSSS">AFILIACIÓN SGSSS</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="icon fa-pencil" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_AfiliacionSGSSS">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
+          <h4 class="example-title">Bienestar Físico <br> Antecedentes familiares del NN/A (Familia Biológica) <br> Estado de Salud de la familia con la que convive el NN/A </h4>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-4">
+                <label class="control-label" for="txtFormatos_VlTrSocial_Enfermedad">ENFERMEDAD</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="icon fa-pencil" aria-hidden="true"></i>
+                  </span>
+                  <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Enfermedad">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-4">
+                <label class="control-label" for="txtFormatos_VlTrSocial_Adicciones">ADICCIONES</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="icon fa-pencil" aria-hidden="true"></i>
+                  </span>
+                  <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Adicciones">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-4">
+                <label class="control-label" for="txtFormatos_VlTrSocial_Accidentes">ACCIDENTES</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="icon fa-pencil" aria-hidden="true"></i>
+                  </span>
+                  <input type="text" class="form-control guardar" id="txtFormatos_VlTrSocial_Accidentes">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <label class="control-label" for="txtFormatos_VlTrSocial_Observaciones">Observaciones</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="icon fa-pencil" aria-hidden="true"></i>
+                  </span>
+                  <textarea class="form-control" id="txtFormatos_VlTrSocial_Observaciones" cols="30" class="form-control guardar"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example padding-10"> <!-- << Proporciona el fondo gris al formulario dentro del panel -->
+          <h4 class="example-title">Bienestar Físico <br> Antecedentes familiares del NN/A (Familia Biológica) <br> Estado de Salud de la familia con la que convive el NN/A </h4>
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Acta de ubicación</label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_ActaUbicacion_Si" value="Si" name="rdbFormatos_VlTrSocial_ActaUbicacion">
+                    <label for="txtFormatos_VlTrSocial_ActaUbicacion_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_ActaUbicacion_No" value="No" name="rdbFormatos_VlTrSocial_ActaUbicacion">
+                    <label for="txtFormatos_VlTrSocial_ActaUbicacion_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_ActaUbicacion" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Registro civil o certificado de nacido vivo</label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_RegistroCivil_Si" value="Si" name="rdbFormatos_VlTrSocial_RegistroCivil">
+                    <label for="txtFormatos_VlTrSocial_RegistroCivil_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_RegistroCivil_No" value="No" name="rdbFormatos_VlTrSocial_RegistroCivil">
+                    <label for="txtFormatos_VlTrSocial_RegistroCivil_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_RegistroCivil" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Fotografías</label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_Fotografias_Si" value="Si" name="rdbFormatos_VlTrSocial_Fotografias">
+                    <label for="txtFormatos_VlTrSocial_Fotografias_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_Fotografias_No" value="No" name="rdbFormatos_VlTrSocial_Fotografias">
+                    <label for="txtFormatos_VlTrSocial_Fotografias_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_Fotografias" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Exámenes, formulas, tratamientos </label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_Tratamientos_Si" value="Si" name="rdbFormatos_VlTrSocial_Tratamientos">
+                    <label for="txtFormatos_VlTrSocial_Tratamientos_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_Tratamientos_No" value="No" name="rdbFormatos_VlTrSocial_Tratamientos">
+                    <label for="txtFormatos_VlTrSocial_Tratamientos_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_Tratamientos" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Carne de vacunas</label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CarneVacunas_Si" value="Si" name="rdbFormatos_VlTrSocial_CarneVacunas">
+                    <label for="txtFormatos_VlTrSocial_CarneVacunas_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CarneVacunas_No" value="No" name="rdbFormatos_VlTrSocial_CarneVacunas">
+                    <label for="txtFormatos_VlTrSocial_CarneVacunas_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_CarneVacunas" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Carne de salud</label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CarneSalud_Si" value="Si" name="rdbFormatos_VlTrSocial_CarneSalud">
+                    <label for="txtFormatos_VlTrSocial_CarneSalud_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CarneSalud_No" value="No" name="rdbFormatos_VlTrSocial_CarneSalud">
+                    <label for="txtFormatos_VlTrSocial_CarneSalud_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_CarneSalud" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Certificado de atención odontológica </label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_Si" value="Si" name="rdbFormatos_VlTrSocial_CertificadoAtencionOdontologica">
+                    <label for="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_No" value="No" name="rdbFormatos_VlTrSocial_CertificadoAtencionOdontologica">
+                    <label for="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_CertificadoAtencionOdontologica" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Valoración de atención nutricional inicial </label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_Si" value="Si" name="rdbFormatos_VlTrSocial_ValoracionNutricionalInicial">
+                    <label for="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_No" value="No" name="rdbFormatos_VlTrSocial_ValoracionNutricionalInicial">
+                    <label for="txtFormatos_VlTrSocial_ValoracionNutricionalInicial_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_ValoracionNutricionalInicial" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Certificados escolares-informes de calificaciones </label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadosEscolares_Si" value="Si" name="rdbFormatos_VlTrSocial_CertificadosEscolares">
+                    <label for="txtFormatos_VlTrSocial_CertificadosEscolares_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_CertificadosEscolares_No" value="No" name="rdbFormatos_VlTrSocial_CertificadosEscolares">
+                    <label for="txtFormatos_VlTrSocial_CertificadosEscolares_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_CertificadosEscolares" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="control-label" for="inputUserNameOne">Copia de actas de dotación recibida </label>
+              <div class="col-md-3 list-unstyled">
+                <div class="rdbFormato">
+                  <div class="radio-custom radio-success">
+                    <input type="radio" id="txtFormatos_VlTrSocial_ActaDotacionRecibida_Si" value="Si" name="rdbFormatos_VlTrSocial_ActaDotacionRecibida">
+                    <label for="txtFormatos_VlTrSocial_ActaDotacionRecibida_Si">SI</label>
+                  </div>
+                  <div class="radio-custom radio-danger">
+                    <input type="radio" id="txtFormatos_VlTrSocial_ActaDotacionRecibida_No" value="No" name="rdbFormatos_VlTrSocial_ActaDotacionRecibida">
+                    <label for="txtFormatos_VlTrSocial_ActaDotacionRecibida_No">NO</label>
+                  </div>
+                  <input id="txtFormatos_VlTrSocial_ActaDotacionRecibida" class="rdbFormato_Value guardar" type="hidden" value="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="sumbit" class="btn btn-success btn-lg"> Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  $("#frmFormatos_VlTrSocial").on("submit", function(evento)
+  {
+    evento.preventDefault();
+    $("#frmFormatos_VlTrSocial").generarDatosEnvio("txtFormatos_VlTrSocial_", function(datos)
+      {
+        $.post('../server/php/proyecto/guardarVisita.php', {Usuario : Usuario.id, Prefijo : obtenerPrefijo(), idFormato : 1, idNNA : $("#txtHomeVisita_idNNA").val(), datos : datos}, function(data, textStatus, xhr) 
+        {
+          
+        });
+      });
+  });
 </script>

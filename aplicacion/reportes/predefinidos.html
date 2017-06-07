@@ -1,0 +1,360 @@
+<div class="page">
+	<div class="page-content container-fluid">
+		<div class="col-sm-12 bg-white padding-10">
+			<div class="slider" id="cntReportesPredefinidos_Opciones">
+				<div>
+					<h3><a href="#cntReportesPredefinidos_Sabana">Sabana</a></h3>
+				</div>
+				<div>
+					<h3><a href="#cntReportesPredefinidos_Ingresos">Ingresos</a></h3>
+				</div>
+				<div>
+					<h3><a href="#cntReportesPredefinidos_Discapacidad">Discapacidad</a></h3>
+				</div>
+				<div>
+					<h3><a href="#cntReportesPredefinidos_Vulneracion">Vulneración</a></h3>
+				</div>
+				<div>
+					<h3><a href="#cntReportesPredefinidos_Resumen">Resumen</a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 row bg-white padding-10 form-horizontal">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Desde: </label>
+					<div class="col-sm-9">
+						<input id="txtReportesPredefinidos_Desde" type="text" class="form-control datepicker">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Hasta: </label>
+					<div class="col-sm-9">
+						<input id="txtReportesPredefinidos_Hasta" type="text" class="form-control datepicker">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cntReportesPredefinidos_Sabana" class="col-sm-12 cntReportesPredefinidos_Tab">
+			<div class="row">
+				<h3>Sabana:
+					<span class="panel-desc"></span>
+				</h3>
+				<input type="hidden" id="txtConfiguracion_Regionales_id">
+			</div>
+			<div class="col-sm-12">
+				<div class="panel panel-primary panel-bordered">
+					<div class="panel-heading">
+					</div>
+					<div class="panel-body">
+						<button id="btnRepPredefinidos_Sabana_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+						<div class="table-responsive">
+							<table id="tblRepPredefinidos_Sabana" class="table table-hover table-striped">
+								<thead>
+									<tr>
+										<th></th>
+										<th>idNna</th>
+										<th>m_SIM</th>
+										<th>Regional</th>
+										<th>CentroZonal</th>
+										<th>Operador</th>
+										<th>Madres</th>
+										<th>Cantidad</th>
+										<th>m_Apellido1</th>
+										<th>m_Apellido2</th>
+										<th>m_Nombre1</th>
+										<th>m_Nombre2</th>
+										<th>m_FechaNacimiento</th>
+										<th>m_Genero</th>
+										<th>m_Edad</th>
+										<th>m_TipoIdentificacion</th>
+										<th>m_Identificacion</th>
+										<th>m_GrupoEtnico</th>
+										<th>m_GrupoEtnicoCual</th>
+										<th>m_FechaApertura</th>
+										<th>m_NumeroResolucionApertura</th>
+										<th>m_FechaResolucion</th>
+										<th>m_FechaResolucionDePerdida</th>
+										<th>m_NumeroResolucionDePerdida</th>
+										<th>m_FechaIngreso</th>
+										<th>m_NivelAcademico</th>
+										<th>m_UltimoSemestreAprobado</th>
+										<th>m_Municipio</th>
+										<th>Direccion</th>
+										<th>Barrio</th>
+										<th>Urbano</th>
+										<th>Celular1</th>
+										<th>Celular2</th>
+										<th>Telefono1</th>
+										<th>Telefono2</th>
+										<th>Correo</th>
+										<th>m_AfiliadaFondoPension</th>
+										<th>m_NombreFondoPension</th>
+										<th>m_ActivoFondoPension</th>
+										<th>m_BeneficiarioPension</th>
+										<th>m_AfiliadoSalud</th>
+										<th>m_TipoAfiliacionSalud</th>
+										<th>m_NombreEPS</th>
+										<th>m_NombreEPSDeseada</th>
+										<th>m_RegimenEspecial</th>
+										<th>m_Discapacidad</th>
+										<th>m_EnfermedadCronica</th>
+										<th>m_TipoDiagnostico</th>
+										<th>m_AfiliacionCajaCompensacionFamiliar</th>
+										<th>m_TipoVivienda</th>
+										<th>m_CalculoActuarial</th>
+										<th>m_NumeroBeneficiarios</th>
+										<th>m_CarnetManipulacionAlimentos</th>
+										<th>m_CursoPrimerosAuxilios</th>
+										<th>m_Banco</th>
+										<th>m_NoCuenta</th>
+										<th>n_Apellido1</th>
+										<th>n_Apellido2</th>
+										<th>n_Nombre1</th>
+										<th>n_Nombre2</th>
+										<th>n_Genero</th>
+										<th>n_TipoDocumento</th>
+										<th>n_Identificacion</th>
+										<th>n_Edad</th>
+										<th>n_FechaNacimiento</th>
+										<th>n_SIM</th>
+										<th>n_Discapacidad</th>
+										<th>n_Diagnostico</th>
+										<th>n_FechaIngreso</th>
+										<th>n_FechaEgreso</th>
+										<th>n_CentroZonal</th>
+										<th>n_Salio</th>
+										<th>n_PARD</th>
+										<th>n_DefensorDeFamilia</th>
+										<th>n_idCentroZonal</th>
+										<th>n_DeclaradoAdoptabilidad</th>
+										<th>n_Desplazado</th>
+										<th>n_AutoridadAdministrativa</th>
+										<th>n_Observaciones</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cntReportesPredefinidos_Ingresos" class="col-sm-12 cntReportesPredefinidos_Tab hide">
+			<div class="row">
+				<h3>Ingresos:
+					<span class="panel-desc"></span>
+				</h3>
+			</div>
+			<div class="col-sm-12">
+				<div class="panel panel-primary panel-bordered">
+					<div class="panel-heading">
+						<h3 class="panel-title">Ingresos Reportados</h3>
+					</div>
+					<div class="panel-body">
+						<button id="btnRepPredefinidos_Ingresos_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+						<div class="table-responsive">
+							<table id="tblRepPredefinidos_Ingresos" class="table table-hover table-striped">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Tipo de solicitud</th>
+										<th>Centro zonal </th>
+										<th>Fecha de solicitud (INGRESOS Y/O TRASLADOS)</th>
+										<th>FECHA DEL INGRESO, EGRESO Y /O TRASLADO</th>
+										<th>NOMBRE Madre sustituta</th>
+										<th>Nombre NNA </th>
+										<th>EDAD</th>
+										<th>NÚMERO SIM Y/O NUMERO DE HISTORIA DE ATENCIÓN</th>
+										<th>NOMBRE DEL DEFENSOR Y/O COMISARIA</th>
+										<th>PROFESIONAL QUE REALIZA LA SOLICITUD</th>
+										<th>ACTA DE UBICACIÓN</th>
+										<th>Sede</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cntReportesPredefinidos_Vulneracion" class="col-sm-12 cntReportesPredefinidos_Tab hide">
+			<div class="row">
+				<h3>Vulneración:
+					<span class="panel-desc"></span>
+				</h3>
+			</div>
+			<div class="col-sm-12">
+				<div class="panel panel-primary panel-bordered">
+					<div class="panel-heading">
+					</div>
+					<div class="panel-body">
+						<button id="btnRepPredefinidos_Vulneracion_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+						<div class="table-responsive">
+							<table id="tblRepPredefinidos_Vulneracion" class="table table-hover table-striped">
+								<thead>
+									<tr>
+										<th></th>
+										<th>CENTRO ZONAL</th>
+										<th>NNA UBICADOS</th>
+										<th>TOTAL UNIDADES DE SERVICIO VULNERACIÓN</th>
+										<th>SUMA TOTAL UNIDADES DE SERVICIO COMPARTIDAS CON DISCAPACIDAD</th>
+										<th>NÚMERO INGRESOS DIARIOS </th>
+										<th>ACUMULADOS INGRESOS</th>
+										<th>NÚMERO EGRESOS DIARIOS</th>
+										<th>ACUMULADOS EGRESOS</th>
+										<th>SEDES POR CENTRO ZONAL </th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cntReportesPredefinidos_Discapacidad" class="col-sm-12 cntReportesPredefinidos_Tab hide">
+			<div class="row">
+				<h3>Discapacidad:
+					<span class="panel-desc"></span>
+				</h3>
+			</div>
+			<div class="col-sm-12">
+				<div class="panel panel-primary panel-bordered">
+					<div class="panel-heading">
+					</div>
+					<div class="panel-body">
+						<button id="btnRepPredefinidos_Discapacidad_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+						<div class="table-responsive">
+							<table id="tblRepPredefinidos_Discapacidad" class="table table-hover table-striped">
+								<thead>
+									<tr>
+										<th></th>
+										<th>CENTRO ZONAL</th>
+										<th>NNA UBICADOS</th>
+										<th>TOTAL UNIDADES DE SERVICIO DISCAPACIDAD</th>
+										<th>SUMA TOTAL UNIDADES DE SERVICIO COMPARTIDAS CON VULNERACION</th>
+										<th>NÚMERO INGRESOS DIARIOS </th>
+										<th>ACUMULADOS INGRESOS</th>
+										<th>NÚMERO EGRESOS DIARIOS</th>
+										<th>ACUMULADOS EGRESOS</th>
+										<th>SEDES POR CENTRO ZONAL </th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cntReportesPredefinidos_Resumen" class="col-sm-12 cntReportesPredefinidos_Tab hide">
+			<div class="row">
+				<h3>Resumen:
+					<span class="panel-desc"></span>
+				</h3>
+			</div>
+			<div class="col-sm-12 col-md-12">
+				<div class="panel panel-primary panel-bordered">
+					<div class="panel-heading">
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Sede: </label>
+							<div class="col-sm-9">
+								<select id="txtReportesPredefinidos_Sede" class="form-control">
+									<option value="1">Soacha</option>
+									<option value="2">Zipaquira</option>
+									<option value="3">Facatativa</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Agrupar Por: </label>
+							<div class="col-sm-9">
+								<select id="txtReportesPredefinidos_Agrupacion" class="form-control">
+									<option value="1">Municipios</option>
+									<option value="2">Centro Zonal</option>
+									<option value="3">Sede</option>
+
+								</select>
+							</div>
+						</div>
+						<!--
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Centro Zonal: </label>
+							<div class="col-sm-9">
+								<select id="txtReportesPredefinidos_Agrupacion" class="form-control">
+									<option value="0">Todos</option>
+									<option value="1">CÁQUEZA</option>
+									<option value="4">FUSAGASUGÁ</option>
+									<option value="6">GIRARDOT</option>
+									<option value="10">SOACHA</option>
+								</select>
+							</div>
+						</div>
+						-->
+						<button id="btnRepPredefinidos_Resumen_Actualizar" class="btn btn-outline btn-default"><i class="icon fa-refresh"></i></button>
+						<div class="table-responsive">
+							<table id="tblRepPredefinidos_Resumen" class="table table-hover table-striped">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Municipio</th>
+										<th>Tiempo</th>
+										<th>En Vulneración</th>
+										<th>En Discapacidad</th>
+										<th>Sin Información </th>
+										<th>Total</th>
+										<th>Madres</th>
+										<th>1</th>
+										<th>2 </th>
+										<th>3 </th>
+										<th>4 </th>
+										<th>5 </th>
+										<th>6 </th>
+										<th>7 </th>
+										<th>8 </th>
+										<th>9 </th>
+										<th>10 </th>
+										<th>11 </th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12">
+				<div class="panel panel-primary panel-bordered">
+					<div class="panel-heading">
+					</div>
+					<div class="panel-body">
+						<div class="height-500 col-sm-12" id="cntReportes_Resumen_Mapa"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	$.getScript("../js/reportesPredefinidos.js", function(ev) {
+		funRepPredefinidos();
+	});
+});
+</script>

@@ -2,26 +2,22 @@
   include("../conectar.php"); 
   include("datosUsuario.php"); 
    $link = Conectar();
-
    $idUsuario = addslashes($_POST['Usuario']);
    $Usuario = datosUsuario($idUsuario);
-
    $Perfil = "";
    if ($Usuario['idPerfil'] > 3)
    {
       $Perfil = " AND (Sedes.id = '" . $Usuario['idSede'] . "' OR Sedes.id IS NULL)";
    }
-
    if ($Usuario['idPerfil'] > 4)
    {
       $Perfil = " AND (datosUsuarios.idLogin = '" . $idUsuario . "'";
    }
-
    $sql = "SELECT
             equipos.id,
             equipos.Nombre,
             datosUsuarios.idSede AS idSede,
-            GROUP_CONCAT(concat(datosUsuarios.Nombre, ' (', datosUsuarios.Cargo, ')') SEPARATOR ', ') AS Integrantes ,
+            GROUP_CONCAT(DISTINCT concat(datosUsuarios.Nombre, ' (', datosUsuarios.Cargo, ')') SEPARATOR ', ') AS Integrantes ,
             Sedes.Nombre AS Sede,
             COUNT(DISTINCT Programacion.idNNA) AS NNA
           FROM
@@ -39,7 +35,6 @@
             Programacion.fecha DESC;";
 
    $result = $link->query($sql);
-
    $idx = 0;
    if ( $result->num_rows > 0)
    {

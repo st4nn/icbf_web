@@ -11,6 +11,7 @@ $(document).ready(function() {
   } else
   {
     llenarRestricciones();
+    cargarModulo("Inicio.html", "Inicio");
   }
 
   document.addEventListener("backbutton", function(e)
@@ -614,3 +615,71 @@ $(document).delegate('.rdbFormato input', 'click', function(event)
   var obj = $(this).parent("div").parent("div").find(".rdbFormato_Value");
   $(obj).val(valor);  
 });
+
+$.fn.cargarCargarPanelEstadistico = function(parametros)
+{
+  parametros.Filtros = parametros.Filtros || {};
+  parametros.Prefijo = parametros.Prefijo || '';
+  parametros.Sufijo = parametros.Sufijo || '';
+  parametros.callbackFila = parametros.callbackFila || function(tds, val){return tds;};
+  var obj = this;
+
+  $(obj).find(".counter").remove();
+
+  $.post('../server/php/proyecto/' + parametros.Script, parametros.Filtros, function(data, textStatus, xhr) 
+  {
+    var fechaDesde = '';
+    var fechaHasta = '';
+
+    if (parametros.Filtros.Desde != "")
+    {
+      fechaDesde = 'fechaCargue_Desde="' + parametros.Filtros.Desde + '"';
+    }
+
+    if (parametros.Filtros.Hasta != "")
+    {
+      fechaHasta = 'fechaCargue_Hasta="' + parametros.Filtros.Hasta + '"';
+    }
+
+    if (data != 0)
+    {
+      var tds = "";
+      var porcentaje = 0;
+      $.each(data.datos, function(index, val) 
+      {
+        porcentaje = (val.Cantidad / data.total * 100);
+        tds += '<div class="counter counter-md text-left">';
+                tds += '<div class="counter-number-group margin-bottom-10">';
+                  tds += '<span class="counter-number">' + parametros.Prefijo + separadorMiles(val.Cantidad) + parametros.Sufijo + '</span>';
+                tds += '</div>';
+                tds += '<div class="counter-label">';
+                  tds += '<div class="progress progress-xs margin-bottom-5">';
+                    tds += '<div class="progress-bar progress-bar-info ' + parametros.Color + '" aria-valuenow="' + porcentaje + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + porcentaje + '%" role="progressbar">';
+                      tds += '<span class="sr-only">' + porcentaje.toFixed(2) + '%</span>';
+                    tds += '</div>';
+                  tds += '</div>';
+                tds += '</div>';
+                tds += '<div class="counter-label text-uppercase margin-bottom-5"><a href="#" ' + parametros.Criterio + '="' + val.id + '" ' + fechaDesde + ' ' + fechaHasta + ' class="lnkOportunidades">' + val.Nombre + '</a></div>';
+            tds += '</div>';
+
+            tds = parametros.callbackFila(tds, val);
+      });
+
+      $(obj).append(tds);
+    }
+  }, 'json');
+}
+
+
+function separadorMiles(num)
+{
+  if(!isNaN(num)){
+    num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+    num = num.split('').reverse().join('').replace(/^[\.]/,'');
+    return num;
+  } 
+  else{ 
+    alert('Solo se permiten numeros');
+    return false;
+  }
+}

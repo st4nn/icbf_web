@@ -40,7 +40,7 @@ function funAsignados()
 		var tds = "";
 		var valor = null;
 
-		var tmpMadre = 0;
+		var tmpMadre = 99999999;
 
 		$("#lblAsignados_PanelNNA_Cargados").text(data.length);
 		$("#lblAsignados_PanelNNA_PorProgramar").text(data.length);

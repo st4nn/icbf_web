@@ -198,7 +198,7 @@ function funProgramacion()
 		var tds = "";
 		var valor = null;
 
-		var tmpMadre = 0;
+		var tmpMadre = 99999999999;
 
 		$("#lblProgramacion_PanelNNA_Cargados").text(data.length);
 		$("#lblProgramacion_PanelNNA_PorProgramar").text(data.length);
@@ -273,9 +273,8 @@ function funProgramacion()
 		if ($("#txtProgramacion_idEquipo").val() != "")
         {
         	$("#txtProgramacion_Equipos").val($("#txtProgramacion_idEquipo").val());
-        	$("#txtProgramacion_Equipos").trigger('change');
+        	//$("#txtProgramacion_Equipos").trigger('change');
         	$("#txtProgramacion_idEquipo").val("");
-
         }
 
 	}, 'json');

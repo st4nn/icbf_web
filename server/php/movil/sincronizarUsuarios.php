@@ -8,7 +8,7 @@
             Login.Clave AS 'password', 
             datosUsuarios.Nombre AS 'nombre', 
             datosUsuarios.Correo AS 'email', 
-            'WSP PB' AS 'empresa' 
+            'AXC' AS 'empresa' 
           FROM Login 
             INNER JOIN datosUsuarios ON datosUsuarios.idLogin = Login.idLogin
           WHERE  Login.Estado = 'Activo';";
